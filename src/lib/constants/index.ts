@@ -1,0 +1,1 @@
+const SZESC = 6;
