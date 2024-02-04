@@ -13,13 +13,16 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "custom-gradient": "linear-gradient(to right, #5D3B66, #E0B0FF)",
+        "gradient-new":
+          "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
       },
-
       colors: {
-        primary: colors.blue,
-        secondary: colors.green,
-        accent: colors.amber,
-        neutral: colors.gray,
+        black: "rgba(0,0,0,1.00)",
+        coral: "rgba(240,132,97,1.00)",
+        indian: "rgba(234,86,87,1.00)",
+        night: "rgba(15,16,19,1.00)",
+        royal: "rgba(129,81,156,1.00)",
+        white: "rgba(255,255,255,1.00)",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

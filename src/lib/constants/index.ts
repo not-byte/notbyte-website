@@ -1,1 +1,0 @@
-const SZESC = 6;
