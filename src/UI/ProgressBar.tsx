@@ -1,6 +1,6 @@
 import React from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
-import withPortal from "@/lib/HOCS/portal";
+import withPortal from "@/UI/HOCS/portal";
 
 type Props = {
   progress: number;
