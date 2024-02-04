@@ -1,1 +1,0 @@
-//tu bedzie interface

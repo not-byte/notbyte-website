@@ -1,3 +1,3 @@
 export default function Home() {
-  return <main className="text-amber-50">Siema</main>;
+  return <main className="bg-custom-gradient">Siema</main>;
 }
