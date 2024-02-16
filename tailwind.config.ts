@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss";
-const colors = require("tailwindcss/colors");
-const plugin = require("tailwindcss/plugin");
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -10,11 +9,9 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
-    extend: {
+    extend:{
       backgroundImage: {
-        "custom-gradient": "linear-gradient(to right, #5D3B66, #E0B0FF)",
-        "gradient-new":
-          "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
+        "colors": "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
       },
       colors: {
         black: "rgba(0,0,0,1.00)",
@@ -24,25 +21,11 @@ const config: Config = {
         royal: "rgba(129,81,156,1.00)",
         white: "rgba(255,255,255,1.00)",
       },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        serif: ["Merriweather", "serif"],
-        mono: ["Fira Code", "monospace"],
-      },
       spacing: {
         128: "32rem",
       },
       borderRadius: {
         "4xl": "2rem",
-      },
-      animation: {
-        wiggle: "wiggle 1s ease-in-out infinite",
-      },
-      keyframes: {
-        wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
-        },
       },
     },
   },
