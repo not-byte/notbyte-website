@@ -53,7 +53,7 @@ jobs:
     needs: publish
 
     steps:
-      - name: Deploy into a Server
+      - name: Deploy into a Server with SSH
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }}
@@ -61,4 +61,4 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SERVER_KEY }}
-          script: ./deploy.sh ${{ github.repository }} &>/dev/null
+          script: ./deploy.sh ${{ github.repository }} ${{ secrets.APP_NAME }} ${{ secrets.APP_PORT }}
