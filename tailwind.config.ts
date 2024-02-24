@@ -9,9 +9,10 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
-    extend:{
+    extend: {
       backgroundImage: {
-        "colors": "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
+        colors:
+          "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
       },
       colors: {
         black: "rgba(0,0,0,1.00)",
@@ -33,6 +34,7 @@ const config: Config = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
+    require("daisyui"),
     plugin(function ({ addUtilities }: { addUtilities: any }) {
       const newUtilities = {
         ".text-shadow": {
