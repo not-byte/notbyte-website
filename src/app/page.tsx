@@ -14,7 +14,7 @@ export default function Home() {
         <h1
           className={`${chakra.className} bg-colors text-transparent bg-clip-text text-[12rem] lowercase -translate-y-[20%] z-10`}
         >
-          Coming Soon_
+          Coming soon_
         </h1>
         <Header />
       </main>
