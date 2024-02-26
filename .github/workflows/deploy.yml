@@ -26,9 +26,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images:
-            ghcr.io/${{ github.repository }}
-
+          images: ghcr.io/${{ github.repository }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -58,4 +56,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SERVER_KEY }}
-          script: ./deploy.sh ${{ github.repository }} ${{ secrets.APP_NAME }} ${{ secrets.APP_PORT }}
+          script: |
+            cd deployment-scripts
+            gh repo sync
+            ./single_instance.sh ${{ github.repository }} ${{ secrets.APP_NAME }} ${{ secrets.APP_PORT }}
