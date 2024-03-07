@@ -1,4 +1,5 @@
 "use client";
+
 import { cn } from "@/lib/utils";
 import { AnimationControls, motion } from "framer-motion";
 import React from "react";
@@ -32,6 +33,7 @@ export const NotByteSvg = ({
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 2048 2048"
+        className="w-full h-auto"
         width={width}
         height={width}
       >
