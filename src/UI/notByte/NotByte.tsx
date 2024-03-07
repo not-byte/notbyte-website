@@ -1,15 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useAnimation } from "framer-motion";
 import { NotByteSvg } from "./NotByteSvg";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 export default function NotByte({
   durations,
   size,
   includeSurroundingSquare,
-  strokeColor,
   strokeWidth,
   containerClassName,
   svgClassName,
@@ -17,14 +17,21 @@ export default function NotByte({
   durations: number[];
   size: number;
   includeSurroundingSquare: boolean;
-  strokeColor: string;
   strokeWidth: number;
   containerClassName?: string;
   svgClassName?: string;
 }) {
+  const [color, setColor] = useState<string>("#fff");
+
   const controlsFirst = useAnimation();
   const controlsSecond = useAnimation();
   const controlsThird = useAnimation();
+
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    setColor(resolvedTheme === "dark" ? "#fff" : "#000");
+  }, [resolvedTheme]);
 
   React.useEffect(() => {
     const sequence = async () => {
@@ -43,15 +50,14 @@ export default function NotByte({
         }),
       ]);
     };
-
     sequence();
   }, [controlsFirst, controlsSecond, controlsThird, durations]);
 
   return (
-    <div className={cn("opacity-10 z-0 absolute", containerClassName)}>
+    <div className={cn("opacity-10 absolute top-[20vh]", containerClassName)}>
       <NotByteSvg
         width={size}
-        strokeColor={strokeColor}
+        strokeColor={color}
         includeSurroundingSquare={includeSurroundingSquare}
         controls={[controlsFirst, controlsSecond, controlsThird]}
         className={svgClassName}

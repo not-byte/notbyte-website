@@ -1,6 +1,6 @@
 import Providers from "@/lib/providers";
 import { ReactNode } from "react";
-import { Navbar } from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
@@ -100,8 +100,8 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-[400vh] bg-white dark:bg-night">
         <Providers>
           <Navbar />
           {children}

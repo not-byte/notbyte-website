@@ -13,7 +13,9 @@ const queryClient = new QueryClient();
 const Providers: FC<LayoutProps> = ({ children }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class">{children}</ThemeProvider>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        {children}
+      </ThemeProvider>
     </QueryClientProvider>
   );
 };
