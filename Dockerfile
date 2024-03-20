@@ -1,6 +1,6 @@
 FROM node:current-alpine
 
-LABEL authors = "botprzemek,pawelos231,akolt19d"
+LABEL authors = "botprzemek,pawelos231,akolt19d,nozowymrozon"
 
 WORKDIR /app
 
