@@ -57,4 +57,4 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           key: ${{ secrets.SERVER_KEY }}
-          script: ./deploy.sh ${{ github.repository }} ${{ secrets.APP_NAME }} ${{ secrets.APP_PORT }}
+          script: ./deployment-scripts/single-instance.sh ${{ github.repository }} ${{ secrets.APP_NAME }} ${{ secrets.APP_PORT }}
