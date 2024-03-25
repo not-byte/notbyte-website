@@ -3,6 +3,7 @@
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { FC, ReactNode } from "react";
 import { ThemeProvider } from "next-themes";
+import { AnimateSharedLayout } from "framer-motion";
 
 interface LayoutProps {
   children: ReactNode;

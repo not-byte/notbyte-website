@@ -1,12 +1,12 @@
 export const transition = { type: "spring", duration: 0.8 };
 
-export const slideAnimation = (direction: string) => {
+export const slideAnimation = (direction: "left" | "right" | "down" | "up") => {
   return {
     initial: {
-      x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: direction === "left" ? -500 : direction === "right" ? 500 : 0,
+      y: direction === "up" ? 500 : direction === "down" ? -500 : 0,
       opacity: 0,
-      transition: { ...transition, delay: 0.5 },
+      transition: { ...transition, delay: 0.6 },
     },
     animate: {
       x: 0,

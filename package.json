@@ -29,6 +29,7 @@
     "react-intersection-observer": "^9.8.1",
     "react-social-icons": "^6.14.0",
     "tailwind-merge": "^2.2.1",
+    "use-view-transitions": "^1.0.8",
     "zod": "^3.22.4"
   },
   "devDependencies": {

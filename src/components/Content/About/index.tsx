@@ -1,10 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ProfileCard from "./Profile";
-import { Profile } from "@/lib/model/profile";
 
 const containerVariants = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -17,42 +15,60 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
+// Custom hook for responsive rootMargin
+const useResponsiveRootMargin = () => {
+  const [rootMargin, setRootMargin] = useState("-100px 0px");
+
+  useEffect(() => {
+    const updateRootMargin = () => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        // Example breakpoint for mobile devices
+        setRootMargin("-50px 0px");
+      } else {
+        setRootMargin("-100px 0px");
+      }
+    };
+
+    window.addEventListener("resize", updateRootMargin);
+    updateRootMargin(); // Initialize on mount
+
+    return () => window.removeEventListener("resize", updateRootMargin);
+  }, []);
+
+  return rootMargin;
 };
 
-const About = ({ profiles }: { profiles: Profile[] }) => {
+const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
   const controls = useAnimation();
+  const rootMargin = useResponsiveRootMargin(); // Using custom hook
   const [ref, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px 0px", // This value can be adjusted based on when you want the animation to start
+    rootMargin, // Using responsive rootMargin
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
       controls.start("show");
     }
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      className="flex flex-wrap justify-center gap-4 sm:gap-6 md:justify-start"
-      variants={containerVariants}
-      initial="hidden"
-      animate={controls}
-    >
-      {profiles.map((profile) => (
-        <motion.div
-          className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 sm:p-6 md:p-10 w-full sm:w-[30vw] md:w-[20vw] lg:w-[15vw] xl:w-[15vw] h-auto"
-          key={Math.floor(Math.random()) * 100000000}
-          variants={cardVariants}
-        >
-          <ProfileCard profile={profile} />
-        </motion.div>
-      ))}
-    </motion.div>
+    <>
+      <h1 className="text-lg md:text-xl lg:text-2xl xl:text-4xl wqhd:text-6xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
+        Meet our team!
+      </h1>
+
+      <motion.div
+        ref={ref}
+        className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:justify-start 2xl:gap-12 overflow-hidden xl:mt-[30vh] wqhd:mt-[0vh]"
+        variants={containerVariants}
+        initial="hidden"
+        animate={controls}
+      >
+        {ProfileWrapper}
+      </motion.div>
+    </>
   );
 };
 
