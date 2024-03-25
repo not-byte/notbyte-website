@@ -2,6 +2,7 @@ import Providers from "@/lib/providers";
 import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
+
 import "./globals.css";
 
 const baseUrl = "https://notbyte.com";
@@ -101,7 +102,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-[400vh] bg-white dark:bg-night">
+      <body className="min-h-[400vh] bg-white dark:bg-night overflow-x-hidden">
         <Providers>
           <Navbar />
           {children}

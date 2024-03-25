@@ -1,0 +1,28 @@
+.block {
+  height: 70vh;
+  width: 70vh;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -3vh;
+}
+
+
+@media (min-width: 768px) { 
+  .block {
+    width: 60vw; 
+    height: 60vw;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .block {
+    width: 55vh; 
+    height: 55vh;
+  }
+}
+
+.block[data-fixed="true"] {
+  position: fixed;
+  border-radius: 50%;
+}
