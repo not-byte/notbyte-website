@@ -1,5 +1,141 @@
 import React from "react";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaYoutube,
+} from "react-icons/fa";
 
-export const index = () => {
-  return <div>index</div>;
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-black text-gray-300 border-t border-gray-700 mt-[30vh]">
+      <div className="w-[80%] mx-auto px-4 py-12 md:py-24 flex justify-center flex-col items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
+          <div className="lg:col-span-2">
+            <h5 className="text-red-600 uppercase font-semibold mb-6 text-lg">
+              About Us
+            </h5>
+            <p className="text-gray-400 text-base leading-relaxed">
+              Elevate your online presence with innovative solutions. Our
+              mission is to empower your digital aspirations with cutting-edge
+              technologies and creative design.
+            </p>
+            <div className="mt-8">
+              <span className="text-gray-400 text-base">Connect with us:</span>
+              <div className="flex space-x-4 mt-4">
+                <a
+                  href="https://www.instagram.com/not_byte/"
+                  className="text-red-600 hover:text-red-500 transition-colors duration-300"
+                >
+                  <FaInstagram size="24" />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61556349384920"
+                  className="text-red-600 hover:text-red-500 transition-colors duration-300"
+                >
+                  <FaFacebookF size="24" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/notbyte/"
+                  className="text-red-600 hover:text-red-500 transition-colors duration-300"
+                >
+                  <FaLinkedinIn size="24" />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCNLeJesJFyJ4efbRfTWhwaw"
+                  className="text-red-600 hover:text-red-500 transition-colors duration-300"
+                >
+                  <FaYoutube size="24" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-2 lg:col-span-1">
+            <h5 className="text-red-600 uppercase font-semibold mb-6 text-lg">
+              Recent Posts
+            </h5>
+            <ul className="text-base space-y-3">
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-red-500 transition-colors duration-300"
+                >
+                  Design Trends 2024
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-red-500 transition-colors duration-300"
+                >
+                  UI/UX Best Practices
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="hover:text-red-500 transition-colors duration-300"
+                >
+                  Web Accessibility Insights
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-1">
+            <h5 className="text-red-600 uppercase font-semibold mb-6 text-lg">
+              Contact Info
+            </h5>
+            <ul className="text-gray-400 text-base space-y-3">
+              <li>
+                <FaPhone className="inline mr-2" />
+                +123 456 7890
+              </li>
+              <li>
+                <FaEnvelope className="inline mr-2" />
+                info@example.com
+              </li>
+              <li>
+                <FaMapMarkerAlt className="inline mr-2" />
+                123 Main St, Anytown, USA
+              </li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-1">
+            <h5 className="text-red-600 uppercase font-semibold mb-6 text-lg">
+              Stay Updated
+            </h5>
+            <form className="flex flex-col space-y-4">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className="px-4 py-3 bg-gray-700 text-white rounded-md text-base"
+              />
+              <button
+                type="submit"
+                className="bg-red-600 hover:bg-red-700 text-white px-4 py-3 rounded-md transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p className="text-gray-400 text-sm mt-4">
+              Subscribe to our newsletter for the latest updates.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center text-gray-400 text-base pt-12 sm:pt-16 font-light">
+          © {new Date().getFullYear()} notByte. Crafted with passion and
+          precision.
+        </div>
+      </div>
+    </footer>
+  );
 };
+
+export default Footer;

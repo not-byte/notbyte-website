@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const baseUrl = "https://notbyte.com";
 
@@ -102,11 +103,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-[400vh] bg-white dark:bg-night overflow-x-hidden">
+      <body className=" bg-white dark:bg-night overflow-x-hidden">
         <Providers>
           <Navbar />
           {children}
           <Toaster position="bottom-right" reverseOrder={false} />
+          <Footer />
         </Providers>
       </body>
     </html>
