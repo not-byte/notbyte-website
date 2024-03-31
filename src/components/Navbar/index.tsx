@@ -9,7 +9,7 @@ import Logo from "./Logo";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center px-4 py-4 fixed w-full bg-grey-lightest text-black dark:bg-black dark:text-white lg:px-8 z-10">
+    <nav className="flex justify-between items-center px-4 py-4 fixed w-full bg-grey-lightest text-black dark:bg-black dark:text-white lg:px-8 z-20">
       <Suspense fallback={<div>Loading...</div>}>
         <Dialog title="Contact" onClose={onClose} onOk={onOk}>
           <Contact />
