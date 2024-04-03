@@ -1,3 +1,4 @@
+import { calculateProjectWidth } from "@/lib/utils/calculateLengthOfProject";
 import React from "react";
 import { timelineData } from "./data";
 import Image from "next/image";
