@@ -4,6 +4,7 @@ import { Chakra_Petch } from "next/font/google";
 import { mockProfileData } from "@/lib/constants/smallProfileData";
 import { ProfileWrapper } from "@/components/Content/About/ProfileCard/ProfileWrapper";
 import FuturePlans from "@/components/Content/Plans";
+import FaqSection from "@/components/Content/FAQ";
 
 const chakra = Chakra_Petch({
   weight: ["700"],
