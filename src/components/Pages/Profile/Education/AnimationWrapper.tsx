@@ -47,9 +47,9 @@ const variants = {
 };
 
 export const EducationSectionAnimationWrapper = ({
-  EducationContentComponent,
+  children,
 }: {
-  EducationContentComponent: ReactNode;
+  children: ReactNode;
 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -71,7 +71,7 @@ export const EducationSectionAnimationWrapper = ({
       animate={controls}
       variants={variants}
     >
-      {EducationContentComponent}
+      {children}
     </motion.section>
   );
 };

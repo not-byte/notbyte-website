@@ -40,9 +40,9 @@ const variants = {
 };
 
 export const SkillsSectionAnimationWrapper = ({
-  SkillsContentComponent,
+  children,
 }: {
-  SkillsContentComponent: ReactNode;
+  children: ReactNode;
 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
@@ -64,7 +64,7 @@ export const SkillsSectionAnimationWrapper = ({
       variants={variants}
       className="mt-[25vh] mx-auto p-10 rounded-lg  transition duration-300  sm:w-[80vw] md:w-[90vw] lg:w-[80vw] xl:w-[80vw] wqhd:w-[60vw]"
     >
-      {SkillsContentComponent}
+      {children}
     </motion.div>
   );
 };

@@ -25,22 +25,20 @@ const ProfilePage = ({ params }: PageProps) => {
     <ProfileComp
       profile={profile}
       BasicInfo={
-        <BasicInfoAnimationWrapper
-          BasicInfoComponent={<BasicInfoSection profile={profile} />}
-        />
+        <BasicInfoAnimationWrapper>
+          <BasicInfoSection profile={profile} />
+        </BasicInfoAnimationWrapper>
       }
       Experience={<ExperienceSection profile={profile} />}
       Education={
-        <EducationSectionAnimationWrapper
-          EducationContentComponent={
-            <EducationSection educations={profile.education} />
-          }
-        />
+        <EducationSectionAnimationWrapper>
+          <EducationSection educations={profile.education} />
+        </EducationSectionAnimationWrapper>
       }
       ProfileSummary={
-        <SkillsSectionAnimationWrapper
-          SkillsContentComponent={<SkillsSection awards={profile.awards!} />}
-        />
+        <SkillsSectionAnimationWrapper>
+          <SkillsSection awards={profile.awards!} />
+        </SkillsSectionAnimationWrapper>
       }
     />
   );
