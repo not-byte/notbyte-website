@@ -55,13 +55,13 @@ const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
 
   return (
     <>
-      <h1 className="text-lg md:text-xl lg:text-2xl xl:text-4xl wqhd:text-6xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
+      <h1 className="text-5xl wqhd:text-7xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
         Meet our team!
       </h1>
 
       <motion.div
         ref={ref}
-        className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:justify-start 2xl:gap-12 overflow-hidden xl:mt-[30vh] wqhd:mt-[0vh]"
+        className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:justify-start 2xl:gap-12 overflow-hidden usm:mt-[0vh] wqhd:mt-[0vh]"
         variants={containerVariants}
         initial="hidden"
         animate={controls}

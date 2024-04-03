@@ -30,7 +30,7 @@ const ProfileCardServer = ({ profile }: { profile: PostProps }) => {
             return <SocialIcon key={index} url={item.url} />;
           })}
         </div>
-        <p className="text-gray-600 dark:text-gray-300 text-center mb-3 pageContent ">
+        <p className="text-gray-600 dark:text-gray-300 text-center mb-3 pageContent p-5">
           {profile.description}
         </p>
       </div>
