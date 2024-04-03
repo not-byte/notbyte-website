@@ -1,200 +1,89 @@
 import { calculateProjectWidth } from "@/lib/utils/calculateLengthOfProject";
 import React from "react";
+import { timelineData } from "./data";
+import Image from "next/image";
+import { shimmer, toBase64 } from "@/UI/shimmer";
 
-type Props = {
-  title: string;
-  description: string;
-  icon: any;
+interface TimelineItemData {
   date: string;
-  alignment?: "top" | "bottom";
-  width: number;
-  position: number;
-};
+  title: string;
+  subTitle: string; // Smaller title or subheading
+  description: string;
+  imageUrl: string;
+}
 
-const TimelineNode = ({
-  title,
-  description,
-  date,
-  alignment,
-  width,
-  position,
-}: Props) => {
-  const nodeStyle = {
-    width: `${Math.ceil(width / 10) * 10}vw`,
-    marginLeft: `${Math.ceil(position / 10) * 10}vw`,
-  };
-
-  return (
+interface TimelineItemProps {
+  data: TimelineItemData;
+  index: number;
+}
+const TimelineItem: React.FC<TimelineItemProps> = ({ data, index }) => (
+  <div className="flex flex-col  sm:w-[100%] wqhd:w-[80%] items-center ">
     <div
-      style={nodeStyle}
-      className={`flex  ${
-        alignment === "bottom" ? "flex-col" : "flex-col-reverse"
-      } items-center`}
+      className={
+        index % 2 === 0
+          ? "md:flex sm:w-[90%] md:w-[100%] xl:w-[80%]  md:justify-end lg:pr-10"
+          : "md:flex sm:w-[90%]   md:w-[100%] xl:w-[80%]   md:justify-start lg:pl-10"
+      }
     >
       <div
-        className={`flex justify-center items-center ${
-          alignment === "bottom" ? "mb-4" : "mt-4"
-        }`}
+        className={
+          "bg-white sm:w-[90%]  md:w-[45%] lg:w-[40%]  dark:bg-transparent border border-black dark:border-grey-darkest p-8 shadow-xl mb-8 md:mb-0 transform transition-transform duration-500 " +
+          (index % 2 === 0
+            ? "sm:hover:scale-95 lg:hover:translate-x-[2rem]"
+            : "sm:hover:scale-95 lg:hover:translate-x-[-2rem]")
+        }
       >
-        <span className="text-gray-500 text-xs">{date}</span>
-      </div>
-      <div className="flex flex-col items-center relative ">
-        <div className="bg-gradient-to-r from-blue-200 to-indigo-200 dark:from-blue-800 dark:to-indigo-800 shadow-xl rounded-lg px-6 py-4 transform transition duration-500 hover:scale-105  w-[12vw]">
-          <h4 className="font-bold text-xl text-indigo-900 dark:text-indigo-100">
-            {title}
-          </h4>
-          <p className="text-gray-500 dark:text-gray-400 text-md mt-2">
-            {description}
-          </p>
+        <div className="relative mb-20 max-h-48 w-full">
+          <Image
+            src={data.imageUrl}
+            alt={data.title}
+            width={50}
+            height={50}
+            quality={50}
+            layout="responsive"
+            objectFit="cover"
+            className="grayscale"
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(
+              shimmer(20, 20)
+            )}`}
+            loading="lazy"
+          />
         </div>
-      </div>
-      <div className={alignment === "top" ? "flex justify-center " : ""}>
-        {alignment === "top" ? (
-          <div className="w-0.5 h-[5vh]  bg-darkModeColors ">
-            <div
-              className={`w-[${nodeStyle.width}]  h-0.5 bg-darkModeColors absolute top-0`}
-            ></div>
-          </div>
-        ) : (
-          <>
-            <div className="w-0.5 h-[5vh] bg-darkModeColors relative">
-              <div
-                className={`w-[${nodeStyle.width}] h-0.5 bg-darkModeColors absolute bottom-0`}
-              ></div>
-            </div>
-          </>
-        )}
+        <h2 className="text-2xl font-bold text-gradient-colors">
+          {data.title}
+        </h2>
+        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+          {data.subTitle}
+        </h3>
+        <p className="text-gray-600 dark:text-gray-200 mt-4">
+          {data.description}
+        </p>
+        <p className="text-gray-400 dark:text-grey-dark text-sm mt-6">
+          {data.date}
+        </p>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
-type Plan = {
-  title: string;
-  description: string;
-  icon: any;
-  date: string;
-  alignment: "top" | "bottom";
-  startDate: Date;
-  endDate: Date;
-  positionInTimeline?: number;
-  widthOfLineInTimeline?: number;
-};
+interface TimelineProps {}
 
-const FuturePlans = () => {
-  const plans: Plan[] = [
-    {
-      title: "Tournament Project",
-      description: "Manage competitive events",
-      icon: "<i className='fa fa-trophy' />",
-      date: "2024 Q1",
-      alignment: "bottom",
-      startDate: new Date("2024-01-01"),
-      endDate: new Date("2024-02-05"),
-    },
-    {
-      title: "Website Redesign",
-      description: "Enhance online presence",
-      icon: '<i className="fa fa-globe" />',
-      date: "2024 Q2",
-      alignment: "top",
-      startDate: new Date("2024-03-01"),
-      endDate: new Date("2024-04-01"),
-    },
-    {
-      title: "Software Development",
-      description: "In-house software solutions",
-      icon: '<i className="fa fa-cogs" />',
-      date: "2024 Q3",
-      alignment: "bottom",
-      startDate: new Date("2024-05-01"),
-      endDate: new Date("2024-07-01"),
-    },
-    {
-      title: "Software Development",
-      description: "In-house software solutions",
-      icon: '<i className="fa fa-cogs" />',
-      date: "2024 Q4",
-      alignment: "top",
-      startDate: new Date("2024-08-01"),
-      endDate: new Date("2024-10-01"),
-    },
-  ];
-
-  let accumulatedWidth = 0;
-
-  plans.forEach((plan, index) => {
-    const width = calculateProjectWidth(plan.startDate, plan.endDate, 365);
-    plan.widthOfLineInTimeline = Number(width);
-
-    if (index === 0) {
-      plan.positionInTimeline = 0;
-    } else {
-      plan.positionInTimeline = accumulatedWidth;
-    }
-
-    accumulatedWidth += plan.widthOfLineInTimeline;
-  });
-
-  //staticaly updated, did not want to make it too complicated for some reason...
-  plans[2].positionInTimeline =
-    plans[2].positionInTimeline! - plans[0].widthOfLineInTimeline!;
-
-  plans[3].positionInTimeline =
-    plans[3].positionInTimeline! - plans[2].widthOfLineInTimeline!;
-
+const Timeline: React.FC<TimelineProps> = () => {
   return (
-    <div className=" text-white py-12 w-full mt-[20vh]">
-      <h2 className="text-6xl font-semibold text-center mb-24 ">
-        Our Future Plans
-      </h2>
-      <div className="flex justify-center">
-        <div className="relative w-[80vw] ">
-          <div className="flex mx-8 w-full">
-            {plans
-              .filter((plan) => plan.alignment === "bottom")
-              .map((p, key) => {
-                return (
-                  <TimelineNode
-                    key={key}
-                    title={p.title}
-                    description={p.description}
-                    icon={p.icon}
-                    date={p.date}
-                    alignment={p.alignment}
-                    width={p.widthOfLineInTimeline!}
-                    position={p.positionInTimeline!}
-                  />
-                );
-              })}
-          </div>
-          <div className="flex">
-            <div className="w-10 h-10 rounded-full bg-green-50 z-10"></div>
-            <div className=" w-full h-1 bg-colors  mt-[20px]"></div>
-            <div className="w-10 h-10 rounded-full bg-green-50 z-10"></div>
-          </div>
-          <div className="flex w-full mx-8 relative">
-            {plans
-              .filter((plan) => plan.alignment === "top")
-              .map((p, key) => {
-                return (
-                  <TimelineNode
-                    key={key}
-                    title={p.title}
-                    description={p.description}
-                    icon={p.icon}
-                    date={p.date}
-                    alignment={p.alignment}
-                    width={p.widthOfLineInTimeline!}
-                    position={p.positionInTimeline!}
-                  />
-                );
-              })}
-          </div>
-        </div>
+    <div className="relative container mx-auto px-4 py-8 overflow-hidden mt-[30vh] ">
+      <h1 className="text-7xl pb-20 text-center dark:text-white text-black">
+        Future development plans
+      </h1>
+      <div className="absolute sm:opacity-0 md:opacity-100 md:left-[50%] transform -translate-x-[50%] w-[1px] bg-black dark:bg-grey-darkest h-full z-0"></div>
+
+      <div className="space-y-8 flex flex-col items-center py-8 ">
+        {timelineData.map((data, idx) => (
+          <TimelineItem key={idx} data={data} index={idx} />
+        ))}
       </div>
     </div>
   );
 };
 
-export default FuturePlans;
+export default Timeline;
