@@ -13,6 +13,18 @@ const config: Config = {
       backgroundImage: {
         colors:
           "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
+        darkModeColors:
+          "linear-gradient(30deg, rgba(90,42,37,1.00) 0%, rgba(59,29,69,1.00) 40%, rgba(100,36,37,1.00) 69%, rgba(90,42,37,1.00) 100%)",
+      },
+      borderColor: {
+        colors:
+          "linear-gradient(90deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
+      },
+      screens: {
+        usm: "420px",
+        "2xl": "1536px",
+        wqhd: "2560px",
+        "4k": "3840px",
       },
       colors: {
         black: "rgba(0,0,0,1.00)",
@@ -69,9 +81,43 @@ const config: Config = {
         ".text-shadow-none": {
           textShadow: "none",
         },
+        ".text-gradient-colors": {
+          backgroundImage:
+            "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
+          color: "transparent",
+          backgroundClip: "text",
+        },
       };
 
       addUtilities(newUtilities, ["responsive", "hover"]);
+    }),
+    plugin(function ({ addComponents }: { addComponents: any }) {
+      addComponents({
+        ".chipped-corner": {
+          position: "relative",
+          overflow: "hidden",
+          boxSizing: "border-box",
+          "&::after": {
+            content: "''",
+            width: "4rem",
+            height: "4rem",
+            position: "absolute",
+            left: "-2rem",
+            bottom: "-2rem",
+            transform: "rotate(45deg)",
+          },
+        },
+        ".chipped-corner-night": {
+          "&::after": {
+            backgroundColor: "rgba(15,16,19,1.00)",
+          },
+        },
+        ".chipped-corner-white": {
+          "&::after": {
+            backgroundColor: "white",
+          },
+        },
+      });
     }),
   ],
   mode: "jit",
