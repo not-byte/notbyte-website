@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { profiles } from "@/lib/constants/profileData";
 import ProfileComp from "@/components/Pages/Profile";
@@ -8,6 +9,7 @@ import { SkillsSection } from "@/components/Pages/Profile/Skills";
 import { SkillsSectionAnimationWrapper } from "@/components/Pages/Profile/Skills/AnimationWrapper";
 import { EducationSectionAnimationWrapper } from "@/components/Pages/Profile/Education/AnimationWrapper";
 import { EducationSection } from "@/components/Pages/Profile/Education";
+import { ProfileShell } from "@/components/Pages/Profile/profileShell";
 
 interface PageProps {
   params: {
@@ -20,7 +22,9 @@ const ProfilePage = ({ params }: PageProps) => {
   const id = params.profileID;
   const profile = profiles.find((item) => item.id == id);
 
-  if (!profile) return <></>;
+  if (!profile) {
+    return <ProfileShell />;
+  }
   return (
     <ProfileComp
       profile={profile}
