@@ -5,6 +5,7 @@ import { mockProfileData } from "@/lib/constants/smallProfileData";
 import { ProfileWrapper } from "@/components/Content/About/ProfileCard/ProfileWrapper";
 import Timeline from "@/components/Content/Plans";
 import FaqSection from "@/components/Content/FAQ";
+import ProjectSection from "@/components/Content/Projects";
 
 const chakra = Chakra_Petch({
   weight: ["700"],
@@ -34,6 +35,7 @@ export default function Home() {
       <About ProfileWrapper={<ProfileWrapper profiles={mockProfileData} />} />
       <Timeline />
       <FaqSection />
+      <ProjectSection />
     </main>
   );
 }
