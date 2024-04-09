@@ -75,7 +75,7 @@ const ProjectSection = () => {
       <div className="container mx-auto w-[70vw]">
         <div className="text-center mb-16">
           <h2 className="text-6xl font-bold text-black dark:text-white">
-            My Works
+            Our Works
           </h2>
           <p className="text-xl mt-4 mx-auto leading-relaxed max-w-3xl">
             Witness the beauty of nature through our lens, as we showcase
@@ -86,7 +86,7 @@ const ProjectSection = () => {
         <Slider {...settings}>
           {projects.map((project) => (
             <div key={project.id} className="px-2">
-              <div className="overflow-hidden rounded-3xl shadow-lg cursor-pointer">
+              <div className="overflow-hidden shadow-lg cursor-pointer border border-black dark:border-grey-darkest">
                 <Image
                   className="w-full transform hover:scale-110 transition duration-700 ease-in-out"
                   src={project.imageUrl}
@@ -100,18 +100,18 @@ const ProjectSection = () => {
                   height={200}
                   layout="responsive"
                 />
-                <div className="p-6 bg-gray-800 rounded-b-3xl">
-                  <h3 className="text-2xl font-semibold text-white mb-2">
+                <div className="p-6 bg-transparent">
+                  <h3 className="text-2xl font-semibold text-black dark:text-white mb-2">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 text-base mb-4">
                     {project.description}
                   </p>
-                  <div className="flex mt-4">
+                  <div className="flex mt-4 gap-3">
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="bg-blue-500 text-xs text-white py-1 px-3 rounded-full mr-2"
+                        className="bg-colors rounded-full bg-[length:200%] text-xs text-white py-1 px-3 hover:bg-center transition-all duration-700"
                       >
                         {tag}
                       </span>
