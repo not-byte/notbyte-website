@@ -1,3 +1,5 @@
+import { Faq } from "../model/FAQ";
+
 export const faqs: Faq[] = [
   {
     question: "How do I reset my password?",
@@ -25,8 +27,3 @@ export const faqs: Faq[] = [
       "You can reach our customer support team by visiting the 'Contact Us' section of our website. There, you'll find options to contact us via email, phone, or live chat. Our team is available 24/7 to assist you with any questions or issues you might have.",
   },
 ];
-
-export interface Faq {
-  question: string;
-  answer: string;
-}

@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { profiles } from "@/lib/constants/profileData";
+import { profiles } from "@/lib/data/profile/profileData";
 //for now static later when we have dynamic content dynamic
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://notbyte.com";

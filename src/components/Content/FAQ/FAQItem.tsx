@@ -2,16 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Faq } from "./data";
+import { Faq } from "@/lib/model/FAQ";
 
 type Props = {
   faq: Faq;
 };
 
 export const FAQItem = ({ faq }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [contentHeight, setContentHeight] = useState(0);
-  const contentRef = useRef<any>(null);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [contentHeight, setContentHeight] = useState<number>(0);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (contentRef.current) {

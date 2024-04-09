@@ -1,5 +1,5 @@
+import { faqs } from "@/lib/data/FAQ";
 import { FAQItem } from "./FAQItem";
-import { faqs } from "./data";
 
 const FaqSection = () => {
   return (

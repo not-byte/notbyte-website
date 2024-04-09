@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import About from "@/components/Content/About";
 import { Chakra_Petch } from "next/font/google";
-import { mockProfileData } from "@/lib/constants/smallProfileData";
+import { mockProfileData } from "@/lib/data/profile/smallProfileData";
 import { ProfileWrapper } from "@/components/Content/About/ProfileCard/ProfileWrapper";
 import Timeline from "@/components/Content/Plans";
 import FaqSection from "@/components/Content/FAQ";
@@ -34,8 +34,8 @@ export default function Home() {
       <Header />
       <About ProfileWrapper={<ProfileWrapper profiles={mockProfileData} />} />
       <Timeline />
-      <FaqSection />
       <ProjectSection />
+      <FaqSection />
     </main>
   );
 }

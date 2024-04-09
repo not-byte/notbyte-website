@@ -6,42 +6,7 @@ import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { shimmer, toBase64 } from "@/UI/shimmer";
-
-const projects = [
-  {
-    id: 1,
-    title: "Ocean at Dusk",
-    description:
-      "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
-    imageUrl: "/knury.jpg",
-    tags: ["Photography", "Nature"],
-  },
-  {
-    id: 2,
-    title: "Dancing Dunes",
-    description:
-      "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
-    imageUrl: "/knury.jpg",
-    tags: ["Photography", "Art Direction"],
-  },
-  {
-    id: 2,
-    title: "Dancing Dunes",
-    description:
-      "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
-    imageUrl: "/knury.jpg",
-    tags: ["Photography", "Art Direction"],
-  },
-  {
-    id: 2,
-    title: "Dancing Dunes",
-    description:
-      "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
-    imageUrl: "/knury.jpg",
-    tags: ["Photography", "Art Direction"],
-  },
-  // ... more projects
-];
+import { projects } from "@/lib/data/projects/smallProjectsData";
 
 const ProjectSection = () => {
   const settings = {
@@ -71,7 +36,7 @@ const ProjectSection = () => {
   };
 
   return (
-    <section className=" py-20 px-4 mt-[25vh]">
+    <section className=" py-20 px-4 mt-[30vh]">
       <div className="container mx-auto w-[70vw]">
         <div className="text-center mb-16">
           <h2 className="text-6xl font-bold text-black dark:text-white">
@@ -84,8 +49,8 @@ const ProjectSection = () => {
           </p>
         </div>
         <Slider {...settings}>
-          {projects.map((project) => (
-            <div key={project.id} className="px-2">
+          {projects.map((project, index) => (
+            <div key={index} className="px-2">
               <div className="overflow-hidden shadow-lg cursor-pointer border border-black dark:border-grey-darkest">
                 <Image
                   className="w-full transform hover:scale-110 transition duration-700 ease-in-out"

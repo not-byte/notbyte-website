@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import { profiles } from "@/lib/constants/profileData";
+import { profiles } from "@/lib/data/profile/profileData";
 import ProfileComp from "@/components/Pages/Profile";
 import { BasicInfoAnimationWrapper } from "@/components/Pages/Profile/BasicInfo/AnimationWrapper";
 import { BasicInfoSection } from "@/components/Pages/Profile/BasicInfo";

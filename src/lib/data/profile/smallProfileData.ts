@@ -1,6 +1,6 @@
-import { SmallProfile } from "../model/profile";
+import { SmallProfile } from "../../model/profile";
 
-//delete this on production
+//data present on the main page
 
 export const mockProfileData: SmallProfile[] = [
   {
