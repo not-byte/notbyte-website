@@ -1,7 +1,6 @@
 import { SmallProfile } from "../../model/profile";
 
 //data present on the main page
-
 export const mockProfileData: SmallProfile[] = [
   {
     id: "Pawel_Linek",

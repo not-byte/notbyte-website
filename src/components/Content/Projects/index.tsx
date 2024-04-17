@@ -2,11 +2,10 @@
 
 import React from "react";
 import Slider from "react-slick";
-import Image from "next/image";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { shimmer, toBase64 } from "@/UI/shimmer";
-import { projects } from "@/lib/data/projects/smallProjectsData";
+import { smallProjects } from "@/lib/data/projects/smallProjectsData";
+import { ImageLink } from "./ImageLink";
 
 const ProjectSection = () => {
   const settings = {
@@ -49,22 +48,10 @@ const ProjectSection = () => {
           </p>
         </div>
         <Slider {...settings}>
-          {projects.map((project, index) => (
+          {smallProjects.map((project, index) => (
             <div key={index} className="px-2">
               <div className="overflow-hidden shadow-lg cursor-pointer border border-black dark:border-grey-darkest">
-                <Image
-                  className="w-full transform hover:scale-110 transition duration-700 ease-in-out"
-                  src={project.imageUrl}
-                  alt={project.title}
-                  placeholder="blur"
-                  blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                    shimmer(300, 200)
-                  )}`}
-                  width={300}
-                  quality={50}
-                  height={200}
-                  layout="responsive"
-                />
+                <ImageLink project={project} />
                 <div className="p-6 bg-transparent">
                   <h3 className="text-2xl font-semibold text-black dark:text-white mb-2">
                     {project.title}

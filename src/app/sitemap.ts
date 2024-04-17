@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { profiles } from "@/lib/data/profile/profileData";
-//for now static later when we have dynamic content dynamic
+import { projects } from "@/lib/data/projects/projectsData";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://notbyte.com";
 
@@ -11,8 +12,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  const projectsUrls = projects.map((project) => {
+    return {
+      url: `${baseUrl}/projects/${project.id}`,
+      lastModified: new Date(),
+    };
+  });
+
   return [
     ...profilesUrls,
+    ...projectsUrls,
     {
       url: baseUrl,
       lastModified: new Date(),

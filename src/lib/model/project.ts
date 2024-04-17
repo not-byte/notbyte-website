@@ -1,4 +1,7 @@
+import { SmallProfile } from "./profile";
+
 export interface SmallProject {
+  id: number;
   title: string;
   description: string;
   imageUrl: string;
@@ -6,17 +9,21 @@ export interface SmallProject {
   status: Status;
 }
 
-interface Milestone {
+export interface Collaborator extends SmallProfile {
+  roles: Role[];
+}
+
+interface Role {
+  name: string;
+  color: "purple" | "blue" | "yellow" | "green";
+}
+
+export interface Milestone {
   name: string;
   date: string; // Ideally, dates should be in ISO format (e.g., "YYYY-MM-DD")
 }
 
-interface Collaborator {
-  name: string;
-  role: string;
-}
-
-interface Feedback {
+export interface Feedback {
   from: string;
   text: string;
 }
@@ -26,6 +33,7 @@ export interface ProjectData {
   title: string;
   description: string;
   imageUrl: string;
+  bannerUrl: string;
   tags: string[];
   creationDate: string; // Format: "YYYY-MM-DD"
   location: string;

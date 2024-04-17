@@ -1,17 +1,22 @@
 import React from "react";
-import { AnimatedCard } from "./AnimatedCard";
 import { SmallProfile } from "@/lib/model/profile";
-import ProfileCardServer from "./ProfileCardServer";
+import { AnimationWrapper } from "./AnimatedCard";
+import ProfileCard from "./content";
 
-export const ProfileWrapper = ({ profiles }: { profiles: SmallProfile[] }) => {
+type Props<T> = {
+  profiles: T[];
+};
+
+const ProfileWrapper = <T extends SmallProfile>({ profiles }: Props<T>) => {
   return (
     <>
       {profiles.map((profile, index: number) => (
-        <AnimatedCard
-          key={index}
-          ProfileCard={<ProfileCardServer profile={profile} />}
-        />
+        <AnimationWrapper key={index}>
+          <ProfileCard profile={profile} />
+        </AnimationWrapper>
       ))}
     </>
   );
 };
+
+export default ProfileWrapper;

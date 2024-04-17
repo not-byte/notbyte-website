@@ -23,7 +23,6 @@ const useResponsiveRootMargin = () => {
     const updateRootMargin = () => {
       const width = window.innerWidth;
       if (width < 768) {
-        // Example breakpoint for mobile devices
         setRootMargin("-50px 0px");
       } else {
         setRootMargin("-100px 0px");
@@ -39,7 +38,9 @@ const useResponsiveRootMargin = () => {
   return rootMargin;
 };
 
-const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
+type Props = { children: ReactNode; heading: ReactNode };
+
+const About = ({ children, heading }: Props) => {
   const controls = useAnimation();
   const rootMargin = useResponsiveRootMargin(); // Using custom hook
   const [ref, inView] = useInView({
@@ -55,9 +56,7 @@ const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
 
   return (
     <>
-      <h1 className="text-5xl wqhd:text-7xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
-        Meet our team!
-      </h1>
+      {heading}
 
       <motion.div
         ref={ref}
@@ -66,7 +65,7 @@ const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
         initial="hidden"
         animate={controls}
       >
-        {ProfileWrapper}
+        {children}
       </motion.div>
     </>
   );

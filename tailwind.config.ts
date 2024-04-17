@@ -91,7 +91,7 @@ const config: Config = {
 
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),
-    plugin(function ({ addComponents }: { addComponents: any }) {
+    plugin(function ({ addComponents }) {
       addComponents({
         ".chipped-corner": {
           position: "relative",
