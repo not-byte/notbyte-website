@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import Link from "next/link";
 import { Button } from "@/UI/Button";
-import ThemeSwitch from "../ThemeSwitch-debug";
+import ThemeSwitch from "../shared/ThemeSwitch-debug";
 import Dialog from "@/UI/Dialog";
 import { onClose, onOk } from "./actions";
 import { Contact } from "./Contact";

@@ -3,6 +3,7 @@
 import React, { ReactNode, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import useResponsiveRootMargin from "@/hooks/responsiveRootMargin";
 
 const containerVariants = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -13,29 +14,6 @@ const containerVariants = {
       staggerChildren: 0.2,
     },
   },
-};
-
-// Custom hook for responsive rootMargin
-const useResponsiveRootMargin = () => {
-  const [rootMargin, setRootMargin] = useState("-100px 0px");
-
-  useEffect(() => {
-    const updateRootMargin = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setRootMargin("-50px 0px");
-      } else {
-        setRootMargin("-100px 0px");
-      }
-    };
-
-    window.addEventListener("resize", updateRootMargin);
-    updateRootMargin(); // Initialize on mount
-
-    return () => window.removeEventListener("resize", updateRootMargin);
-  }, []);
-
-  return rootMargin;
 };
 
 type Props = { children: ReactNode; heading: ReactNode };

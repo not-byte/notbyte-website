@@ -1,7 +1,7 @@
 "use client";
 
 import { shimmer, toBase64 } from "@/UI/shimmer";
-import CardRedirector from "@/app/cardRedirector";
+import CardRedirector from "@/components/shared/cardRedirector";
 import { SmallProfile } from "@/lib/model/profile";
 import { motion } from "framer-motion";
 import Image from "next/image";

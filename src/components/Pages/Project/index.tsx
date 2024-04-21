@@ -6,9 +6,6 @@ import { Collabarators } from "./components/Collaborators";
 import { Milestones } from "./components/Milestones";
 import { Banner } from "./components/Banner";
 
-// Assuming the Status enum and other interfaces are in a separate file, import them
-// import { Status, ProjectData, Milestone, Collaborator } from './path-to-your-interfaces-file';
-
 interface ProjectDetailsProps {
   project: ProjectData;
 }
@@ -16,8 +13,10 @@ interface ProjectDetailsProps {
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
   return (
     <div className="w-[70vw] mx-auto px-6 py-8 sm:px-8 font-sans">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">{project.title}</h1>
       <Banner description={project.description} bannerUrl={project.bannerUrl} />
+      <h1 className="text-7xl font-bold text-black dark:text-white mb-6 mt-[5vh]">
+        {project.title}
+      </h1>
       <p className="text-xl text-black dark:text-white mb-6 mt-[5vh]">
         {project.description}
       </p>
