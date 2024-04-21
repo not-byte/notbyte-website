@@ -1,13 +1,15 @@
 import React from "react";
-import { Profile } from "@/lib/model/profile";
+import { Experience } from "@/lib/model/profile";
 import { AnimatedExperience } from "./AnimatedExperience";
 import { ExperienceWrapper } from "./ExperienceWrapper";
 
 interface ExperienceProps {
-  profile: Profile;
+  experience: Experience[];
 }
 
-export const ExperienceSection: React.FC<ExperienceProps> = ({ profile }) => {
+export const ExperienceSection: React.FC<ExperienceProps> = ({
+  experience,
+}) => {
   return (
     <section className="w-full py-8 overflow-hidden mt-[25vh]">
       <div className="max-w-screen-xl mx-auto px-4 lg:px-8">
@@ -15,7 +17,7 @@ export const ExperienceSection: React.FC<ExperienceProps> = ({ profile }) => {
           Experience
         </h1>
         <AnimatedExperience
-          ExperienceWrapper={<ExperienceWrapper profile={profile} />}
+          ExperienceWrapper={<ExperienceWrapper experience={experience} />}
         />
       </div>
     </section>

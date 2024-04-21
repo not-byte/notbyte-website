@@ -1,12 +1,16 @@
 import React from "react";
 import { ExperienceItem } from "./ExperienceItem/AnimationWrapper";
 import { ExperienceItemServer } from "./ExperienceItem/ExperienceItemServer";
-import { Profile } from "@/lib/model/profile";
+import { Experience, Profile } from "@/lib/model/profile";
 
-export const ExperienceWrapper = ({ profile }: { profile: Profile }) => {
+export const ExperienceWrapper = ({
+  experience,
+}: {
+  experience: Experience[];
+}) => {
   return (
     <>
-      {profile.experience.map((exp, index) => (
+      {experience.map((exp, index) => (
         <ExperienceItem
           key={index}
           index={index}

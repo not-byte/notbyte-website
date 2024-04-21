@@ -1,4 +1,6 @@
+import { ReactNode } from "react";
 import { SmallProfile } from "./profile";
+import { IconType } from "react-icons/lib";
 
 export interface SmallProject {
   id: number;
@@ -15,12 +17,16 @@ export interface Collaborator extends SmallProfile {
 
 interface Role {
   name: string;
-  color: "purple" | "blue" | "yellow" | "green";
+  color: "purple" | "blue" | "red" | "green";
 }
 
 export interface Milestone {
   name: string;
   date: string; // Ideally, dates should be in ISO format (e.g., "YYYY-MM-DD")
+  description: string;
+  tags: string[];
+  status: Status;
+  relatedLinks?: string[];
 }
 
 export interface Feedback {

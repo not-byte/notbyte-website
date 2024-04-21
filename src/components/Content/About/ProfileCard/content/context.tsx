@@ -4,8 +4,8 @@ import { createContext, useContext } from "react";
 //setting this as any is a hack to provide extended SmallProfile further in the code
 const ProfileContext = createContext<any>(null);
 
-export const useProfileContext = <K extends SmallProfile>(): K => {
-  const context = useContext<K>(ProfileContext);
+export const useProfileContext = <T extends SmallProfile>(): T => {
+  const context = useContext<T>(ProfileContext);
   if (!context) {
     throw new Error("Profile context failed");
   }

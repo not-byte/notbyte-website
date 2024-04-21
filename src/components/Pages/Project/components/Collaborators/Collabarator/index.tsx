@@ -1,3 +1,5 @@
+"use client";
+
 import ProfileCard from "@/components/Content/About/ProfileCard/content";
 import { Collaborator } from "@/lib/model/project";
 
