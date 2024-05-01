@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
-export const ProfileShell = () => {
+export const ProfileFallback = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 text-center ">
       <div className="max-w-md w-full  rounded-lg shadow-md p-8 ">

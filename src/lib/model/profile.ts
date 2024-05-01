@@ -19,15 +19,6 @@ export interface Profile {
   certifications?: Certification[];
 }
 
-export interface SmallProfile {
-  id: string;
-  socials: Social[];
-  image: string;
-  description: string;
-  name: string;
-  position: string;
-}
-
 export interface Award {
   title: string;
   date: Date;
@@ -62,4 +53,13 @@ export interface PersonalInfo {
   dob?: Date;
   nationality?: string;
   languages: string[];
+}
+
+export interface SmallProfile {
+  id: string;
+  socials: Social[];
+  image: string;
+  description: string;
+  name: string;
+  position: string;
 }

@@ -1,8 +1,9 @@
 "use client";
 
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import useResponsiveRootMargin from "@/hooks/responsiveRootMargin";
 
 const containerVariants = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -15,31 +16,9 @@ const containerVariants = {
   },
 };
 
-// Custom hook for responsive rootMargin
-const useResponsiveRootMargin = () => {
-  const [rootMargin, setRootMargin] = useState("-100px 0px");
+type Props = { children: ReactNode; heading: ReactNode };
 
-  useEffect(() => {
-    const updateRootMargin = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        // Example breakpoint for mobile devices
-        setRootMargin("-50px 0px");
-      } else {
-        setRootMargin("-100px 0px");
-      }
-    };
-
-    window.addEventListener("resize", updateRootMargin);
-    updateRootMargin(); // Initialize on mount
-
-    return () => window.removeEventListener("resize", updateRootMargin);
-  }, []);
-
-  return rootMargin;
-};
-
-const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
+const About = ({ children, heading }: Props) => {
   const controls = useAnimation();
   const rootMargin = useResponsiveRootMargin(); // Using custom hook
   const [ref, inView] = useInView({
@@ -55,9 +34,7 @@ const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
 
   return (
     <>
-      <h1 className="text-5xl wqhd:text-7xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
-        Meet our team!
-      </h1>
+      {heading}
 
       <motion.div
         ref={ref}
@@ -66,7 +43,7 @@ const About = ({ ProfileWrapper }: { ProfileWrapper: ReactNode }) => {
         initial="hidden"
         animate={controls}
       >
-        {ProfileWrapper}
+        {children}
       </motion.div>
     </>
   );

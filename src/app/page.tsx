@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
 import About from "@/components/Content/About";
-import { Chakra_Petch } from "next/font/google";
-import { mockProfileData } from "@/lib/constants/smallProfileData";
-import { ProfileWrapper } from "@/components/Content/About/ProfileCard/ProfileWrapper";
+import ProfileWrapper from "@/components/Content/About/ProfileCard/ProfileWrapper";
 import Timeline from "@/components/Content/Plans";
 import FaqSection from "@/components/Content/FAQ";
+import ProjectSection from "@/components/Content/Projects";
+import { Chakra_Petch } from "next/font/google";
+import { smallProfiles } from "@/lib/data/profile/smallProfileData";
 
 const chakra = Chakra_Petch({
   weight: ["700"],
@@ -31,8 +32,17 @@ export default function Home() {
         </h1>
       </div>
       <Header />
-      <About ProfileWrapper={<ProfileWrapper profiles={mockProfileData} />} />
+      <About
+        heading={
+          <h2 className="text-5xl wqhd:text-7xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
+            Meet our team!
+          </h2>
+        }
+      >
+        <ProfileWrapper profiles={smallProfiles} />
+      </About>
       <Timeline />
+      <ProjectSection />
       <FaqSection />
     </main>
   );

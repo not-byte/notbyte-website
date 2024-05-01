@@ -1,5 +1,5 @@
 //opengraph image creation for dynamic metadata
-import { profiles } from "@/lib/constants/profileData";
+import { profiles } from "@/lib/data/profile/profileData";
 import Image from "next/image";
 import { ImageResponse } from "next/og";
 
