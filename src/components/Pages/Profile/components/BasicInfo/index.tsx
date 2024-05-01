@@ -4,7 +4,7 @@ import { SocialIcon } from "react-social-icons";
 
 export const BasicInfoSection = async ({ profile }: { profile: Profile }) => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <h1 className="text-2xl md:text-3xl lg:text-4xl wqhd:text-5xl font-extrabold dark:text-white text-gray-800 text-center md:text-left">
         {profile.name}
       </h1>

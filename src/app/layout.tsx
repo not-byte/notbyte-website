@@ -78,7 +78,7 @@ export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: "notByte",
-    template: `%s | notByte`,
+    template: `notByte | %s`,
   },
   description: "Unleash the digital future, with our Web Alchemy.",
   keywords:
@@ -106,6 +106,9 @@ export default function RootLayout({
       <body className="bg-white dark:bg-night overflow-x-hidden">
         <Providers>
           <Navbar />
+          {/* not yet used, will be used for some external api calls */}
+          <div id="progress_bar"></div>
+          <div id="dialog"></div>
           {children}
           <Toaster position="bottom-right" reverseOrder={false} />
           <Footer />

@@ -21,7 +21,7 @@ export const SkillsSection = ({ awards }: ProfileSummaryProps) => {
       </h2>
 
       <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full ">
-        {awards.map((award, index) => (
+        {awards?.map((award, index) => (
           <div
             key={index}
             className="flex flex-col justify-between bg-colors dark:bg-darkModeColors rounded-lg p-2 sm:p-3 md:p-4 lg:p-5 hover:scale-105 transition-transform ease-in-out duration-300 sm:w-5/6 md:w-3/4 lg:w-2/3 xl:w-[48%]   mx-auto"

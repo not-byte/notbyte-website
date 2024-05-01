@@ -32,7 +32,7 @@ const ProfileComp = ({
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-hidden">
       <div className="flex flex-col items-center sm:flex-row  justify-start p-4 sm:p-6 md:p-8 lg:p-10 w-full h-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white 2xl:pt-[20vh]">
         <motion.div
           className={styles.block}

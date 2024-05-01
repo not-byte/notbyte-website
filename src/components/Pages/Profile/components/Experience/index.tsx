@@ -11,7 +11,7 @@ export const ExperienceSection: React.FC<ExperienceProps> = ({
   experience,
 }) => {
   return (
-    <section className="w-full py-8 overflow-hidden mt-[25vh]">
+    <section className="w-full py-8 overflow-hidden mt-[25vh] overflow-y-hidden">
       <div className="max-w-screen-xl mx-auto px-4 lg:px-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl wqhd:text-7xl 4k:text-7xl font-bold text-center text-gray-900 dark:text-white mb-8">
           Experience

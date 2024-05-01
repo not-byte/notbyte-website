@@ -1,7 +1,6 @@
 import React from "react";
 import { ProjectData } from "@/lib/model/project";
 import { Gallery } from "./components/Gallery";
-import { FeedbackSec } from "./components/Feedback";
 import { Collabarators } from "./components/Collaborators";
 import { Milestones } from "./components/Milestones";
 import { Banner } from "./components/Banner";
@@ -46,7 +45,6 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
       <Milestones milestones={project.milestones} />
       <Collabarators collaborators={project.collaborators} />
       <Gallery gallery={project.gallery} />
-      {project.feedback && <FeedbackSec feedback={project.feedback} />}
     </div>
   );
 };

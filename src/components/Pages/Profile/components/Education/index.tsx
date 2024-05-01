@@ -10,7 +10,7 @@ export const EducationSection = ({
   educations: Education[];
 }) => {
   return (
-    <div className="container mx-auto px-4 lg:px-8">
+    <div className="container mx-auto px-4 lg:px-8 overflow-hidden">
       <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl wqhd:text-7xl 4k:text-7xl  font-bold text-center text-black dark:text-white mb-10">
         Education
       </h1>

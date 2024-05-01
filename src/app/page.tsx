@@ -34,9 +34,9 @@ export default function Home() {
       <Header />
       <About
         heading={
-          <h1 className="text-5xl wqhd:text-7xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
+          <h2 className="text-5xl wqhd:text-7xl font-semibold text-gray-800 dark:text-gray-200 mb-[5vh]">
             Meet our team!
-          </h1>
+          </h2>
         }
       >
         <ProfileWrapper profiles={smallProfiles} />

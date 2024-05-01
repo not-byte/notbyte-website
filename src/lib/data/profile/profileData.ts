@@ -118,4 +118,74 @@ export const profiles: Profile[] = [
       },
     ],
   },
+  {
+    id: "Lukasz_Ganczaryk",
+    name: "Łukasz Ganczaryk",
+    position: "Social Media Manager, Software Tester",
+    image: "/lukasz.png",
+    longDescription:
+      "Ambitious software developer specialized in full-stack web applications, I am deeply passionate about continuous learning and keenly follow industry trends to stay ahead. My skill set spans across various full-stack technologies, underpinned by a strong grasp of data structures and proficiency in lower-level programming languages like C++. I thrive in dynamic environments, eagerly embracing new challenges to push the boundaries of what's possible. My interest doesn't stop at coding; I'm also fascinated by physics and mathematics, aiming to intertwine these disciplines with technology to create innovative solutions. I see immense potential in merging computational physics and mathematical models with software development to tackle complex problems. Eager to contribute to a team that prioritizes innovation, collaboration, and a progressive outlook, I am committed to leveraging my skills and interests to drive impactful projects at the nexus of technology and science.",
+    shortDescription:
+      "Full-stack software developer with a passion for continuous learning and innovation in web applications.",
+    socials: [
+      {
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/łukasz-ganczaryk-977924242/",
+      },
+      {
+        icon: "GitHub",
+        url: "https://github.com/nozowymrozon",
+      },
+    ],
+    contact: {
+      email: "lukasz@notbyte.com",
+      phone: "736814253",
+      address: "Knurow, Poland",
+    },
+    education: [
+      {
+        institution: "Politechnika Śląska",
+        degree: "Bachelor of Computer Science",
+        fieldOfStudy: "Information and Communication Technology",
+        description:
+          "Politechnika Śląska (Silesian University of Technology) in Gliwice is a well-regarded institution with a strong focus on engineering, technology, and science. It is known for its innovative research, strong academic programs, and significant contributions to science and industry. The university is involved in various scientific and educational activities, hosting events like conferences and workshops to foster knowledge exchange and development",
+        startDate: new Date("2023-10-01"),
+        endDate: null,
+      },
+      {
+        institution: "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+        degree: "High School Diploma",
+        fieldOfStudy: "Computer Science", // Field of study not specified for high school
+        startDate: new Date("2019-09-01"),
+        description: `Zespół Szkół Techniczno-Informatycznych in Gliwice (ZSTI Gliwice) is recognized as a "Złota Szkoła 2024" (Golden School 2024), ranking second place in the Silesian Voivodeship. The school prides itself on teaching not just for educational purposes but for life skills. This achievement highlights the school's commitment to providing high-quality education and preparing students for their future careers and life challenges. For more detailed information about the school and its achievements, you can visit their website.`,
+        endDate: new Date("2023-05-31"),
+      },
+    ],
+    experience: [
+      {
+        company: "notByte",
+        position: "Social Media Manager",
+        startDate: new Date("2024-01-01"),
+        endDate: null,
+        description:
+          "Crafting engaging content to make sure our brands' voice is heard and developing solutions to drive brand awareness and engagement",
+      },
+      {
+        company: "Alfa-System",
+        position: "Intern",
+        startDate: new Date("2022-04-01"),
+        endDate: new Date("2022-05-31"),
+        description:
+          "Gained practical experience working with computer networks, Linux operating system and networking hardware.",
+      },
+      {
+        company: "PC-Store",
+        position: "Intern",
+        startDate: new Date("2021-05-01"),
+        endDate: new Date("2021-06-30"),
+        description:
+          "Troubleshooted hardware issues and performed repairs and upgrades, along with building PCs from scratch",
+      },
+    ],
+  },
 ];

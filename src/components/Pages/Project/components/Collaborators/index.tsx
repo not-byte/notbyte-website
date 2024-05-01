@@ -8,7 +8,7 @@ type Props = {
 };
 export const Collabarators = ({ collaborators }: Props) => {
   return (
-    <div className="mt-[25vh]">
+    <div className="mt-[30vh]">
       {" "}
       <h2 className="text-7xl text-black dark:text-white  text-center font-semibold ">
         Collaborators

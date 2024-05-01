@@ -30,7 +30,7 @@ export const smallProfiles: SmallProfile[] = [
   },
 
   {
-    id: "Lukasz_Ganaczaryk",
+    id: "Lukasz_Ganczaryk",
     name: "Łukasz",
     socials: [
       {
@@ -46,7 +46,7 @@ export const smallProfiles: SmallProfile[] = [
         url: "https://twitter.com/LinekPawe",
       },
     ],
-    image: "/logo-black.png",
+    image: "/lukasz.png",
     description:
       "siema tutaj papek, siema tutaj papek ,siema tutaj papek ,siema tutaj papek ,siema tutaj papek siema tutaj papek",
     position: "Software engineer, CEO",

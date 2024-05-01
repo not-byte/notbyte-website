@@ -11,20 +11,49 @@ import { EducationSectionAnimationWrapper } from "@/components/Pages/Profile/com
 import { EducationSection } from "@/components/Pages/Profile/components/Education";
 import { ProfileFallback } from "@/components/Pages/Profile/profileShell";
 
-interface PageProps {
+interface Props {
   params: {
     profileID: string;
   };
 }
 
-//the reason we are passing components as children is to render them on the server, for example basicInfo is not rendered on the server but infoServer is,
-const ProfilePage = ({ params }: PageProps) => {
+export async function generateStaticParams() {
+  return profiles.map((profile) => ({
+    profileID: profile.id,
+  }));
+}
+
+export async function generateMetadata({ params }: Props) {
+  const id = params.profileID;
+  const profile = profiles.find((item) => item.id === id);
+
+  if (!profile) {
+    return {
+      title: "profile not found",
+      description: "no description beacuse profile was not found",
+    };
+  }
+
+  return {
+    title: {
+      default: `profile of ${profile.name}`,
+      template: `%s | Profile of ${profile.name}`,
+    },
+    description: profile.shortDescription,
+    alternates: {
+      canonical: `/profiles/${profile.id}`,
+    },
+  };
+}
+
+const ProfilePage = ({ params }: Props) => {
   const id = params.profileID;
   const profile = profiles.find((item) => item.id === id);
 
   if (!profile) {
     return <ProfileFallback />;
   }
+
   return (
     <ProfileComp
       profile={profile}
@@ -40,9 +69,13 @@ const ProfilePage = ({ params }: PageProps) => {
         </EducationSectionAnimationWrapper>
       }
       ProfileSummary={
-        <SkillsSectionAnimationWrapper>
-          <SkillsSection awards={profile.awards!} />
-        </SkillsSectionAnimationWrapper>
+        <>
+          {profile.awards ? (
+            <SkillsSectionAnimationWrapper>
+              <SkillsSection awards={profile.awards!} />
+            </SkillsSectionAnimationWrapper>
+          ) : null}
+        </>
       }
     />
   );

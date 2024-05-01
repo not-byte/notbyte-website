@@ -71,9 +71,9 @@ interface TimelineProps {}
 const Timeline: React.FC<TimelineProps> = () => {
   return (
     <div className="relative container mx-auto px-4 py-8 overflow-hidden mt-[30vh] ">
-      <h1 className="text-5xl wqhd:text-7xl pb-20 text-center dark:text-white text-black font-semibold">
+      <h2 className="text-5xl wqhd:text-7xl pb-20 text-center dark:text-white text-black font-semibold">
         Future development plans
-      </h1>
+      </h2>
       <div className="absolute sm:opacity-0 md:opacity-100 md:left-[50%] transform -translate-x-[50%] w-[1px] bg-black dark:bg-grey-darkest h-full z-0"></div>
 
       <div className="space-y-8 flex flex-col items-center py-8 ">
