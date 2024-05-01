@@ -4,7 +4,7 @@ import React from "react";
 
 interface Props {
   params: {
-    projectID: number;
+    projectID: string;
   };
 }
 
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: {
-      default: `project ${project.title}`,
+      default: `${project.title} project`,
       template: `%s | project ${project.title}`,
     },
     description: project.description,
@@ -38,10 +38,12 @@ export async function generateMetadata({ params }: Props) {
 }
 
 const ProjectPage = ({ params }: Props) => {
-  if (!projects[params.projectID - 5]) {
+  const project = projects.find((project) => project.id === params.projectID);
+
+  if (!project) {
     return <></>;
   }
-  return <ProjectDetails project={projects[params.projectID - 5]} />;
+  return <ProjectDetails project={project} />;
 };
 
 export default ProjectPage;

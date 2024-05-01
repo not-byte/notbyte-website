@@ -1,9 +1,7 @@
-import { ReactNode } from "react";
 import { SmallProfile } from "./profile";
-import { IconType } from "react-icons/lib";
 
 export interface SmallProject {
-  id: number;
+  id: string;
   title: string;
   description: string;
   imageUrl: string;
@@ -35,7 +33,7 @@ export interface Feedback {
 }
 
 export interface ProjectData {
-  id: number;
+  id: string;
   title: string;
   description: string;
   imageUrl: string;

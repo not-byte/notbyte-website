@@ -3,8 +3,8 @@ import { smallProfiles } from "../profile/smallProfileData";
 
 export const projects: ProjectData[] = [
   {
-    id: 5,
-    title: "Ocean at Dusk",
+    id: "tournament",
+    title: "Tournament",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices augue ut imperdiet aliquam. Mauris enim velit, sollicitudin id magna laoreet, accumsan interdum velit. Proin iaculis posuere luctus. Duis dignissim eros turpis, in gravida turpis condimentum nec. Cras fermentum libero quis arcu tempor semper. Nulla porttitor velit vel libero egestas ullamcorper. Integer faucibus in risus nec porta. Ut at placerat odio, at interdum mauris. Fusce ullamcorper ornare est sed placerat. Proin quis aliquam arcu. Cras in condimentum orci, id auctor dui. Phasellus dignissim laoreet tellus, et suscipit neque auctor non. Sed ut iaculis nisi. Nullam convallis sem vel nulla cursus, at venenatis nulla laoreet Vestibulum imperdiet ligula ut risus aliquam, in malesuada tortor mollis. Pellentesque ac arcu sed ex porttitor hendrerit. Pellentesque justo nisi, blandit vitae vestibulum sed, venenatis in nisl. Cras egestas justo eu interdum facilisis. Aenean maximus sodales enim ac suscipit. Nam facilisis lobortis arcu. Vivamus quis odio lacus. Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
     imageUrl: "/knury.jpg",
@@ -74,8 +74,8 @@ export const projects: ProjectData[] = [
     version: "1.0",
   },
   {
-    id: 6,
-    title: "Ocean at Dusk",
+    id: "post_manager",
+    title: "Post Manager",
     description:
       "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
     imageUrl: "/knury.jpg",
@@ -145,8 +145,8 @@ export const projects: ProjectData[] = [
     version: "1.0",
   },
   {
-    id: 7,
-    title: "Ocean at Dusk",
+    id: "notByte_website",
+    title: "notByte website",
     description:
       "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
     imageUrl: "/knury.jpg",
@@ -216,7 +216,7 @@ export const projects: ProjectData[] = [
     version: "1.0",
   },
   {
-    id: 8,
+    id: "Ocean_at_Dusk",
     title: "Ocean at Dusk",
     description:
       "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",

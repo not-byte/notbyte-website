@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 // Function to determine the x-axis offset based on the viewport width
 const getXOffset = () => {
+  if (!window) return 300;
   const width = window.innerWidth;
   if (width < 768) {
     return 300;

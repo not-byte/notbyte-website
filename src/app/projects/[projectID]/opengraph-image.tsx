@@ -6,7 +6,7 @@ import Image from "next/image";
 
 interface PageProps {
   params: {
-    projectID: number;
+    projectID: string;
   };
 }
 

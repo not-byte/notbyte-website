@@ -4,8 +4,8 @@ import { SmallProject, Status } from "@/lib/model/project";
 
 export const smallProjects: SmallProject[] = [
   {
-    id: 5,
-    title: "Ocean at Dusk",
+    id: "tournament",
+    title: "Tournament",
     description:
       "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
     imageUrl: "/knury.jpg",
@@ -13,8 +13,8 @@ export const smallProjects: SmallProject[] = [
     status: Status.Completed,
   },
   {
-    id: 6,
-    title: "Dancing Dunes",
+    id: "post_manager",
+    title: "Post Manager",
     description:
       "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
     imageUrl: "/knury.jpg",
@@ -22,8 +22,8 @@ export const smallProjects: SmallProject[] = [
     status: Status.Completed,
   },
   {
-    id: 7,
-    title: "Dancing Dunes",
+    id: "notByte_website",
+    title: "notByte website",
     description:
       "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
     imageUrl: "/knury.jpg",
@@ -31,8 +31,8 @@ export const smallProjects: SmallProject[] = [
     status: Status.Completed,
   },
   {
-    id: 8,
-    title: "Dancing Dunes",
+    id: "Ocean_at_Dusk",
+    title: "Ocean at Dusk",
     description:
       "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
     imageUrl: "/knury.jpg",
