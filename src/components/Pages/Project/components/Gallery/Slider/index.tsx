@@ -18,7 +18,12 @@ export const SliderComp = ({ gallery }: SliderProps) => {
     <>
       <Slider {...SLIDESHOW_SETTINGS}>
         {gallery.map((image, index) => (
-          <SliderItem key={index} image={image} />
+          <SliderItem
+            key={index}
+            currentImage={image}
+            images={gallery}
+            currentIndex={index}
+          />
         ))}
       </Slider>
     </>
@@ -26,23 +31,28 @@ export const SliderComp = ({ gallery }: SliderProps) => {
 };
 
 type SliderItemProps = {
-  image: string;
+  images: string[];
+  currentImage: string;
+  currentIndex: number;
 };
 
-export const SliderItem = ({ image }: SliderItemProps) => {
+export const SliderItem = ({
+  images,
+  currentImage,
+  currentIndex,
+}: SliderItemProps) => {
   const [isOpen, setOpen] = useState<boolean>(false);
-  const click = () => {
+
+  const switchGalleryItemOpenState = () => {
     setOpen(!isOpen);
   };
 
   return (
-    <div
-      className="px-4 hover:scale-95 transition-all duration-300"
-      onClick={click}
-    >
+    <div className="px-4 hover:scale-95 transition-all duration-300">
       <div className="overflow-hidden shadow-lg cursor-pointer rounded-lg min-h-[30vh] relative ">
         <Image
-          src={image}
+          onClick={switchGalleryItemOpenState}
+          src={currentImage}
           layout="fill"
           objectFit="cover"
           alt={`project gallery item `}
@@ -52,7 +62,13 @@ export const SliderItem = ({ image }: SliderItemProps) => {
           )}`}
         />
       </div>
-      {isOpen ? <GalleryDialogCompoent close={click} image={image} /> : null}
+      {isOpen ? (
+        <GalleryDialogCompoent
+          close={switchGalleryItemOpenState}
+          imagesUrls={images}
+          currentIndex={currentIndex}
+        />
+      ) : null}
     </div>
   );
 };

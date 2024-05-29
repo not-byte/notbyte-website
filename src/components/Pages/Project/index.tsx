@@ -11,7 +11,7 @@ interface ProjectDetailsProps {
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
   return (
-    <div className="w-[70vw] mx-auto px-6 py-8 sm:px-8 font-sans">
+    <div className="sm:w-[90vw] md:w-[70vw] mx-auto px-6 py-8 sm:px-8 font-sans">
       <Banner description={project.description} bannerUrl={project.bannerUrl} />
       <h1 className="text-7xl font-bold text-black dark:text-white mb-6 mt-[5vh]">
         {project.title}
