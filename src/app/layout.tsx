@@ -86,14 +86,6 @@ export const metadata = {
   icons: icons,
   authors: authors,
   manifest: "/site.webmanifest",
-  structuredData: `{
-    "@context": "http://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "notByte",
-    "description": "A platform dedicated to revolutionizing web development through digital innovation and cutting-edge tech solutions.",
-    "applicationCategory": "WebApplication",
-    "operatingSystem": "All"
-  }`,
 };
 
 export default function RootLayout({

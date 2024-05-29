@@ -8,7 +8,7 @@ type Props = {
 };
 export const Milestones = ({ milestones }: Props) => {
   return (
-    <div className="mt-[30vh]">
+    <div className="mt-[30vh] sm:w-[100%] flex justify-center flex-col items-center ">
       <h2 className="text-7xl mb-20 text-black dark:text-white text-center font-semibold">
         Milestones
       </h2>
