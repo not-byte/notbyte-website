@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { create } from "./actions";
+import { create } from "../../lib/server-actions/navbarContact";
 import { ContactSchema } from "@/lib/validators/contact";
 import toast from "react-hot-toast";
 import DialogContext from "@/UI/Dialog/dialogContext";
@@ -40,12 +40,12 @@ export const Contact = () => {
     <form
       action={createContact}
       id="contactForm"
-      className="w-full max-w-lg mx-auto"
+      className="w-full  mx-auto p-20"
     >
       <div className="input-group mb-4">
         <label
           htmlFor="name"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          className="block text-md font-medium text-gray-700 dark:text-gray-300 mb-2"
         >
           Name
         </label>
@@ -54,13 +54,13 @@ export const Contact = () => {
           id="name"
           required
           name="name"
-          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white"
+          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:bg-darkModeColors dark:focus:border-blue-300"
         />
       </div>
       <div className="input-group mb-4">
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          className="block text-md  font-medium text-gray-700 dark:text-gray-300"
         >
           Email
         </label>
@@ -69,22 +69,22 @@ export const Contact = () => {
           id="email"
           name="email"
           required
-          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white"
+          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:bg-darkModeColors dark:focus:border-blue-300"
         />
       </div>
       <div className="input-group mb-4">
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+          className="block text-md  font-medium text-gray-700 dark:text-gray-300"
         >
           Message
         </label>
         <textarea
           id="message"
           name="message"
-          rows={4}
+          rows={8}
           required
-          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white"
+          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:bg-darkModeColors dark:focus:border-blue-300"
         ></textarea>
       </div>
       <div className="form-actions flex justify-end">

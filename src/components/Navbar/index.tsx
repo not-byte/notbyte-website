@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/UI/Button";
 import ThemeSwitch from "../shared/ThemeSwitch-debug";
 import Dialog from "@/UI/Dialog";
-import { onClose, onOk } from "./actions";
+import { onClose, onOk } from "../../lib/server-actions/navbarContact";
 import { Contact } from "./Contact";
 import Logo from "./Logo";
 
@@ -21,7 +21,12 @@ const Navbar = () => {
       <div className="flex justify-center gap-8 items-center">
         <ThemeSwitch />
         <Button className="bg-colors text-lg  rounded-none">
-          <Link href="/?showDialog=y">
+          <Link
+            href={{
+              pathname: "",
+              query: { showDialog: "y" },
+            }}
+          >
             <span>get in touch</span>
           </Link>
         </Button>
