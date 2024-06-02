@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
               </button>
             </form>
             <p className="text-grey text-sm mt-4">
-              Subscribe to our newsletter for the latest updates.
+              Subscribe to receive our newest updates.
             </p>
           </div>
         </div>

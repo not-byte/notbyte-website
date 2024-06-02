@@ -1,4 +1,5 @@
 "use server";
+
 import { ContactSchema } from "@/lib/validators/contact";
 
 export async function onClose() {
