@@ -29,24 +29,6 @@ export const smallProfiles: SmallProfile[] = [
     position: "Software engineer, CEO",
   },
   {
-    id: "Lukasz_Ganczaryk",
-    name: "Łukasz",
-    socials: [
-      {
-        icon: "LinkedIn",
-        url: "https://www.linkedin.com/in/łukasz-ganczaryk-977924242/",
-      },
-      {
-        icon: "GitHub",
-        url: "https://github.com/nozowymrozon",
-      },
-    ],
-    image: "/lukasz.png",
-    description:
-      "Social media manager and software tester, dedicated to making sure everything runs smoothly.",
-    position: "Social media manager, tester",
-  },
-  {
     id: "Przemyslaw_Szymanski",
     name: "Przemysław",
     socials: [
@@ -77,5 +59,23 @@ export const smallProfiles: SmallProfile[] = [
     description:
       "Passionate and skilled web developer commited to continuously improving my knowledge and understanding of all things IT.",
     position: "CTO, Software Developer",
+  },
+  {
+    id: "Lukasz_Ganczaryk",
+    name: "Łukasz",
+    socials: [
+      {
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/łukasz-ganczaryk-977924242/",
+      },
+      {
+        icon: "GitHub",
+        url: "https://github.com/nozowymrozon",
+      },
+    ],
+    image: "/lukasz.png",
+    description:
+      "Social media manager and software tester, dedicated to making sure everything runs smoothly.",
+    position: "Social media manager, tester",
   },
 ];

@@ -92,121 +92,126 @@ const config: Config = {
       addUtilities(newUtilities, ["responsive", "hover"]);
     }),
     plugin(function ({ addComponents, theme }) {
-			// Creating class names for every position+size variant
-			let classList: string[] = []
-			const sizeChart = {
-				default: 2,
-				sm: 1,
-				lg: 4,
-				xl: 8,
-				xs: .5,
-				md: 1.5
-			}
-			const sizeList = Object.keys(sizeChart).slice(1)
-			const positionList = ["br", "bl", "tr", "tl"]
+      // Creating class names for every position+size variant
+      let classList: string[] = [];
+      const sizeChart = {
+        default: 2,
+        sm: 1,
+        lg: 4,
+        xl: 8,
+        xs: 0.5,
+        md: 1.5,
+      };
+      const sizeList = Object.keys(sizeChart).slice(1);
+      const positionList = ["br", "bl", "tr", "tl"];
 
-			positionList.forEach(position => {
-				let prefix = ".corner-"
-				classList.push(prefix+position)
-				sizeList.forEach(size => {
-					classList.push(`${prefix}${position}-${size}`)
-				})
-			})
+      positionList.forEach((position) => {
+        let prefix = ".corner-";
+        classList.push(prefix + position);
+        sizeList.forEach((size) => {
+          classList.push(`${prefix}${position}-${size}`);
+        });
+      });
 
-			const baseAfter = {
-				content: "''",
-				position: "absolute",
-				transform: "rotate(45deg)"
-			}
+      const baseAfter = {
+        content: "''",
+        position: "absolute",
+        transform: "rotate(45deg)",
+      };
 
-			function getStyle(after: any) {
-				return {
-					position: "relative",
-					overflow: "hidden",
-					boxSizing: "border-box",
-					"&::after": after
-				}
-			}
+      function getStyle(after: any) {
+        return {
+          position: "relative",
+          overflow: "hidden",
+          boxSizing: "border-box",
+          "&::after": after,
+        };
+      }
 
-			// Processing styling based on class params
-			function processArgs(position: any, sizing?: any) {
-				let sides = [ position[0] == 'b' ? "bottom" : "top", position[1] == 'r' ? "right" : "left" ]
-				let settings = {
-					width: "",
-					aspectRatio: "1/1",
-				}
-				
-				if(!sizing) // @ts-ignore
-					settings["width"] = `${sizeChart.default}rem`
-				else // @ts-ignore
-					settings["width"] = `${sizeChart[sizing]}rem`
+      // Processing styling based on class params
+      function processArgs(position: any, sizing?: any) {
+        let sides = [
+          position[0] == "b" ? "bottom" : "top",
+          position[1] == "r" ? "right" : "left",
+        ];
+        let settings = {
+          width: "",
+          aspectRatio: "1/1",
+        };
 
-				sides.forEach(el => {
-					if(!sizing) // @ts-ignore
-						settings[el] = `-${sizeChart.default/2}rem`
-					else // @ts-ignore
-						settings[el] = `-${sizeChart[sizing]/2}rem`
-				})
-
-				return settings
-			}
-
-			// Getting arguments from class params
-			function getArgs(className: any) {
-				let args: Array<string | null> = className.substring(8).split("-")
-				if(args.length == 1)
-					args.push(null)
-
-				return args
-			}
-
-			// Creating an object containing every combination of class name and styling
-			let processedClassList = {}
-			classList.forEach((className: any) => {
-				let args = getArgs(className)
-				let customAfter = processArgs(args[0], args[1])
+        if (!sizing)
+          // @ts-ignore
+          settings["width"] = `${sizeChart.default}rem`;
         // @ts-ignore
-				processedClassList[className] = getStyle({
-					...baseAfter,
-					...customAfter
-				})
-			})
+        else settings["width"] = `${sizeChart[sizing]}rem`;
 
-			function getBgColor(value: string) {
-				return {
-					"&::after": {
-						backgroundColor: value
-					}
-				}
-			}
+        sides.forEach((el) => {
+          if (!sizing)
+            // @ts-ignore
+            settings[el] = `-${sizeChart.default / 2}rem`;
+          // @ts-ignore
+          else settings[el] = `-${sizeChart[sizing] / 2}rem`;
+        });
 
-			// Creating class names and their values for every established color variant
-			let processedColorsList = {}
-			const themeColors = theme('colors')
-			if(themeColors) {
-				Object.entries(themeColors).forEach(entry => {
-					let prefix = ".corner-"
-					const key = entry[0]
-					const value = entry[1]
-					if(typeof themeColors[key] === 'object') {
-						Object.entries(value).forEach(entry2 => {
+        return settings;
+      }
+
+      // Getting arguments from class params
+      function getArgs(className: any) {
+        let args: Array<string | null> = className.substring(8).split("-");
+        if (args.length == 1) args.push(null);
+
+        return args;
+      }
+
+      // Creating an object containing every combination of class name and styling
+      let processedClassList = {};
+      classList.forEach((className: any) => {
+        let args = getArgs(className);
+        let customAfter = processArgs(args[0], args[1]);
+        // @ts-ignore
+        processedClassList[className] = getStyle({
+          ...baseAfter,
+          ...customAfter,
+        });
+      });
+
+      function getBgColor(value: string) {
+        return {
+          "&::after": {
+            backgroundColor: value,
+          },
+        };
+      }
+
+      // Creating class names and their values for every established color variant
+      let processedColorsList = {};
+      const themeColors = theme("colors");
+      if (themeColors) {
+        Object.entries(themeColors).forEach((entry) => {
+          let prefix = ".corner-";
+          const key = entry[0];
+          const value = entry[1];
+          if (typeof themeColors[key] === "object") {
+            Object.entries(value).forEach((entry2) => {
               // @ts-ignore
-							processedColorsList[`${prefix}${key}-${entry2[0]}`] = getBgColor(entry2[1])
-						})
-					} 
-					else // @ts-ignore
-						processedColorsList[prefix+key] = getBgColor(value)
+              processedColorsList[`${prefix}${key}-${entry2[0]}`] = getBgColor(
+                entry2[1]
+              );
+            });
+          } // @ts-ignore
+          else processedColorsList[prefix + key] = getBgColor(value);
 
-					processedColorsList
-				})
-			}
+          processedColorsList;
+        });
+      }
 
-			addComponents({
-				// Deconstructing class combinations inside this object
-				...processedClassList,
-				...processedColorsList,
-			});
-		}),
+      addComponents({
+        // Deconstructing class combinations inside this object
+        ...processedClassList,
+        ...processedColorsList,
+      });
+    }),
     plugin(function ({ addComponents }: { addComponents: any }) {
       addComponents({
         ".chipped-corner": {
