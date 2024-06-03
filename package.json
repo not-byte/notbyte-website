@@ -22,6 +22,7 @@
     "lucide-react": "^0.321.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
+    "nodemailer": "^6.9.13",
     "react": "^18",
     "react-chrono": "^2.6.1",
     "react-dom": "^18",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-slick": "^0.23.13",

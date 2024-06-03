@@ -36,6 +36,7 @@ export default function Header() {
     <NotByte
       durations={[5, 2, 2]}
       includeSurroundingSquare={true}
+      shineAfterFinish={true} 
       size={size}
       strokeWidth={2}
     />

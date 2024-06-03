@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { create } from "../../lib/server-actions/navbarContact";
+import { send } from "../../server-actions/navbarContact";
 import { ContactSchema } from "@/lib/validators/contact";
 import toast from "react-hot-toast";
 import DialogContext from "@/UI/Dialog/dialogContext";
@@ -28,11 +28,14 @@ export const Contact = () => {
       return;
     }
 
-    const res = await create(formData);
-    if (res?.error) {
-      toast.error(res.error);
+    const validatedForm = await send(formData);
+
+    if (validatedForm?.error) {
+      toast.error(validatedForm.message);
+      return;
     }
-    toast.success("Sucessfuly send form");
+
+    toast.success(validatedForm.message);
     closeDialog();
   };
 

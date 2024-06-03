@@ -13,11 +13,13 @@ export default function NotByte({
   strokeWidth,
   containerClassName,
   svgClassName,
+  shineAfterFinish = true,
 }: {
   durations: number[];
   size: number;
   includeSurroundingSquare: boolean;
   strokeWidth: number;
+  shineAfterFinish: boolean;
   containerClassName?: string;
   svgClassName?: string;
 }) {
@@ -62,6 +64,7 @@ export default function NotByte({
         controls={[controlsFirst, controlsSecond, controlsThird]}
         className={svgClassName}
         strokeWidth={strokeWidth}
+        shineAfterFinish={shineAfterFinish}
       />
     </div>
   );

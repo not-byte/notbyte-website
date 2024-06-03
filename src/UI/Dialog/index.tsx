@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useCallback } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRef, useEffect } from "react";
 import { redirectToPage } from "./close";
@@ -10,15 +10,20 @@ import { FaTimesCircle } from "react-icons/fa";
 type Props = {
   title: string;
   onClose: () => void;
-  onOk: () => void;
   children: React.ReactNode;
 };
 
-export default function Dialog({ title, onClose, onOk, children }: Props) {
+export default function Dialog({ title, onClose, children }: Props) {
   const searchParams = useSearchParams();
   const dialogRef = useRef<null | HTMLDialogElement>(null);
   const showDialog = searchParams.get("showDialog");
   const pathname = usePathname();
+
+  const closeDialog = useCallback(() => {
+    dialogRef.current?.close();
+    redirectToPage(pathname);
+    onClose();
+  }, [onClose, pathname]);
 
   useEffect(() => {
     if (showDialog === "y") {
@@ -31,7 +36,7 @@ export default function Dialog({ title, onClose, onOk, children }: Props) {
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        onClose();
+        closeDialog();
       }
     };
 
@@ -39,18 +44,7 @@ export default function Dialog({ title, onClose, onOk, children }: Props) {
     return () => {
       document.removeEventListener("keydown", handleEscape);
     };
-  }, [onClose]);
-
-  const closeDialog = () => {
-    dialogRef.current?.close();
-    redirectToPage(pathname);
-    onClose();
-  };
-
-  const clickOk = () => {
-    onOk();
-    closeDialog();
-  };
+  }, [closeDialog]);
 
   const dialog: JSX.Element | null =
     showDialog === "y" ? (

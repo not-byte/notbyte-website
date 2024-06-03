@@ -25,74 +25,57 @@ export const smallProfiles: SmallProfile[] = [
     ],
     image: "/pawel.png",
     description:
-      "Full-stack software developer with a passion for continuous learning and innovation in web applications.",
+      "Software engineer with a passion for continuous learning and innovation in the world of IT.",
     position: "Software engineer, CEO",
   },
-
   {
     id: "Lukasz_Ganczaryk",
     name: "Łukasz",
     socials: [
       {
-        icon: "linkedIn",
-        url: "https://www.linkedin.com/in/paweloslinek/",
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/łukasz-ganczaryk-977924242/",
       },
       {
-        icon: "facebook",
-        url: "https://www.facebook.com/profile.php?id=100010260706946",
-      },
-      {
-        icon: "twitter",
-        url: "https://twitter.com/LinekPawe",
+        icon: "GitHub",
+        url: "https://github.com/nozowymrozon",
       },
     ],
     image: "/lukasz.png",
     description:
-      "siema tutaj papek, siema tutaj papek ,siema tutaj papek ,siema tutaj papek ,siema tutaj papek siema tutaj papek",
-    position: "Software engineer, CEO",
+      "Social media manager and software tester, dedicated to making sure everything runs smoothly.",
+    position: "Social media manager, tester",
   },
   {
     id: "Przemyslaw_Szymanski",
     name: "Przemysław",
     socials: [
       {
-        icon: "linkedIn",
-        url: "https://www.linkedin.com/in/paweloslinek/",
-      },
-      {
-        icon: "facebook",
-        url: "https://www.facebook.com/profile.php?id=100010260706946",
-      },
-      {
-        icon: "twitter",
-        url: "https://twitter.com/LinekPawe",
+        icon: "GitHub",
+        url: "https://github.com/botprzemek",
       },
     ],
-    image: "/logo-black.png",
+    image: "/przemek.jpg",
     description:
-      "siema tutaj papek, siema tutaj papek ,siema tutaj papek ,siema tutaj papek ,siema tutaj papek siema tutaj papek",
-    position: "Software engineer, CEO",
+      "A DevOps engineer, responsible for managing our Linux infrastructure using VMWare and Proxmox on Oracle Cloud.",
+    position: "CIO, DevOps Engineer",
   },
   {
     id: "Adam_Kolt",
     name: "Adam",
     socials: [
       {
-        icon: "linkedIn",
-        url: "https://www.linkedin.com/in/paweloslinek/",
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/a-kolt/",
       },
       {
-        icon: "facebook",
-        url: "https://www.facebook.com/profile.php?id=100010260706946",
-      },
-      {
-        icon: "twitter",
-        url: "https://twitter.com/LinekPawe",
+        icon: "GitHub",
+        url: "https://github.com/akolt19d",
       },
     ],
     image: "/kosmos.jpg",
     description:
-      "siema tutaj papek, siema tutaj papek ,siema tutaj papek ,siema tutaj papek ,siema tutaj papek siema tutaj papek",
-    position: "Software engineer, CEO",
+      "Passionate and skilled web developer commited to continuously improving my knowledge and understanding of all things IT.",
+    position: "CTO, Software Developer",
   },
 ];
