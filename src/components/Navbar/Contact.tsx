@@ -43,12 +43,12 @@ export const Contact = () => {
     <form
       action={createContact}
       id="contactForm"
-      className="w-full  mx-auto p-20"
+      className="w-full mx-auto px-8 md:px-20"
     >
       <div className="input-group mb-4">
         <label
           htmlFor="name"
-          className="block text-md font-medium text-gray-700 dark:text-gray-300 mb-2"
+          className="block text-md font-medium text-grey-darker dark:text-grey-lighter mb-2"
         >
           Name
         </label>
@@ -57,13 +57,13 @@ export const Contact = () => {
           id="name"
           required
           name="name"
-          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:bg-darkModeColors dark:focus:border-blue-300"
+          className="mt-1 p-2 w-full border-gray-300 rounded-md shadow-sm text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[rgba(240,132,97,1.00)] focus:border-[rgba(240,132,97,1.00)]"
         />
       </div>
       <div className="input-group mb-4">
         <label
           htmlFor="email"
-          className="block text-md  font-medium text-gray-700 dark:text-gray-300"
+          className="block text-md font-medium text-grey-darker dark:text-grey-lighter"
         >
           Email
         </label>
@@ -72,13 +72,13 @@ export const Contact = () => {
           id="email"
           name="email"
           required
-          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:bg-darkModeColors dark:focus:border-blue-300"
+          className="mt-1 p-2 w-full border-gray-300 rounded-md shadow-sm text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[rgba(129,81,156,1.00)] focus:border-[rgba(129,81,156,1.00)]"
         />
       </div>
       <div className="input-group mb-4">
         <label
           htmlFor="message"
-          className="block text-md  font-medium text-gray-700 dark:text-gray-300"
+          className="block text-md font-medium text-grey-darker dark:text-grey-lighter"
         >
           Message
         </label>
@@ -87,7 +87,7 @@ export const Contact = () => {
           name="message"
           rows={8}
           required
-          className="mt-1 p-2 w-full border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:bg-darkModeColors dark:focus:border-blue-300"
+          className="mt-1 p-2 w-full border-gray-300 rounded-md shadow-sm text-black transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-[rgba(234,86,87,1.00)] focus:border-[rgba(234,86,87,1.00)]"
         ></textarea>
       </div>
       <div className="form-actions flex justify-end">

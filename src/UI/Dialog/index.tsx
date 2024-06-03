@@ -51,18 +51,18 @@ export default function Dialog({ title, onClose, children }: Props) {
       <DialogContext.Provider value={{ closeDialog }}>
         <dialog
           ref={dialogRef}
-          className="w-[50%] h-[70%] p-16 rounded-xl shadow-lg bg-transparent backdrop-blur-md text-gray-200 border transition-all "
+          className="w-full p-4 lg:w-[75%] xl:w-[50%] lg:px-16 lg:py-12 rounded-xl shadow-lg bg-transparent backdrop-blur-md text-gray-200 border border-grey-light transition-all "
         >
           <div className="flex flex-col">
             <div className="flex items-center justify-between mb-6">
-              <h1 className="text-6xl font-semibold text-gradient-colors">
+              <h1 className=" text-4xl md:text-6xl font-semibold text-gradient-colors">
                 {title}
               </h1>
               <button
                 onClick={closeDialog}
-                className="rounded-full p-2 inline-flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                className="rounded-full p-1 inline-flex items-center justify-center text-gray-400 hover:text-white transition-colors"
               >
-                <FaTimesCircle className="w-12 h-12" />
+                <FaTimesCircle className="w-8 h-8" />
               </button>
             </div>
             <div className="mb-6 text-gray-400">{children}</div>
