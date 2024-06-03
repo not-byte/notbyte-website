@@ -14,14 +14,6 @@ export const smallProfiles: SmallProfile[] = [
         icon: "GitHub",
         url: "https://github.com/pawelos231",
       },
-      {
-        icon: "facebook",
-        url: "https://www.facebook.com/profile.php?id=100010260706946",
-      },
-      {
-        icon: "twitter",
-        url: "https://twitter.com/LinekPawe",
-      },
     ],
     image: "/pawel.png",
     description:
@@ -35,6 +27,10 @@ export const smallProfiles: SmallProfile[] = [
       {
         icon: "GitHub",
         url: "https://github.com/botprzemek",
+      },
+      {
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/botprzemek",
       },
     ],
     image: "/przemek.jpg",
