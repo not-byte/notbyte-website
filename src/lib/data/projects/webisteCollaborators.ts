@@ -1,7 +1,6 @@
-import { SmallProfile } from "../../model/profile";
+import { Collaborator } from "@/lib/model/profile";
 
-//data present on the main page
-export const smallProfiles: SmallProfile[] = [
+export const websiteCollaborators: Collaborator[] = [
   {
     id: "Pawel_Linek",
     name: "Paweł",
@@ -17,8 +16,18 @@ export const smallProfiles: SmallProfile[] = [
     ],
     image: "/pawel.png",
     description:
-      "Software engineer with a passion for continuous learning and innovation in the world of IT.",
+      "Developed both the frontend and backend of the project, ensuring optimal performance and scalability. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
     position: "CEO, Software engineer",
+    roles: [
+      {
+        name: "Project Manager",
+        color: "red",
+      },
+      {
+        name: "Lead Developer",
+        color: "blue",
+      },
+    ],
   },
   {
     id: "Przemyslaw_Szymanski",
@@ -35,8 +44,14 @@ export const smallProfiles: SmallProfile[] = [
     ],
     image: "/przemek.jpg",
     description:
-      "A DevOps engineer, responsible for managing our Linux infrastructure using VMWare and Proxmox on Oracle Cloud.",
+      "Deisgner of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
     position: "CIO, DevOps Engineer",
+    roles: [
+      {
+        name: "Designer",
+        color: "purple",
+      },
+    ],
   },
   {
     id: "Adam_Kolt",
@@ -53,8 +68,14 @@ export const smallProfiles: SmallProfile[] = [
     ],
     image: "/adam_temp.jpg",
     description:
-      "Passionate and skilled web developer commited to continuously improving my knowledge and understanding of all things IT.",
+      "Designed the project's frontend, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
     position: "CTO, Software Developer",
+    roles: [
+      {
+        name: "Deisgner",
+        color: "purple",
+      },
+    ],
   },
   {
     id: "Lukasz_Ganczaryk",
@@ -71,7 +92,13 @@ export const smallProfiles: SmallProfile[] = [
     ],
     image: "/lukasz.png",
     description:
-      "Social media manager and software tester, dedicated to making sure everything runs smoothly.",
+      "tester of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
     position: "Social media manager, tester",
+    roles: [
+      {
+        name: "Tester",
+        color: "pink",
+      },
+    ],
   },
 ];

@@ -1,76 +1,69 @@
 import { ProjectData, Status } from "@/lib/model/project";
 import { smallProfiles } from "../profile/smallProfileData";
 import { Collaborator } from "@/lib/model/profile";
+import { tournamentCollaborators } from "./tournamentCollaborators";
+import { websiteCollaborators } from "./webisteCollaborators";
 
 export const projects: ProjectData[] = [
   {
     id: "tournament",
     title: "Tournament",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices augue ut imperdiet aliquam. Mauris enim velit, sollicitudin id magna laoreet, accumsan interdum velit. Proin iaculis posuere luctus. Duis dignissim eros turpis, in gravida turpis condimentum nec. Cras fermentum libero quis arcu tempor semper. Nulla porttitor velit vel libero egestas ullamcorper. Integer faucibus in risus nec porta. Ut at placerat odio, at interdum mauris. Fusce ullamcorper ornare est sed placerat. Proin quis aliquam arcu. Cras in condimentum orci, id auctor dui. Phasellus dignissim laoreet tellus, et suscipit neque auctor non. Sed ut iaculis nisi. Nullam convallis sem vel nulla cursus, at venenatis nulla laoreet Vestibulum imperdiet ligula ut risus aliquam, in malesuada tortor mollis. Pellentesque ac arcu sed ex porttitor hendrerit. Pellentesque justo nisi, blandit vitae vestibulum sed, venenatis in nisl. Cras egestas justo eu interdum facilisis. Aenean maximus sodales enim ac suscipit. Nam facilisis lobortis arcu. Vivamus quis odio lacus. Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
+      "Tournament is a robust application developed with Nuxt and Golang, designed to enable users to create and manage basketball team tournaments, monitor their progress, and view match results. The application boasts a user-friendly and intuitive interface, featuring a clean and modern design that ensures easy navigation and use. Future plans for the application include expanding it to a SaaS model, offering enhanced features and scalability for a broader audience.",
     imageUrl: "/knury.jpg",
     bannerUrl: "/knury.jpg",
     tags: ["Photography", "Internal"],
     creationDate: "2023-04-15",
     location: "Malibu, California",
-    status: Status.Completed,
+    status: Status.OnGoing,
     milestones: [
       {
         name: "Project Kickoff",
-        date: "2023-03-01",
+        date: "2024-03-01",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
+          "We began our journey with 'Knury Knurów' in March 2024, marking the moment when the first line of code for the project was written.",
+        tags: ["Intialization"],
         status: Status.Completed,
       },
       {
-        name: "Project Kickoff",
-        date: "2023-03-01",
+        name: "Project Development",
+        date: "2024-03-10",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
+          "As time went on, we found ourselves writing more and more code, gradually beginning to see the first results of our efforts. It was an exciting and rewarding period for us, filled with a sense of accomplishment and progress.",
+        tags: ["Nuxt", "Golang", "development"],
         status: Status.Completed,
       },
       {
-        name: "Project Kickoff",
-        date: "2023-03-01",
+        name: "Project delivery",
+        date: "2024-05-25",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
+          "After a challenging yet rewarding journey, we successfully delivered the project to the client. It was a great success, with everything proceeding smoothly and the client being extremely satisfied with the results. We are immensely proud of our achievements. However, we do not plan to stop here.",
+        tags: ["Delivery"],
         status: Status.Completed,
       },
       {
-        name: "Project Kickoff",
-        date: "2023-03-01",
+        name: "Plans of expanding",
+        date: "2024-06-01",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
+          "We are excited to announce our plans to expand the project into a SaaS model, aiming to offer enhanced features and greater scalability to reach a broader audience. Additionally, we plan to extend our platform's capabilities to include a variety of sports beyond just basketball. We are enthusiastic about the future of this project and the new opportunities it will bring!",
+        tags: ["Future", "Saas"],
+        status: Status.OnGoing,
       },
     ],
     impact:
-      "Featured in 5 international nature magazines; reached an audience of over 1 million viewers.",
+      "Featured in local magazines and newspapers, reaching large audiences",
     challenges:
-      "Overcoming unpredictable weather conditions to capture the perfect shot.",
-    futurePlans:
-      "A follow-up series focusing on coastal wildlife is in the conceptualization stage.",
+      "Overcoming unpredictable problems with the API and ensuring the application's scalability and performance under heavy loads.",
+    futurePlans: "Going saas",
     externalLinks: ["https://www.naturemagexample.com/ocean-at-dusk-feature"],
-    collaborators: smallProfiles.map((item) => {
-      (item as Collaborator).roles = [
-        {
-          name: "admin",
-          color: "red",
-        },
-        {
-          name: "yoo",
-          color: "purple",
-        },
-      ];
-      return item as Collaborator;
-    }),
+    collaborators: tournamentCollaborators,
     projectManager: "Jane Smith",
-    gallery: ["/knury.jpg", "/pawel.png", "/knury.jpg"],
-    client: "Nature Magazine",
+    gallery: [
+      "/knury.jpg",
+      "/dziekujemy_tournament.png",
+      "/knury_z_gory.jpg",
+      "/knury_z_gory_2.jpg",
+    ],
     version: "1.0",
   },
   {
@@ -120,6 +113,8 @@ export const projects: ProjectData[] = [
         ],
       },
     ].map((i) => {
+      i.description =
+        "Developed both frontend and backend of the project. Responsible for managing the project's development process and ensuring the timely delivery of milestones.";
       return i as Collaborator;
     }),
     projectManager: "Adam Kołt",
@@ -130,7 +125,7 @@ export const projects: ProjectData[] = [
     id: "notByte_website",
     title: "notByte website",
     description:
-      "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
+      "A website you are reading right now. It is a modern, responsive, and user-friendly website that showcases the projects, team members, and other information about notByte. The website is built using Next.js and Tailwind CSS, ensuring optimal performance and a seamless user experience. The website is continuously updated with new features and content to provide visitors with the latest information about notByte and its projects. The website is also optimized for search engines, making it easy for users to find the information they need.",
     imageUrl: "/notByte_website.png",
     bannerUrl: "/notByte_website.png",
     tags: ["Photography", "Internal"],
@@ -140,60 +135,45 @@ export const projects: ProjectData[] = [
     milestones: [
       {
         name: "Project Kickoff",
-        date: "2023-03-01",
+        date: "2024-01-01",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
+          "Our efforts to create a modern, responsive, and user-friendly website for notByte began on January 1, 2024. The project's development process was initiated, and the team started working on the website's design and functionality.",
+        tags: ["initialization"],
         status: Status.Completed,
       },
       {
-        name: "Project Kickoff",
-        date: "2023-03-01",
+        name: "Project Development",
+        date: "2023-02-01",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
+          "Project development was quite a protracted process due to little amounts of time and a lot of work. All of our team still studies and works full-time, so we had to find time for the project in our free time. Despite this, we managed to finish the project on time and with a great result. We are proud of our work and we hope that you like our website.",
+        tags: ["tailwindcss", "Next.js", "development"],
         status: Status.Completed,
       },
       {
-        name: "Project Kickoff",
+        name: "Project delivery",
         date: "2023-03-01",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
+          "We are happy to announce that the project has been successfully delivered to the client. The website is live and available to the public, providing visitors with information about notByte, its projects, and team members. The website is continuously updated with new features and content to ensure a seamless user experience.",
+        tags: ["delivery"],
         status: Status.Completed,
       },
       {
-        name: "Project Kickoff",
+        name: "future plans",
         date: "2023-03-01",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
+          "Plans for the future include expanding the website's features and content to provide visitors with more information about notByte and its projects. The website will be continuously updated with new features and content to ensure a seamless user experience. We are excited about the future of the website and the new opportunities it will bring.",
+        tags: ["Future"],
+        status: Status.OnGoing,
       },
     ],
-    impact:
-      "Featured in 5 international nature magazines; reached an audience of over 1 million viewers.",
     challenges:
-      "Overcoming unpredictable weather conditions to capture the perfect shot.",
+      "Overcoming challenges related to time constraints and balancing project development with other commitments. Ensuring the website's design and functionality meet the client's requirements and expectations.",
     futurePlans:
-      "A follow-up series focusing on coastal wildlife is in the conceptualization stage.",
+      "Creating more features and content to provide visitors with the latest information about notByte and its projects. Continuously updating the website to ensure a seamless user experience. Optimizing the website for search engines to make it easy for users to find the information they need.",
     externalLinks: ["https://www.naturemagexample.com/ocean-at-dusk-feature"],
-    collaborators: smallProfiles.map((item) => {
-      (item as Collaborator).roles = [
-        {
-          name: "admin",
-          color: "purple",
-        },
-        {
-          name: "yoo",
-          color: "blue",
-        },
-      ];
-      return item as Collaborator;
-    }),
+    collaborators: websiteCollaborators,
     projectManager: "Jane Smith",
-    gallery: ["/knury1.jpg", "/knury2.jpg", "/knury3.jpg"],
-    client: "Nature Magazine",
+    gallery: [],
     version: "1.0",
   },
 ];

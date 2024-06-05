@@ -14,7 +14,7 @@ export const Collabarators = ({ collaborators }: Props) => {
         Collaborators
       </h2>
       <AnimationWrapper>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 ">
           {collaborators.map((collaborator, index) => (
             <CollaboratorItem key={index} collaborator={collaborator} />
           ))}

@@ -1,7 +1,7 @@
 "use client";
 
 import ProfileCard from "@/components/Content/About/ProfileCard/content";
-import { Collaborator } from "@/lib/model/project";
+import { Collaborator } from "@/lib/model/profile";
 import { motion } from "framer-motion";
 
 interface CollaboratorItemProps {
@@ -18,7 +18,7 @@ export const CollaboratorItem: React.FC<CollaboratorItemProps> = ({
 }) => (
   <motion.div
     variants={cardVariants}
-    className="bg-transparent border border-black dark:border-grey-darkest p-4 sm:p-6 md:p-10 w-full sm:w-[30vw] md:w-[20vw] lg:w-[15vw] xl:w-[18vw] wqhd:w-[15vw] h-auto transition hover:bg-colors hover:border-none chipped-corner chipped-corner-white dark:chipped-corner-night mt-20"
+    className="bg-transparent border border-black dark:border-grey-darkest p-4 sm:p-6 md:p-10 w-full sm:w-[80vw] md:w-[50vw] lg:w-[30vw] xl:w-[28vw] 2xl:w-[20vw]  wqhd:w-[15vw] h-auto transition hover:bg-colors hover:border-none chipped-corner chipped-corner-white dark:chipped-corner-night mt-20"
   >
     <ProfileCard
       profile={collaborator}

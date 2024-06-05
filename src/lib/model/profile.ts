@@ -70,5 +70,5 @@ export interface Collaborator extends SmallProfile {
 
 interface Role {
   name: string;
-  color: "purple" | "blue" | "red" | "green";
+  color: "purple" | "blue" | "red" | "yellow" | "pink";
 }
