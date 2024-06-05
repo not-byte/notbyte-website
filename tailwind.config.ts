@@ -10,6 +10,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      aspectRatio: {
+        "21/9": "21 / 9",
+      },
       backgroundImage: {
         colors:
           "linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",

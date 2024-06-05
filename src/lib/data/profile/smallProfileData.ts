@@ -43,15 +43,15 @@ export const smallProfiles: SmallProfile[] = [
     name: "Adam",
     socials: [
       {
-        icon: "LinkedIn",
-        url: "https://www.linkedin.com/in/a-kolt/",
-      },
-      {
         icon: "GitHub",
         url: "https://github.com/akolt19d",
       },
+      {
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/a-kolt/",
+      },
     ],
-    image: "/kosmos.jpg",
+    image: "/adam_temp.jpg",
     description:
       "Passionate and skilled web developer commited to continuously improving my knowledge and understanding of all things IT.",
     position: "CTO, Software Developer",
@@ -61,12 +61,12 @@ export const smallProfiles: SmallProfile[] = [
     name: "Łukasz",
     socials: [
       {
-        icon: "LinkedIn",
-        url: "https://www.linkedin.com/in/łukasz-ganczaryk-977924242/",
-      },
-      {
         icon: "GitHub",
         url: "https://github.com/nozowymrozon",
+      },
+      {
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/łukasz-ganczaryk-977924242/",
       },
     ],
     image: "/lukasz.png",

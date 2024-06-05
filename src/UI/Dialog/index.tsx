@@ -51,7 +51,7 @@ export default function Dialog({ title, onClose, children }: Props) {
       <DialogContext.Provider value={{ closeDialog }}>
         <dialog
           ref={dialogRef}
-          className="w-full p-4 lg:w-[75%] xl:w-[50%] lg:px-16 lg:py-12 rounded-xl shadow-lg bg-transparent backdrop-blur-md text-gray-200 border border-grey-light transition-all "
+          className="w-full p-4 lg:w-[75%] xl:w-[50%] lg:px-16 lg:py-12 rounded-xl shadow-lg bg-transparent backdrop-blur-2xl text-gray-200 border border-grey-light transition-all "
         >
           <div className="flex flex-col">
             <div className="flex items-center justify-between mb-6">

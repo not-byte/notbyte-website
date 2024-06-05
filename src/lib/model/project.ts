@@ -1,4 +1,4 @@
-import { SmallProfile } from "./profile";
+import { Collaborator } from "./profile";
 
 export interface SmallProject {
   id: string;
@@ -7,15 +7,6 @@ export interface SmallProject {
   imageUrl: string;
   tags: string[];
   status: Status;
-}
-
-export interface Collaborator extends SmallProfile {
-  roles: Role[];
-}
-
-interface Role {
-  name: string;
-  color: "purple" | "blue" | "red" | "green";
 }
 
 export interface Milestone {
@@ -40,19 +31,18 @@ export interface ProjectData {
   bannerUrl: string;
   tags: string[];
   creationDate: string; // Format: "YYYY-MM-DD"
-  location: string;
   status: Status;
-  technologies: string[];
   milestones: Milestone[];
-  impact: string;
   challenges: string;
   futurePlans: string;
-  externalLinks: string[];
   collaborators: Collaborator[];
   projectManager: string;
   gallery: string[];
-  client: string;
   version: string;
+  location?: string;
+  impact?: string;
+  externalLinks?: string[];
+  client?: string;
   license?: string;
   budget?: number;
   feedback?: Feedback[];

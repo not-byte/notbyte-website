@@ -4,7 +4,7 @@ import { Button } from "@/UI/Button";
 import ThemeSwitch from "../shared/ThemeSwitch-debug";
 import Dialog from "@/UI/Dialog";
 import { onClose } from "../../server-actions/navbarContact";
-import { Contact } from "./Contact";
+import { Contact } from "../shared/Contact";
 import Logo from "./Logo";
 
 const Navbar = () => {

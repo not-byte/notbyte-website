@@ -63,3 +63,12 @@ export interface SmallProfile {
   name: string;
   position: string;
 }
+
+export interface Collaborator extends SmallProfile {
+  roles: Role[];
+}
+
+interface Role {
+  name: string;
+  color: "purple" | "blue" | "red" | "green";
+}

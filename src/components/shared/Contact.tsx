@@ -5,7 +5,7 @@ import { send } from "../../server-actions/navbarContact";
 import { ContactSchema } from "@/lib/validators/contact";
 import toast from "react-hot-toast";
 import DialogContext from "@/UI/Dialog/dialogContext";
-import { FormButton } from "./button";
+import { FormButton } from "./contactFormButton";
 
 export const Contact = () => {
   const { closeDialog } = useContext(DialogContext);

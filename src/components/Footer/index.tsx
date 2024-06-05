@@ -8,6 +8,8 @@ import {
   FaMapMarkerAlt,
   FaYoutube,
 } from "react-icons/fa";
+import { Button } from "@/UI/Button";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -110,19 +112,18 @@ const Footer: React.FC = () => {
             <h5 className="text-[rgba(240,132,97,1.00)] uppercase font-semibold mb-6 text-lg">
               Stay Updated
             </h5>
-            <form className="flex flex-col space-y-4">
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                className="px-4 py-3 bg-grey-darkest border-grey-darker focus:border-[rgba(240,132,97,1.00)] placeholder:text-grey-dark !text-white !ring-0 text-base"
-              />
-              <button
-                type="submit"
-                className="bg-colors hover:brightness-75 text-white px-4 py-3 transition-[filter] duration-300 corner-br corner-black"
-              >
+            <Link
+              scroll={false}
+              href={{
+                pathname: "",
+                query: { showDialog: "y" },
+              }}
+            >
+              <button className="usm:w-[70vw] md:w-[15vw] wqhd:w-[10vw]  space-y-4 bg-colors hover:brightness-75 text-white px-4 py-3 transition-[filter] duration-300 corner-br corner-black">
                 Subscribe
               </button>
-            </form>
+            </Link>
+
             <p className="text-grey text-sm mt-4">
               Subscribe to receive our newest updates.
             </p>

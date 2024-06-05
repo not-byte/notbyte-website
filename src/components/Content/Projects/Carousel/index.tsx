@@ -15,6 +15,7 @@ export const Carousel = () => {
         <div key={index} className="px-2">
           <div className="overflow-hidden shadow-lg cursor-pointer border border-black dark:border-grey-darkest">
             <ImageLink project={project} />
+
             <div className="p-6 bg-transparent">
               <h3 className="text-2xl font-semibold text-black dark:text-white mb-2">
                 {project.title}

@@ -13,7 +13,7 @@ type Props = {
 export const Banner = ({ description, bannerUrl }: Props) => {
   return (
     <motion.div
-      className={` overflow-hidden rounded-lg shadow-lg`}
+      className={` overflow-hidden rounded-lg shadow-lg mt-[10vh]`}
       {...slideAnimation("right")}
     >
       <Image

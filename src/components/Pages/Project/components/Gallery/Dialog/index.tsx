@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import withPortal from "@/UI/HOCS/portal";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -15,7 +16,6 @@ type Props = {
 };
 
 const GalleryDialogCompoent = ({ imagesUrls, currentIndex, close }: Props) => {
-  const [mounted, setMounted] = useState<boolean>(false);
   const [dimmensions, setDimmensions] = useState<Dimmension>({
     width: 0,
     height: 0,
@@ -29,24 +29,7 @@ const GalleryDialogCompoent = ({ imagesUrls, currentIndex, close }: Props) => {
       const { width, height } = ref.current;
       setDimmensions({ width, height });
     }
-  }, [mounted]);
-
-  useEffect(() => {
-    setMounted(true);
   }, []);
-
-  const slide = (direction: "left" | "right") => () => {
-    console.log("slide", direction);
-    if (direction === "left") {
-      setActiveIndex(
-        activeIndex === 0 ? imagesUrls.length - 1 : activeIndex - 1
-      );
-    } else {
-      setActiveIndex((activeIndex + 1) % imagesUrls.length);
-    }
-  };
-
-  if (!mounted) return <></>;
 
   return (
     <div
@@ -61,8 +44,11 @@ const GalleryDialogCompoent = ({ imagesUrls, currentIndex, close }: Props) => {
         <FaArrowLeft size={60} color="white" />
       </div>*/}
       <div
-        className={`bg-white rounded-lg overflow-hidden shadow-xl transform transition-all ${
-          shouldImageBeScaled(dimmensions) ? "w-[45%]" : "w-[80%]"
+        className={`bg-white rounded-lg overflow-hidden shadow-xl transform transition-all
+        ${
+          shouldImageBeScaled(dimmensions)
+            ? "w-[90%] sm:w-[70%] md:w-[60%] lg:w-[45%]"
+            : "w-[95%] sm:w-[85%] md:w-[80%] lg:w-[75%]"
         }`}
       >
         <Image

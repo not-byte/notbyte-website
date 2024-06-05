@@ -1,5 +1,6 @@
-import { Collaborator, ProjectData, Status } from "@/lib/model/project";
+import { ProjectData, Status } from "@/lib/model/project";
 import { smallProfiles } from "../profile/smallProfileData";
+import { Collaborator } from "@/lib/model/profile";
 
 export const projects: ProjectData[] = [
   {
@@ -13,7 +14,6 @@ export const projects: ProjectData[] = [
     creationDate: "2023-04-15",
     location: "Malibu, California",
     status: Status.Completed,
-    technologies: ["DSLR Camera", "Adobe Photoshop"],
     milestones: [
       {
         name: "Project Kickoff",
@@ -77,85 +77,66 @@ export const projects: ProjectData[] = [
     id: "post_manager",
     title: "Post Manager",
     description:
-      "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
-    imageUrl: "/knury.jpg",
-    bannerUrl: "/knury.jpg",
-    tags: ["Photography", "Internal"],
-    creationDate: "2023-04-15",
-    location: "Malibu, California",
-    status: Status.Completed,
-    technologies: ["DSLR Camera", "Adobe Photoshop"],
+      "An internal tool which allows the user to manage social media posts across all connected platforms from the application. The user can create a post using the built-in creator and post it on the platforms of their choosing.",
+    imageUrl: "/notbyte_dev.jpg",
+    bannerUrl: "/notbyte_dev.jpg",
+    tags: ["Developer Panel", "CMS", "Internal"],
+    creationDate: "2024-04-10",
+    status: Status.InDevelopment,
     milestones: [
       {
         name: "Project Kickoff",
-        date: "2023-03-01",
+        date: "2024-04-10",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
+          "After a thorough evaluation process to determine the most suitable technologies for the project, the development team selected a robust stack that would ensure optimal performance and scalability. With the technologies chosen and confirmed, the initial setup phase commenced, leading to the successful initialization of the application.",
+        tags: ["Initialization"],
         status: Status.Completed,
       },
       {
-        name: "Project Kickoff",
-        date: "2023-03-01",
+        name: "Project Development",
+        date: "2024-04-11",
         description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
-      },
-      {
-        name: "Project Kickoff",
-        date: "2023-03-01",
-        description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
-      },
-      {
-        name: "Project Kickoff",
-        date: "2023-03-01",
-        description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
+          "The development period will last until a stable version of the post manager is released.",
+        tags: ["Development"],
+        status: Status.InDevelopment,
       },
     ],
-    impact:
-      "Featured in 5 international nature magazines; reached an audience of over 1 million viewers.",
     challenges:
-      "Overcoming unpredictable weather conditions to capture the perfect shot.",
+      "Utilizing the Facebook and Linkedin API's simultaneously in order to make posting on social media quick and universal.",
     futurePlans:
-      "A follow-up series focusing on coastal wildlife is in the conceptualization stage.",
-    externalLinks: ["https://www.naturemagexample.com/ocean-at-dusk-feature"],
-    collaborators: smallProfiles.map((item) => {
-      (item as Collaborator).roles = [
-        {
-          name: "admin",
-          color: "purple",
-        },
-        {
-          name: "yoo",
-          color: "blue",
-        },
-      ];
-      return item as Collaborator;
+      "Expanding on already implemented functionalities in order to create a fully-fledged developer panel.",
+    collaborators: [
+      {
+        ...smallProfiles.find((p) => p.id === "Adam_Kolt"),
+        roles: [
+          {
+            name: "Project Manager",
+            color: "green",
+          },
+          {
+            name: "Lead Developer",
+            color: "red",
+          },
+        ],
+      },
+    ].map((i) => {
+      return i as Collaborator;
     }),
-    projectManager: "Jane Smith",
-    gallery: ["/knury1.jpg", "/knury2.jpg", "/knury3.jpg"],
-    client: "Nature Magazine",
-    version: "1.0",
+    projectManager: "Adam Kołt",
+    gallery: [],
+    version: "0.1",
   },
   {
     id: "notByte_website",
     title: "notByte website",
     description:
       "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
-    imageUrl: "/knury.jpg",
-    bannerUrl: "/knury.jpg",
+    imageUrl: "/notByte_website.png",
+    bannerUrl: "/notByte_website.png",
     tags: ["Photography", "Internal"],
     creationDate: "2023-04-15",
     location: "Malibu, California",
     status: Status.Completed,
-    technologies: ["DSLR Camera", "Adobe Photoshop"],
     milestones: [
       {
         name: "Project Kickoff",
@@ -206,77 +187,6 @@ export const projects: ProjectData[] = [
         {
           name: "yoo",
           color: "blue",
-        },
-      ];
-      return item as Collaborator;
-    }),
-    projectManager: "Jane Smith",
-    gallery: ["/knury1.jpg", "/knury2.jpg", "/knury3.jpg"],
-    client: "Nature Magazine",
-    version: "1.0",
-  },
-  {
-    id: "Ocean_at_Dusk",
-    title: "Ocean at Dusk",
-    description:
-      "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
-    imageUrl: "/knury.jpg",
-    bannerUrl: "/knury.jpg",
-    tags: ["Photography", "Internal"],
-    creationDate: "2023-04-15",
-    location: "Malibu, California",
-    status: Status.Completed,
-    technologies: ["DSLR Camera", "Adobe Photoshop"],
-    milestones: [
-      {
-        name: "Project Kickoff",
-        date: "2023-03-01",
-        description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
-      },
-      {
-        name: "Project Kickoff",
-        date: "2023-03-01",
-        description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
-      },
-      {
-        name: "Project Kickoff",
-        date: "2023-03-01",
-        description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
-      },
-      {
-        name: "Project Kickoff",
-        date: "2023-03-01",
-        description:
-          "Maecenas tellus odio, bibendum sit amet cursus non, condimentum eget metus. Duis ac lectus ac urna mollis feugiat quis quis sapien. Fusce euismod, nunc eu porta elementum, eros mi placerat lectus, vitae tempor nibh nulla et lacus. Donec eget sollicitudin sem. In et libero aliquet, sodales tellus quis, faucibus dolor. Vestibulum euismod accumsan tellus eu euismod.",
-        tags: ["siema", "siema", "sieam"],
-        status: Status.Completed,
-      },
-    ],
-    impact:
-      "Featured in 5 international nature magazines; reached an audience of over 1 million viewers.",
-    challenges:
-      "Overcoming unpredictable weather conditions to capture the perfect shot.",
-    futurePlans:
-      "A follow-up series focusing on coastal wildlife is in the conceptualization stage.",
-    externalLinks: ["https://www.naturemagexample.com/ocean-at-dusk-feature"],
-    collaborators: smallProfiles.map((item) => {
-      (item as Collaborator).roles = [
-        {
-          name: "admin",
-          color: "blue",
-        },
-        {
-          name: "yoo",
-          color: "purple",
         },
       ];
       return item as Collaborator;
