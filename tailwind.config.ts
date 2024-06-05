@@ -24,6 +24,7 @@ const config: Config = {
           "linear-gradient(90deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)",
       },
       screens: {
+        smMax: { max: "768px" },
         usm: "420px",
         "2xl": "1536px",
         wqhd: "2560px",
