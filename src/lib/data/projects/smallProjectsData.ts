@@ -7,27 +7,34 @@ export const smallProjects: SmallProject[] = [
     id: "tournament",
     title: "Tournament",
     description:
-      "A serene ocean scene as the sun sets, casting hues of orange and pink across the water.",
+      "Tournament is app for managing basketball tournaments, monitoring progress, and viewing results. It has a user-friendly, modern interface with plans to expand to a SaaS model for more features and scalability.",
     imageUrl: "/knury.jpg",
-    tags: ["Photography", "Internal"],
-    status: Status.Completed,
+    tags: [
+      "Basketball",
+      "Sports",
+      "Tournament",
+      "Management",
+      "Nuxt",
+      "Golang",
+    ],
+    status: Status.OnGoing,
   },
   {
     id: "post_manager",
     title: "Post Manager",
     description:
-      "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
+      "An internal tool for managing social media posts across all connected platforms. Users can create and publish posts using the built-in creator, selecting the platforms they prefer.",
     imageUrl: "/notbyte_dev.jpg",
-    tags: ["Photography", "Art Direction"],
+    tags: ["Development", "Internal", "CMS"],
     status: Status.Completed,
   },
   {
     id: "notByte_website",
     title: "notByte website",
     description:
-      "Capturing the breathtaking beauty of sand dunes through artistic lensmanship.",
+      "This modern, responsive website showcases notByte's projects and team, built with Next.js and Tailwind CSS for optimal performance and user experience. Continuously updated and SEO optimized.",
     imageUrl: "/notByte_website.png",
-    tags: ["Photography", "Art Direction"],
+    tags: ["Website", "Next.js", "Tailwind CSS"],
     status: Status.Completed,
   },
 ];
