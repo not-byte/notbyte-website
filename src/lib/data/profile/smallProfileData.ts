@@ -7,12 +7,12 @@ export const smallProfiles: SmallProfile[] = [
     name: "Paweł",
     socials: [
       {
-        icon: "LinkedIn",
-        url: "https://www.linkedin.com/in/paweloslinek/",
-      },
-      {
         icon: "GitHub",
         url: "https://github.com/pawelos231",
+      },
+      {
+        icon: "LinkedIn",
+        url: "https://www.linkedin.com/in/paweloslinek/",
       },
     ],
     image: "/pawel.png",
