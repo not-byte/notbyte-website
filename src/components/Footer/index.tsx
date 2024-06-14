@@ -58,32 +58,32 @@ const Footer: React.FC = () => {
 
           <div className="md:col-span-2 lg:col-span-1">
             <h5 className="text-[rgba(129,81,156,1.00)] uppercase font-semibold mb-6 text-lg">
-              Recent Posts
+              Recent Projects
             </h5>
             <ul className="text-base space-y-3">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/projects/tournament"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >
-                  Design Trends 2024
-                </a>
+                  Tournament
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+              <Link
+                  href="/projects/post_manager"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >
-                  UI/UX Best Practices
-                </a>
+                  Post Manager
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+              <Link
+                  href="/projects/notByte_website"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >
-                  Web Accessibility Insights
-                </a>
+                  Our Website
+                </Link>
               </li>
             </ul>
           </div>
@@ -95,22 +95,22 @@ const Footer: React.FC = () => {
             <ul className="text-grey text-base space-y-3">
               <li>
                 <FaPhone className="inline mr-2" />
-                +123 456 7890
+                +48 797 477 825
               </li>
               <li>
                 <FaEnvelope className="inline mr-2" />
-                info@example.com
+                info@notbyte.com
               </li>
               <li>
                 <FaMapMarkerAlt className="inline mr-2" />
-                123 Main St, Anytown, USA
+                Roberta Miki 2, 41-811 Zabrze, Poland
               </li>
             </ul>
           </div>
 
           <div className="lg:col-span-1">
             <h5 className="text-[rgba(240,132,97,1.00)] uppercase font-semibold mb-6 text-lg">
-              Stay Updated
+              Have any questions?
             </h5>
             <Link
               scroll={false}
@@ -119,13 +119,13 @@ const Footer: React.FC = () => {
                 query: { showDialog: "y" },
               }}
             >
-              <button className="usm:w-[70vw] md:w-[15vw] wqhd:w-[10vw]  space-y-4 bg-colors hover:brightness-75 text-white px-4 py-3 transition-[filter] duration-300 corner-br corner-black">
-                Subscribe
+              <button className="text-lg space-y-4 bg-colors hover:brightness-75 text-white pl-10 pr-16 py-2 transition-[filter] duration-300 corner-br corner-black">
+                Contact us
               </button>
             </Link>
 
             <p className="text-grey text-sm mt-4">
-              Subscribe to receive our newest updates.
+              We'll happily answer any questions you have for us!
             </p>
           </div>
         </div>
