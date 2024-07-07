@@ -200,7 +200,7 @@ const config: Config = {
             Object.entries(value).forEach((entry2) => {
               // @ts-ignore
               processedColorsList[`${prefix}${key}-${entry2[0]}`] = getBgColor(
-                entry2[1]
+                entry2[1] as string
               );
             });
           } // @ts-ignore

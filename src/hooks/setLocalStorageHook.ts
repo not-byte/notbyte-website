@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+// eslint-disable-next-line no-unused-vars
 type FuncType = <T>(val: T) => any;
 type updateValue<K> = K extends Function ? FuncType : K;
 

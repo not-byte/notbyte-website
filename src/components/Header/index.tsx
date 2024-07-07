@@ -19,6 +19,9 @@ export default function Header() {
   }, []);
 
   function getSize() {
+    if (typeof window == "undefined") {
+      return 768;
+    }
     const width = window?.innerWidth;
     const height = window?.innerHeight;
     if (width >= 2560 && height >= 1440) {
@@ -36,7 +39,7 @@ export default function Header() {
     <NotByte
       durations={[5, 2, 2]}
       includeSurroundingSquare={true}
-      shineAfterFinish={true} 
+      shineAfterFinish={true}
       size={size}
       strokeWidth={2}
     />

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import {
   FaInstagram,
@@ -8,7 +9,6 @@ import {
   FaMapMarkerAlt,
   FaYoutube,
 } from "react-icons/fa";
-import { Button } from "@/UI/Button";
 import Link from "next/link";
 
 const Footer: React.FC = () => {
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-              <Link
+                <Link
                   href="/projects/post_manager"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-              <Link
+                <Link
                   href="/projects/notByte_website"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >

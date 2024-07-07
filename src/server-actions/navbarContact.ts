@@ -53,7 +53,7 @@ export async function send(formData: FormData) {
     },
   });
 
-  transporter.verify((error, success) => {
+  transporter.verify((error) => {
     if (error) {
       return {
         message: "Something went wrong" + error.message,
@@ -98,8 +98,9 @@ export async function send(formData: FormData) {
   };
 
   async function asyncsendMail() {
-    return new Promise<ContactFormState>((resolve, reject) => {
-      transporter.sendMail(mailOptions, function (error: any, info: any) {
+    return new Promise<ContactFormState>((resolve) => {
+      transporter.sendMail(mailOptions, function (error: any) {
+        //if() {console.log(info)}
         if (error) {
           resolve({
             message: "Something went wrong" + error.message,

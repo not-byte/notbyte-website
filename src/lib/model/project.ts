@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Collaborator } from "./profile";
 
 export interface SmallProject {
