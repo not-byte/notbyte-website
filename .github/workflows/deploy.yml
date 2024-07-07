@@ -43,6 +43,10 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            "EMAIL_HOST=${{ secrets.EMAIL_HOST }}"
+            "EMAIL_PASS=${{ secrets.EMAIL_PASS }}"
+            "EMAIL_USER=${{ secrets.EMAIL_USER }}"
   deploy:
     name: Deploy Docker to a Linux instance
     runs-on: ubuntu-latest
