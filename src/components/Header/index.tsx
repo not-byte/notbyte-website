@@ -11,6 +11,10 @@ export default function Header() {
       setSize(getSize());
     };
 
+    if (typeof window == "undefined") {
+      return;
+    }
+
     window.addEventListener("resize", handleResize);
 
     return () => {

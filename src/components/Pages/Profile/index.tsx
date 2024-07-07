@@ -25,10 +25,12 @@ const ProfileComp = ({
   const [fixed, setFixed] = useState<boolean>(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    if (typeof window === "undefined") return;
+    const clock = setTimeout(() => {
       window.scrollTo(0, 0);
       setFixed(false);
     }, 0);
+    return () => clearTimeout(clock);
   }, []);
 
   return (

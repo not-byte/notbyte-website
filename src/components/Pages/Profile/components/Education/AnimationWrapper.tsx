@@ -5,6 +5,7 @@ import React, { ReactNode } from "react";
 import { useInView } from "react-intersection-observer";
 
 const getXOffset = () => {
+  if (typeof window === "undefined") return 500;
   const width = window.innerWidth;
   if (width < 768) {
     return 200;

@@ -5,6 +5,7 @@ const useResponsiveRootMargin = () => {
 
   useEffect(() => {
     const updateRootMargin = () => {
+      if (typeof window === "undefined") return;
       const width = window.innerWidth;
       if (width < 768) {
         setRootMargin("-50px 0px");
