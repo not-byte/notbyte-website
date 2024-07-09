@@ -35,7 +35,7 @@ const ProfileComp = ({
 
   return (
     <div className="overflow-hidden">
-      <div className="flex flex-col items-center sm:flex-row  justify-start p-4 sm:p-6 md:p-8 lg:p-10 w-full h-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white 2xl:pt-[20vh]">
+      <div className="flex flex-col items-center justify-center 2xl:flex-row 2xl:mt-[20vh] p-4 sm:p-6 md:p-8 lg:p-10 w-full h-full text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white ">
         <motion.div
           className={styles.block}
           data-fixed={fixed}
@@ -44,18 +44,18 @@ const ProfileComp = ({
         >
           <Image
             alt={profile.shortDescription}
-            width={500}
-            height={500}
-            quality={100}
+            width={100}
+            height={100}
+            quality={50}
             layout="responsive"
             src={profile.image || "/logo-black.png"}
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              shimmer(500, 500)
+              shimmer(50, 50)
             )}`}
           />
         </motion.div>
-        <div className="flex flex-col ">{BasicInfo}</div>
+        <div className="flex flex-col  ">{BasicInfo}</div>
       </div>
       {Experience}
       {Education}

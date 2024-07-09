@@ -30,10 +30,11 @@ export const ImageLink = ({ project, className }: ImageProps) => {
             alt={project.title}
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              shimmer(700, 300)
+              shimmer(200, 100)
             )}`}
             layout="fill"
             objectFit="cover"
+            loading="lazy"
             quality={50}
           />
         </div>

@@ -38,7 +38,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ data, index }) => (
             className="grayscale"
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              shimmer(100, 100)
+              shimmer(50, 50)
             )}`}
             loading="lazy"
           />

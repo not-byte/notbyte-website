@@ -4,14 +4,14 @@ import { SocialIcon } from "react-social-icons";
 
 export const BasicInfoSection = async ({ profile }: { profile: Profile }) => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden  ml-[-3vh]">
       <h1 className="text-2xl md:text-3xl lg:text-4xl wqhd:text-5xl font-extrabold dark:text-white text-gray-800 text-center md:text-left">
         {profile.name}
       </h1>
       <h2 className="text-lg md:text-xl lg:text-2xl wqhd:text-3xl font-semibold dark:text-gray-300 text-gray-600 text-center md:text-left">
         {profile.position}
       </h2>
-      <p className="text-sm md:text-md lg:text-xl wqhd:text-2xl pt-4 pr-4 pb-4 dark:text-gray-300 text-gray-600">
+      <p className="text-sm md:text-md lg:text-xl wqhd:text-2xl pt-4 pr-4 pb-4 dark:text-gray-300 text-gray-600 text-justify">
         {profile.longDescription}
       </p>
       <div className=" text-xl flex flex-col md:flex-row justify-start items-center mt-4 space-x-0 md:space-x-4">

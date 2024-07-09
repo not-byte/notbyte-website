@@ -24,7 +24,7 @@ export const timelineData = [
     subTitle: "Knurów, basketball",
   },
   {
-    date: "2023-06-01",
+    date: "2024-06-01",
     title: "Future plans",
     description:
       "In the future we plan to expand our company and create new projects. We are excited about the future and the new opportunities it will bring.",

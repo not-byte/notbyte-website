@@ -21,6 +21,7 @@ export const MotionImageLink = ({ profile }: { profile: SmallProfile }) => {
           <Image
             width={20}
             height={20}
+            quality={1}
             layout="responsive"
             src={profile.image}
             alt={profile.name + "profile image"}

@@ -53,12 +53,13 @@ export const SliderItem = ({
         <Image
           onClick={switchGalleryItemOpenState}
           src={currentImage}
+          quality={30}
           layout="fill"
           objectFit="cover"
-          alt={`project gallery item `}
+          alt={`project gallery item ${currentIndex}`}
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${toBase64(
-            shimmer(200, 200)
+            shimmer(100, 60)
           )}`}
         />
       </div>

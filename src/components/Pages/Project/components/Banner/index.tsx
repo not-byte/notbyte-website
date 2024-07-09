@@ -20,7 +20,7 @@ export const Banner = ({ description, bannerUrl }: Props) => {
         alt={description}
         width={1000}
         height={1000}
-        quality={100}
+        quality={60}
         layout="responsive"
         src={bannerUrl || "/logo-black.png"}
         placeholder="blur"
