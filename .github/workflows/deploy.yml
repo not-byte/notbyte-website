@@ -1,7 +1,7 @@
 name: Publish and deploy Docker image
 
 on:
-  push:
+  release:
     types: [published]
 
 jobs:
