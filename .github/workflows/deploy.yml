@@ -1,13 +1,13 @@
 name: Publish and deploy Docker image
 
 on:
-  release:
+  push:
     types: [published]
 
 jobs:
   publish:
     name: Publish Docker image to GitHub Packages
-    runs-on: self-hosted
+    runs-on: ubuntu-latest # self-hosted, no money :/
     permissions:
       packages: write
       contents: read
@@ -50,7 +50,7 @@ jobs:
 
   deploy:
     name: Deploy Docker to a Linux instance
-    runs-on: self-hosted
+    runs-on: ubuntu-latest # self-hosted, no money :/
     needs: publish
 
     steps:
