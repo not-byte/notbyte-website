@@ -7,7 +7,7 @@ on:
 jobs:
   publish:
     name: Publish Docker image to GitHub Packages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # self-hosted, no money :/
     permissions:
       packages: write
       contents: read
@@ -39,17 +39,18 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            "EMAIL_HOST=${{ secrets.EMAIL_HOST }}"
-            "EMAIL_PASS=${{ secrets.EMAIL_PASS }}"
-            "EMAIL_USER=${{ secrets.EMAIL_USER }}"
+            "SMTP_HOST=${{ secrets.SMTP_HOST }}"
+            "SMTP_USER=${{ secrets.SMTP_USER }}"
+            "EMAIL_PASSWORD=${{ secrets.SMTP_PASSWORD }}"
+
   deploy:
     name: Deploy Docker to a Linux instance
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # self-hosted, no money :/
     needs: publish
 
     steps:
