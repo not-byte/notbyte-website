@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
 import { Carousel } from "./Carousel";
@@ -11,9 +12,9 @@ const ProjectSection = () => {
             Our Works
           </h2>
           <p className="text-xl mt-4 mx-auto leading-relaxed max-w-3xl">
-            Witness the beauty of nature through our lens, as we showcase
-            stunning landscapes that evoke wonder and appreciation for the
-            environment.
+            We have worked on some incredible projects that demonstrate our
+            expertise and innovation. Our projects are a testament to our team's
+            dedication and hard work. Check out some of our projects below.{" "}
           </p>
         </div>
         <Carousel />

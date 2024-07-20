@@ -104,7 +104,7 @@ export const projects: ProjectData[] = [
         roles: [
           {
             name: "Project Manager",
-            color: "green",
+            color: "blue",
           },
           {
             name: "Lead Developer",
