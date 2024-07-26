@@ -1,8 +1,26 @@
 version: 2.1
 
+orbs:
+  node: circleci/node@5
+
 jobs:
-  build:
-  #...
+  build-node:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          command: npm run build
+      - run:
+          name: Create the ~/artifacts directory if it doesn't exist
+          command: mkdir -p ~/artifacts
+      - run:
+          name: Copy artifacts
+          command: cp -R build dist public .output .next .docusaurus ~/artifacts 2>/dev/null || true
+      - store_artifacts:
+          path: ~/artifacts
+          destination: node-build
   deploy:
     machine:
       image: ubuntu-2204:2023.07.2
@@ -18,7 +36,7 @@ workflows:
       - build
       - deploy:
           requires:
-            - build # only deploy once build job has completed
+            - build
           filters:
             branches:
-              only: main # only deploy on the main branch
+              only: main
