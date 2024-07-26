@@ -26,6 +26,18 @@ jobs:
       image: ubuntu-2204:2023.07.2
     steps:
       - run:
+          name: "echo an env var that is part of our project"
+          command: |
+            echo $SSH_USER
+      - run:
+          name: "echo an env var that is part of our project"
+          command: |
+            echo $SSH_HOST
+      - run:
+          name: "echo an env var that is part of our project"
+          command: |
+            echo $SSH_PORT
+      - run:
           name: Deploy Over SSH
           command: |
             ssh $SSH_USER@$SSH_HOST:$SSH_PORT "touch ~/test.txt"
