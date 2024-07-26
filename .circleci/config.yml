@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh $SSH_USER@$SSH_HOST:$SSH_PORT "touch ~/test.txt"
+            ssh $SSH_USER@$SSH_HOST -p $SSH_PORT "touch ~/test.txt"
 
 workflows:
   build-and-deploy:
