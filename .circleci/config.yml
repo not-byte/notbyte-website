@@ -24,6 +24,8 @@ jobs:
   deploy:
     machine:
       image: ubuntu-2204:2023.07.2
+    context:
+      - SSH
     steps:
       - run:
           name: "echo an env var that is part of our project"
