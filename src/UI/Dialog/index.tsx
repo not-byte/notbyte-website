@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useCallback } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useRef, useEffect } from "react";
-import { redirectToPage } from "./close";
 import DialogContext from "./dialogContext";
 import { FaTimesCircle } from "react-icons/fa";
 
@@ -17,13 +16,15 @@ export default function Dialog({ title, onClose, children }: Props) {
   const searchParams = useSearchParams();
   const dialogRef = useRef<null | HTMLDialogElement>(null);
   const showDialog = searchParams.get("showDialog");
-  const pathname = usePathname();
 
   const closeDialog = useCallback(() => {
     dialogRef.current?.close();
-    redirectToPage(pathname);
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.delete("showDialog");
+    window.history.replaceState(null, "", newUrl.toString());
+
     onClose();
-  }, [onClose, pathname]);
+  }, [onClose]);
 
   useEffect(() => {
     if (showDialog === "y") {
