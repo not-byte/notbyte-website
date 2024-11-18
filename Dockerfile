@@ -52,6 +52,8 @@ COPY --from=production --chown=node:node /app/.next ./.next
 COPY --from=production --chown=node:node /app/node_modules ./node_modules
 COPY --from=production --chown=node:node /app/package.json ./package.json
 
+COPY --from=setup --chown=node:node /app/public ./public
+
 CMD ["npm", "run", "start"]
 
 EXPOSE 3000
