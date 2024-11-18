@@ -32,7 +32,7 @@ ENV NODE_ENV=production
 
 RUN npm install --clean --production
 
-COPY --from=setup --chown=node:node /app/dist ./dist
+COPY --from=setup --chown=node:node /app/.next ./.next
 
 RUN npm prune --omit=dev
 
