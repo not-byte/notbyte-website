@@ -44,7 +44,7 @@ ENV NODE_ENV=production
 
 LABEL authors = "botprzemek,pawelos231,akolt19d,nozowymrozon"
 
-RUN apk add --update nodejs
+RUN apk add --update nodejs npm
 
 WORKDIR /app
 
