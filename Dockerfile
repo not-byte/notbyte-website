@@ -30,7 +30,7 @@ COPY --chown=node:node package*.json .
 
 ENV NODE_ENV=production
 
-RUN npm install --clean --production
+RUN npm install --clean --omit=dev
 
 COPY --from=setup --chown=node:node /app/.next ./.next
 
@@ -52,6 +52,6 @@ COPY --from=production --chown=node:node /app/.next ./.next
 COPY --from=production --chown=node:node /app/node_modules ./node_modules
 COPY --from=production --chown=node:node /app/package.json ./package.json
 
-RUN npm run start
+CMD ["npm", "run", "start"]
 
 EXPOSE 3000
