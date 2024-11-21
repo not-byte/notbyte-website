@@ -50,10 +50,11 @@ RUN apk add --update nodejs
 
 WORKDIR /app
 
-COPY --from=production --chown=node:node /app/.next/standalone ./.next/standalone
+COPY --from=production --chown=node:node /app/.next/standalone ./standalone
+COPY --from=production --chown=node:node /app/.next/static ./standalone/static
 
-COPY --from=setup --chown=node:node /app/public ./public
+COPY --from=setup --chown=node:node /app/public ./standalone/public
 
-CMD ["node", ".next/standalone/server.js"]
+CMD ["node", "./standalone/server.js"]
 
 EXPOSE 3000
