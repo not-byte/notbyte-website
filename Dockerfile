@@ -16,6 +16,8 @@ COPY --chown=node:node package*.json .
 
 RUN npm install --clean
 
+RUN npm install sharp
+
 COPY --chown=node:node . .
 
 RUN npm run build
