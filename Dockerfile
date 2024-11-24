@@ -44,7 +44,7 @@ FROM alpine AS runner
 
 ENV NODE_ENV=production
 
-LABEL authors = "botprzemek,pawelos231,akolt19d,nozowymrozon,braspi"
+LABEL authors = "botprzemek,pawelos231,akolt19d,nozowymrozon"
 
 RUN apk add --update nodejs
 
