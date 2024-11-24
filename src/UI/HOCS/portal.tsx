@@ -10,8 +10,8 @@ function withPortal<P extends object>(
   WrappedComponent: React.ComponentType<P>,
   portalProps: PortalProps
 ) {
+  // @ts-ignore
   return memo(
-    // eslint-disable-next-line
     forwardRef(function PortalWrapper(props: P, ref: React.ForwardedRef<any>) {
       const { portalId } = portalProps;
       const [mounted, setMounted] = useState<boolean>(false);
