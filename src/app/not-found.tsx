@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link';
 
 const NotFound = () => {
   return (
@@ -8,7 +9,11 @@ const NotFound = () => {
       <p className="text-sm md:text-md text-gray-400">
               The page you are looking for doesn’t exist or has been moved.
       </p>
-      <a href="/" className="text-lg space-y-4 bg-colors hover:brightness-75 text-white pl-10 pr-16 py-2 transition-[filter] duration-300 corner-br">Come back</a>
+      <Link href="/">
+        <a className="text-lg space-y-4 bg-colors hover:brightness-75 text-white pl-10 pr-16 py-2 transition-[filter] duration-300 corner-br">
+            Come back
+        </a>
+      </Link>
     </div>
   );
 };
