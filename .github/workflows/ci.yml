@@ -29,3 +29,31 @@ jobs:
 
       - name: Build Next.js app
         run: npm run build
+
+  build-docker:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    container:
+      image: gcr.io/kaniko-project/executor:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Kaniko Configuration
+        run: |
+          mkdir -p /kaniko/.docker
+          echo '{
+            "auths": {
+              "${{ secrets.REGISTRY_URL }}": {
+                "username": "${{ secrets.REGISTRY_USERNAME }}",
+                "password": "${{ secrets.REGISTRY_PASSWORD }}"
+              }
+            }
+          }' > /kaniko/.docker/config.json
+
+      - name: Build and Push Docker Image
+        run: |
+          /kaniko/executor \
+            --context . \
+            --dockerfile ./Dockerfile \
+            --destination ${{ secrets.REGISTRY_URL }}/my-app:${{ github.sha }}

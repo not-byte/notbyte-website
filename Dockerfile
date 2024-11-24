@@ -1,6 +1,6 @@
 FROM node:current-alpine
 
-LABEL authors = "botprzemek,pawelos231,akolt19d,nozowymrozon"
+LABEL authors = "botprzemek,pawelos231,akolt19d,nozowymrozon,braspi"
 
 ARG SMTP_HOST
 ARG SMTP_USER
