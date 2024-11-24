@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { memo, forwardRef } from "react";
 
 interface PortalProps {
-  portalId: string;
+    portalId: string;
 }
 
 function withPortal<P extends object>(
@@ -11,7 +11,10 @@ function withPortal<P extends object>(
   portalProps: PortalProps
 ) {
   return memo(
-    forwardRef(function PortalWrapper(props: P, ref: React.ForwardedRef<any>) {
+    forwardRef(function PortalWrapper(
+      props: P,
+      ref: React.ForwardedRef<any>
+    ) {
       const { portalId } = portalProps;
       const [mounted, setMounted] = useState<boolean>(false);
       const portalContainerRef = useRef<Element | null>(null);
@@ -19,7 +22,7 @@ function withPortal<P extends object>(
       useEffect(() => {
         setMounted(true);
         portalContainerRef.current =
-          document.querySelector<HTMLElement>(portalId);
+                    document.querySelector<HTMLElement>(portalId);
         return () => {
           portalContainerRef.current = null;
         };
