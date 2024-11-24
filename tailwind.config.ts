@@ -64,7 +64,6 @@ const config: Config = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
-    require("daisyui"),
     plugin(function ({ addUtilities }: { addUtilities: any }) {
       const newUtilities = {
         ".text-shadow": {
