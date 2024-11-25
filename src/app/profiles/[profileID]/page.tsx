@@ -43,6 +43,9 @@ export async function generateMetadata({ params }: Props) {
     alternates: {
       canonical: `/profiles/${profile.id}`,
     },
+    openGraph: {
+      images: [profile.image]
+    }
   };
 }
 
