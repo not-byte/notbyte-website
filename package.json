@@ -42,7 +42,7 @@
     "@types/react-slick": "^0.23.13",
     "@types/react-vertical-timeline-component": "^3.3.6",
     "autoprefixer": "^10.0.1",
-    "daisyui": "^4.7.2",
+    "daisyui": "^4.12.20",
     "eslint": "^9",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
