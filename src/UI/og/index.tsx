@@ -13,14 +13,16 @@ interface bannerOgImageProps {
 }
 
 const ImageWrapper = ({children}: {children: ReactNode}) => (
-  <div style={{
-    backgroundImage: `linear-gradient(30deg, rgba(240,132,97,1.00) 0%, rgba(129,81,156,1.00) 40%, rgba(234,86,87,1.00) 69%, rgba(240,132,97,1.00) 100%)`,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    height: "100%",
-  }}>
+  <div
+    style={{
+      background: "linear-gradient(30deg, rgba(240,132,97,1) 0%, rgba(129,81,156,1) 40%, rgba(234,86,87,1) 69%, rgba(240,132,97,1) 100%)",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100%",
+      height: "100%",
+    }}>
     {children}
   </div>
 );
@@ -43,11 +45,37 @@ export function defaultOgImage(): ImageResponse {
   );
 }
 
-export function bannerOgImage({imageUrl, altString}: bannerOgImageProps): ImageResponse {
+export function projectOgImage({imageUrl, altString}: bannerOgImageProps): ImageResponse {
   return new ImageResponse(
     (
       <ImageWrapper>
         <img src={imageUrl} alt={altString}/>
+      </ImageWrapper>
+    ),
+    size
+  );
+}
+
+export function profileOgImage({imageUrl, altString}: bannerOgImageProps): ImageResponse {
+  return new ImageResponse(
+    (
+      <ImageWrapper>
+        <img src={imageUrl} alt={altString} style={{
+          borderRadius: "50%",
+          width: "400px",
+          height: "400px",
+          marginRight: "20px",
+          display: "block",
+        }}/>
+        <div style={{display: "flex"}}>
+          <h1 style={{
+            fontSize: "80px",
+            fontWeight: "900",
+            color: "black",
+            textShadow: "0 2px 4px rgba(0,0,0,0.1)",
+            maxWidth: "600px",
+          }}>{altString}</h1>
+        </div>
       </ImageWrapper>
     ),
     size
