@@ -7,7 +7,7 @@ const size = {
   height: 630,
 };
 
-interface bannerOgImageProps {
+interface BannerOgImageProps {
   imageUrl: string;
   altString: string;
 }
@@ -45,7 +45,7 @@ export function defaultOgImage(): ImageResponse {
   );
 }
 
-export function projectOgImage({imageUrl, altString}: bannerOgImageProps): ImageResponse {
+export function projectOgImage({imageUrl, altString}: BannerOgImageProps): ImageResponse {
   return new ImageResponse(
     (
       <ImageWrapper>
@@ -56,7 +56,7 @@ export function projectOgImage({imageUrl, altString}: bannerOgImageProps): Image
   );
 }
 
-export function profileOgImage({imageUrl, altString}: bannerOgImageProps): ImageResponse {
+export function profileOgImage({imageUrl, altString}: BannerOgImageProps): ImageResponse {
   return new ImageResponse(
     (
       <ImageWrapper>
