@@ -1,4 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
+
+/**
+ * Profile Fallback Component is no longer used in the project.
+ * I'm leaving it because it might be useful in the future
+ */
+
 import React from "react";
 
 export const ProfileFallback = () => {
