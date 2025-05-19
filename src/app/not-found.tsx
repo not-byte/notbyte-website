@@ -21,10 +21,10 @@ export default async function NotFound() {
   }
 
   return (
-    <div className="h-[100vh] flex flex-col justify-center items-center">
+    <div className="h-[100vh] flex flex-col justify-center items-center p-20">
       <h1 className={`${chakra.className} flex flex-col items-center`}>
-        <span className="text-gradient-colors text-[20vh]">404.</span>
-        <span className={"text-night dark:text-white text-7xl"}>Page not found</span>
+        <span className="text-gradient-colors text-[20vh] leading-[0.8]">404.</span>
+        <span className={"text-night dark:text-white text-[6vh] text-center"}>Page not found</span>
       </h1>
 
       <p className="text-2xl my-7">
