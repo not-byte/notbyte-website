@@ -1,6 +1,7 @@
 import ProjectDetails from "@/components/Pages/Project";
 import { projects } from "@/lib/data/projects/projectsData";
 import React from "react";
+import {notFound} from "next/navigation";
 
 interface Props {
   params: {
@@ -41,7 +42,7 @@ const ProjectPage = ({ params }: Props) => {
   const project = projects.find((project) => project.id === params.projectID);
 
   if (!project) {
-    return <></>;
+    notFound();
   }
   return <ProjectDetails project={project} />;
 };

@@ -10,6 +10,7 @@ import { SkillsSectionAnimationWrapper } from "@/components/Pages/Profile/compon
 import { EducationSectionAnimationWrapper } from "@/components/Pages/Profile/components/Education/AnimationWrapper";
 import { EducationSection } from "@/components/Pages/Profile/components/Education";
 import { ProfileFallback } from "@/components/Pages/Profile/profileFallback";
+import {notFound} from "next/navigation";
 
 interface Props {
   params: {
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: Props) {
   if (!profile) {
     return {
       title: "profile not found",
-      description: "no description beacuse profile was not found",
+      description: "no description because profile was not found",
     };
   }
 
@@ -51,7 +52,7 @@ const ProfilePage = ({ params }: Props) => {
   const profile = profiles.find((item) => item.id === id);
 
   if (!profile) {
-    return <ProfileFallback />;
+    notFound();
   }
 
   return (

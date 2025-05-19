@@ -1,8 +1,8 @@
 //opengraph image creation for dynamic metadata
 import { projects } from "@/lib/data/projects/projectsData";
-import React from "react";
-import { ImageResponse } from "next/og";
-import Image from "next/image";
+
+import { headers } from "next/headers";
+import { defaultOgImage, projectOgImage} from "@/UI/og";
 
 interface PageProps {
   params: {
@@ -10,37 +10,23 @@ interface PageProps {
   };
 }
 
-export const size = {
-  width: 500,
-  height: 500,
-};
-
 export default function og({ params }: PageProps) {
   const id = params.projectID;
   const project = projects.find((item) => item.id == id);
 
+  const imagePath = project?.bannerUrl ?? "/logo-black.png";
+
+  const host = headers().get("host")!;
+  const protocol = host.startsWith("localhost") ? "http" : "https";
+
+  // url has to be absolute
+  const imageUrl = `${protocol}://${host}${imagePath}`;
+
+  const altString = project?.title ?? "Project Logo";
+
   if (!project) {
-    return new ImageResponse(
-      (
-        <Image
-          src={"/logo-black.png"}
-          alt={"profile does not exist"}
-          width={500}
-          height={500}
-        />
-      ),
-      size
-    );
+    return defaultOgImage();
   }
-  return new ImageResponse(
-    (
-      <Image
-        src={project.bannerUrl}
-        alt={project.title}
-        width={500}
-        height={500}
-      />
-    ),
-    { width: 1024, height: 500 }
-  );
+
+  return projectOgImage({imageUrl, altString});
 }
