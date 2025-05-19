@@ -22,7 +22,7 @@ const roleConfig = {
 export const Roles = () => {
   const { roles } = useProfileContext<Collaborator>();
   return (
-    <div className="pb-3 pt-3">
+    <div className="py-3 flex flex-wrap justify-center">
       {roles.map((role, index) => {
         return (
           <span
