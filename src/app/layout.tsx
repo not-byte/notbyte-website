@@ -10,44 +10,44 @@ const baseUrl = "https://notbyte.com";
 
 const icons = [
   {
-    url: "dark/favicon.ico",
+    url: "/dark/favicon.ico",
     type: "image/x-icon",
   },
   {
-    url: "dark/favicon-32x32.png",
+    url: "/dark/favicon-32x32.png",
     type: "image/png",
     sizes: "32x32",
   },
   {
-    url: "dark/favicon-16x16.png",
+    url: "/dark/favicon-16x16.png",
     type: "image/png",
     sizes: "16x16",
   },
   {
-    url: "dark/apple-touch-icon.png",
+    url: "/dark/apple-touch-icon.png",
     type: "image/png",
     sizes: "180x180",
     rel: "apple-touch-icon",
   },
   {
-    url: "light/favicon.ico",
+    url: "/light/favicon.ico",
     type: "image/x-icon",
     media: "(prefers-color-scheme: dark)",
   },
   {
-    url: "light/favicon-32x32.png",
+    url: "/light/favicon-32x32.png",
     type: "image/png",
     sizes: "32x32",
     media: "(prefers-color-scheme: dark)",
   },
   {
-    url: "light/favicon-16x16.png",
+    url: "/light/favicon-16x16.png",
     type: "image/png",
     sizes: "16x16",
     media: "(prefers-color-scheme: dark)",
   },
   {
-    url: "light/apple-touch-icon.png",
+    url: "/light/apple-touch-icon.png",
     type: "image/png",
     sizes: "180x180",
     media: "(prefers-color-scheme: dark)",

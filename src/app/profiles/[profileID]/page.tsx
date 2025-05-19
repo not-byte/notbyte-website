@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props) {
   if (!profile) {
     return {
       title: "profile not found",
-      description: "no description beacuse profile was not found",
+      description: "no description because profile was not found",
     };
   }
 
