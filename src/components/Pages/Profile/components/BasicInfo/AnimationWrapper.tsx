@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
 import { slideAnimation } from "@/UI/motion";
 
-export const BasicInfoAnimationWrapper = ({
+const BasicInfoAnimationWrapper = ({
   children,
 }: {
   children: ReactNode;
@@ -18,3 +18,5 @@ export const BasicInfoAnimationWrapper = ({
     </motion.div>
   );
 };
+
+export default BasicInfoAnimationWrapper;

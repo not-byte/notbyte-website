@@ -53,6 +53,7 @@ const ProfileComp = ({
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
               shimmer(50, 50)
             )}`}
+            priority={true}
           />
         </motion.div>
         <div className="flex flex-col  ">{BasicInfo}</div>

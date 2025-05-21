@@ -47,7 +47,7 @@ const variants = {
   },
 };
 
-export const EducationSectionAnimationWrapper = ({
+const EducationSectionAnimationWrapper = ({
   children,
 }: {
   children: ReactNode;
@@ -76,3 +76,5 @@ export const EducationSectionAnimationWrapper = ({
     </motion.section>
   );
 };
+
+export default EducationSectionAnimationWrapper;

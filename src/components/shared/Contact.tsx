@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { send } from "../../server-actions/navbarContact";
+import { send } from "@/server-actions/navbarContact";
 import { ContactSchema } from "@/lib/validators/contact";
 import toast from "react-hot-toast";
 import DialogContext from "@/UI/Dialog/dialogContext";

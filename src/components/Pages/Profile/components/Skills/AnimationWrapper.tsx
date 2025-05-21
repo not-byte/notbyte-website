@@ -39,7 +39,7 @@ const variants = {
   },
 };
 
-export const SkillsSectionAnimationWrapper = ({
+const SkillsSectionAnimationWrapper = ({
   children,
 }: {
   children: ReactNode;
@@ -68,3 +68,5 @@ export const SkillsSectionAnimationWrapper = ({
     </motion.div>
   );
 };
+
+export default SkillsSectionAnimationWrapper;

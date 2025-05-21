@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/UI/Button";
 import ThemeSwitch from "../shared/ThemeSwitch-debug";
 import Dialog from "@/UI/Dialog";
-import { onClose } from "../../server-actions/navbarContact";
+import { onClose } from "@/server-actions/navbarContact";
 import { Contact } from "../shared/Contact";
 import Logo from "./Logo";
 
