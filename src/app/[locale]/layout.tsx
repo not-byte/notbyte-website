@@ -3,8 +3,11 @@ import { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 
-import "./globals.css";
+import "../globals.css";
 import Footer from "@/components/Footer";
+import {hasLocale, NextIntlClientProvider} from "next-intl";
+import {routing} from "@/i18n/routing";
+import {notFound} from "next/navigation";
 
 const baseUrl = "https://notbyte.com";
 
@@ -88,22 +91,31 @@ export const metadata = {
   manifest: "/site.webmanifest",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: ReactNode;
+  params: Promise<{locale: string}>
 }>) {
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className="bg-white dark:bg-night overflow-x-hidden">
         <Providers>
-          <Navbar />
-          {/* not yet used, will be used for some external api calls */}
-          <div id="progress_bar"></div>
-          <div id="dialog"></div>
-          {children}
-          <Toaster position="bottom-right" reverseOrder={false} />
-          <Footer />
+          <NextIntlClientProvider>
+            <Navbar />
+            {/* not yet used, will be used for some external api calls */}
+            <div id="progress_bar"></div>
+            <div id="dialog"></div>
+            {children}
+            <Toaster position="bottom-right" reverseOrder={false} />
+            <Footer />
+          </NextIntlClientProvider>
         </Providers>
       </body>
     </html>

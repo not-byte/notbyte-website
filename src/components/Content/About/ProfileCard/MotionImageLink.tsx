@@ -5,13 +5,18 @@ import CardRedirector from "@/components/shared/cardRedirector";
 import { SmallProfile } from "@/lib/model/profile";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import {Link} from "@/i18n/navigation";
 
 export const MotionImageLink = ({ profile }: { profile: SmallProfile }) => {
   return (
     <CardRedirector>
-      <Link href={`/profiles/${profile.id}`} scroll={false}>
+      <Link href={{
+        pathname: "/profiles/[profileID]",
+        params: {
+          profileID: profile.id,
+        }
+      }} scroll={false}>
         <motion.div
           className=" mb-4 overflow-hidden  w-40 h-40 rounded-full"
           transition={{ duration: 0.2 }}

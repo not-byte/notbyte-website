@@ -4,9 +4,9 @@ import { shimmer, toBase64 } from "@/UI/shimmer";
 import { SmallProject } from "@/lib/model/project";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { cn } from "@/lib/utils";
+import {Link} from "@/i18n/navigation";
 
 interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   project: SmallProject;
@@ -14,7 +14,10 @@ interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export const ImageLink = ({ project, className }: ImageProps) => {
   return (
-    <Link href={`/projects/${project.id}`}>
+    <Link href={{
+      pathname: '/projects/[projectID]',
+      params: { projectID: project.id }
+    }}>
       <motion.div
         className="aspect-w-21 aspect-h-9 mb-4 rounded-full"
         transition={{ duration: 0.3 }}

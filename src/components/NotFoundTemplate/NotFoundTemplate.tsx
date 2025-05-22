@@ -1,6 +1,6 @@
 import React from "react";
 import {Chakra_Petch} from "next/font/google";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 const chakra = Chakra_Petch({
   weight: ["700"],
