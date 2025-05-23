@@ -23,7 +23,7 @@ const Logo = () => {
         placeholder="blur"
         blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(30, 30))}`}
       />
-      <span className="text-xl font-semibold">notByte</span>
+      <span className="hidden sm:inline text-xl font-semibold">notByte</span>
     </div>
   );
 };
