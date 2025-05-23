@@ -9,7 +9,6 @@ import { SkillsSection } from "@/components/Pages/Profile/components/Skills";
 import { SkillsSectionAnimationWrapper } from "@/components/Pages/Profile/components/Skills/AnimationWrapper";
 import { EducationSectionAnimationWrapper } from "@/components/Pages/Profile/components/Education/AnimationWrapper";
 import { EducationSection } from "@/components/Pages/Profile/components/Education";
-import { ProfileFallback } from "@/components/Pages/Profile/profileFallback";
 import {notFound} from "next/navigation";
 
 interface Props {
