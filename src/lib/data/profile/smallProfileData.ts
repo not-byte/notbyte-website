@@ -16,9 +16,8 @@ export const smallProfiles: SmallProfile[] = [
       },
     ],
     image: "/pawel.png",
-    description:
-      "Software engineer with a passion for continuous learning and innovation in the world of IT.",
-    position: "CEO, Software engineer",
+    description: "pawel.description",
+    position: "pawel.role",
   },
   {
     id: "Przemyslaw_Szymanski",
@@ -34,9 +33,8 @@ export const smallProfiles: SmallProfile[] = [
       },
     ],
     image: "/przemek.jpg",
-    description:
-      "A DevOps engineer, responsible for managing our Linux infrastructure using VMWare and Proxmox on Oracle Cloud.",
-    position: "CIO, DevOps Engineer",
+    description: "przemyslaw.description",
+    position: "przemyslaw.role",
   },
   {
     id: "Adam_Kolt",
@@ -52,9 +50,8 @@ export const smallProfiles: SmallProfile[] = [
       },
     ],
     image: "/adam_temp.jpg",
-    description:
-      "Passionate and skilled web developer commited to continuously improving my knowledge and understanding of all things IT.",
-    position: "CTO, Software Developer",
+    description: "adam.description",
+    position: "adam.role",
   },
   {
     id: "Lukasz_Ganczaryk",
@@ -70,8 +67,7 @@ export const smallProfiles: SmallProfile[] = [
       },
     ],
     image: "/lukasz.png",
-    description:
-      "Social media manager and software tester, dedicated to making sure everything runs smoothly.",
-    position: "Social media manager, tester",
+    description: "lukasz.description",
+    position: "lukasz.role",
   },
 ];

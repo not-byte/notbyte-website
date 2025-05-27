@@ -10,23 +10,24 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-const Footer: React.FC = () => {
+export default async function Footer() {
+  const t = await getTranslations("Footer");
+
   return (
     <footer className="bg-black text-grey-lighter text-center lg:text-left mt-[30vh]">
       <div className="w-[80%] mx-auto px-4 py-12 md:py-24 flex justify-center flex-col items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2">
             <h5 className="text-[rgba(240,132,97,1.00)] uppercase font-semibold mb-6 text-lg">
-              About Us
+              {t("about.title")}
             </h5>
             <p className="text-grey text-base leading-relaxed">
-              Elevate your online presence with innovative solutions. Our
-              mission is to empower your digital aspirations with cutting-edge
-              technologies and creative design.
+              {t("about.description")}
             </p>
             <div className="mt-8">
-              <span className="text-grey text-base">Connect with us:</span>
+              <span className="text-grey text-base">{t("about.connect")}</span>
               <div className="flex justify-center lg:justify-start space-x-4 mt-4">
                 <a
                   href="https://www.instagram.com/not_byte/"
@@ -58,7 +59,7 @@ const Footer: React.FC = () => {
 
           <div className="md:col-span-2 lg:col-span-1">
             <h5 className="text-[rgba(129,81,156,1.00)] uppercase font-semibold mb-6 text-lg">
-              Recent Projects
+              {t("recent_projects.title")}
             </h5>
             <ul className="text-base space-y-3">
               <li>
@@ -66,7 +67,7 @@ const Footer: React.FC = () => {
                   href="/projects/tournament"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >
-                  Tournament
+                  {t("recent_projects.tournament")}
                 </Link>
               </li>
               <li>
@@ -74,7 +75,7 @@ const Footer: React.FC = () => {
                   href="/projects/post_manager"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >
-                  Post Manager
+                  {t("recent_projects.post_manager")}
                 </Link>
               </li>
               <li>
@@ -82,7 +83,7 @@ const Footer: React.FC = () => {
                   href="/projects/notByte_website"
                   className="hover:text-[rgba(129,81,156,1.00)] transition-colors duration-300"
                 >
-                  Our Website
+                  {t("recent_projects.our_website")}
                 </Link>
               </li>
             </ul>
@@ -90,7 +91,7 @@ const Footer: React.FC = () => {
 
           <div className="lg:col-span-1">
             <h5 className="text-[rgba(234,86,87,1.00)] uppercase font-semibold mb-6 text-lg">
-              Contact Info
+              {t("contact_info")}
             </h5>
             <ul className="text-grey text-base space-y-3">
               <li>
@@ -110,7 +111,7 @@ const Footer: React.FC = () => {
 
           <div className="lg:col-span-1">
             <h5 className="text-[rgba(240,132,97,1.00)] uppercase font-semibold mb-6 text-lg">
-              Have any questions?
+              {t("questions.title")}
             </h5>
             <Link
               scroll={false}
@@ -120,23 +121,20 @@ const Footer: React.FC = () => {
               }}
             >
               <button className="text-lg space-y-4 bg-colors hover:brightness-75 text-white pl-10 pr-16 py-2 transition-[filter] duration-300 corner-br corner-black">
-                Contact us
+                {t("questions.contact_us")}
               </button>
             </Link>
 
             <p className="text-grey text-sm mt-4">
-              We'll happily answer any questions you have for us!
+              {t("questions.contact_us_description")}
             </p>
           </div>
         </div>
 
         <div className="text-center text-grey text-base pt-12 sm:pt-16 font-light">
-          © {new Date().getFullYear()} notByte. Crafted with passion and
-          precision.
+          © {new Date().getFullYear()} notByte. {t("copy")}
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

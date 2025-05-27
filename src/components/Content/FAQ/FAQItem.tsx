@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Faq } from "@/lib/model/FAQ";
+import { useTranslations } from "next-intl";
 
 type Props = {
   faq: Faq;
@@ -12,6 +13,7 @@ export const FAQItem = ({ faq }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [contentHeight, setContentHeight] = useState<number>(0);
   const contentRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("Homepage.FAQ");
 
   useEffect(() => {
     if (contentRef.current) {
@@ -46,7 +48,7 @@ export const FAQItem = ({ faq }: Props) => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-between w-full p-5 text-left text-base font-medium text-gray-900 bg-gray-100 hover:bg-gray-200 focus:outline-none hover:bg-colors"
       >
-        <span>{faq.question}</span>
+        <span>{t(faq.question)}</span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           className="text-gray-600"
@@ -76,7 +78,7 @@ export const FAQItem = ({ faq }: Props) => {
             className="overflow-hidden"
           >
             <div ref={contentRef} className="p-5 bg-white">
-              <p className="text-gray-700 text-sm">{faq.answer}</p>
+              <p className="text-gray-700 text-sm">{t(faq.answer)}</p>
             </div>
           </motion.div>
         )}

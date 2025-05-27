@@ -4,10 +4,9 @@ export const profiles: Profile[] = [
   {
     id: "Pawel_Linek",
     name: "Paweł Linek",
-    position: "Chief Executive Officer, Software Developer",
+    position: "pawel.roles",
     image: "/pawel.png",
-    longDescription:
-      "Ambitious software developer specialized in full-stack web applications, I am deeply passionate about continuous learning and keenly follow industry trends to stay ahead. My skill set spans across various full-stack technologies, underpinned by a strong grasp of data structures and proficiency in lower-level programming languages like C++. I thrive in dynamic environments, eagerly embracing new challenges to push the boundaries of what's possible. My interest doesn't stop at coding; I'm also fascinated by physics and mathematics, aiming to intertwine these disciplines with technology to create innovative solutions. I see immense potential in merging computational physics and mathematical models with software development to tackle complex problems. Eager to contribute to a team that prioritizes innovation, collaboration, and a progressive outlook, I am committed to leveraging my skills and interests to drive impactful projects at the nexus of technology and science.",
+    longDescription: "pawel.description",
     shortDescription:
       "Software engineer with a passion for continuous learning and innovation in the world of IT.",
     socials: [
@@ -27,96 +26,86 @@ export const profiles: Profile[] = [
     },
     education: [
       {
-        institution: "Politechnika Śląska",
-        degree: "Bachelor of Computer Science",
-        fieldOfStudy: "Computer Science",
-        description:
-          "Politechnika Śląska (Silesian University of Technology) in Gliwice is a well-regarded institution with a strong focus on engineering, technology, and science. It is known for its innovative research, strong academic programs, and significant contributions to science and industry. The university is involved in various scientific and educational activities, hosting events like conferences and workshops to foster knowledge exchange and development",
+        institution: "pawel.education.0.institution",
+        degree: "pawel.education.0.degree",
+        fieldOfStudy: "Computer Science", // Editors note: Feels unnecessary?
+        description: "pawel.education.0.description",
         startDate: new Date("2023-10-01"),
         endDate: null,
       },
       {
-        institution: "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
-        degree: "High School Diploma",
+        institution: "pawel.education.1.institution",
+        degree: "pawel.education.1.degree",
         fieldOfStudy: "Computer Science", // Field of study not specified for high school
         startDate: new Date("2019-09-01"),
-        description: `Zespół Szkół Techniczno-Informatycznych in Gliwice (ZSTI Gliwice) is recognized as a "Złota Szkoła 2024" (Golden School 2024), ranking second place in the Silesian Voivodeship. The school prides itself on teaching not just for educational purposes but for life skills. This achievement highlights the school's commitment to providing high-quality education and preparing students for their future careers and life challenges. For more detailed information about the school and its achievements, you can visit their website.`,
+        description: `pawel.education.1.description`,
         endDate: new Date("2023-05-31"),
       },
     ],
     experience: [
       {
-        company: "iO Data AS",
-        position: "Software Engineer",
+        company: "pawel.experience.0.company",
+        position: "pawel.experience.0.position",
         startDate: new Date("2023-10-01"),
         endDate: null,
-        description:
-          "Dedicated to all stages of software development cycle with a focus on backend and frontend solutions. Expertise in data analysis and processing for complex project development.",
+        description: "pawel.experience.0.description",
       },
       {
-        company: "notByte",
-        position: "Chief Executive Officer",
+        company: "pawel.experience.1.company",
+        position: "pawel.experience.1.position",
         startDate: new Date("2024-01-01"),
         endDate: null,
-        description:
-          "Leading a software development company and managing cross-functional teams to innovate and drive product strategy and business growth.",
+        description: "pawel.experience.1.description",
       },
       {
-        company: "TOLAPTOP.gr (ERASMUS+)",
-        position: "Computer hardware service technician",
+        company: "pawel.experience.2.company",
+        position: "pawel.experience.2.position",
         startDate: new Date("2022-05-01"),
         endDate: new Date("2022-06-30"),
-        description:
-          "Performed diagnostic maintenance and troubleshooting during an ERASMUS+ internship. Specialized in laptop disassembly and repair, demonstrating the ability to resolve hardware issues efficiently.",
+        description: "pawel.experience.2.description",
       },
       {
-        company: "Centrum Technologii Informatycznej",
-        position: "Software Intern",
+        company: "pawel.experience.3.company",
+        position: "pawel.experience.3.position",
         startDate: new Date("2022-04-01"),
         endDate: new Date("2022-05-31"),
-        description:
-          "Gained practical experience with software development under a team setting. Worked with front-end and back-end technologies, focusing on React.js and Node.js.",
+        description: "pawel.experience.3.description",
       },
       {
-        company: "SPIE Energotest",
-        position: "Software Intern",
+        company: "pawel.experience.4.company",
+        position: "pawel.experience.4.position",
         startDate: new Date("2021-05-01"),
         endDate: new Date("2021-06-30"),
-        description:
-          "Contributed to projects in the area of energy efficiency and automation. Developed software solutions tailored for industrial applications and enhanced understanding of PLCs and automation systems.",
+        description: "pawel.experience.4.description",
       },
     ],
     awards: [
       {
-        title: 'Three-time finalist of "Motorola Science Cup" competition',
+        title: "pawel.awards.0.title",
         date: new Date("2022-06-01"),
-        issuer: "Motorola",
-        description:
-          "National IT competition in Poland showcasing expertise in programming, mathematics, physics, and astronomy. (2021, 2022, 2023)",
+        issuer: "pawel.awards.0.issuer",
+        description: "pawel.awards.0.description",
       },
       {
-        title: "Two-time recipient of “The Laurel of Science”",
+        title: "pawel.awards.1.title",
         date: new Date("2022-01-10"),
-        issuer: "City of Gliwice, Poland",
-        description:
-          "Recognizing exceptional academic performance, awarded by the mayor of the city of Gliwice. (2021, 2022)",
+        issuer: "pawel.awards.1.issuer",
+        description: "pawel.awards.1.description",
       },
       {
-        title: '2nd place in "THE FIRST NATIONAL IT CHAMPIONSHIP"',
+        title: "pawel.awards.2.title",
         date: new Date("2022-10-15"),
-        issuer: "Poznań game arena",
-        description:
-          "Reflects comprehensive knowledge of the Linux operating system and its intricate internals.",
+        issuer: "pawel.awards.2.issuer",
+        description: "pawel.awards.2.description",
       },
     ],
   },
   {
     id: "Lukasz_Ganczaryk",
     name: "Łukasz Ganczaryk",
-    position: "Social Media Manager, Software Tester",
+    position: "lukasz.roles",
     image: "/lukasz.png",
-    longDescription:
-      "As a dedicated social media manager and software tester, I blend creativity with analytical precision. My expertise spans social media platforms, where I craft engaging campaigns, and software testing environments, ensuring top-notch user experiences. Beyond my professional pursuits, I am a music enthusiast and guitar player, harmonizing creativity with discipline. My love for cinema and literature fuels innovative approaches to both social media and software testing. I believe in the power of storytelling, whether through compelling social media content or well-crafted test scenarios, to connect with audiences and deliver impactful results. Eager to join a forward-thinking team that values innovation and collaboration, I aim to leverage my diverse skills and interests to contribute to projects at the intersection of technology, creativity, and culture.",
+    longDescription: "lukasz.description",
     shortDescription:
       "Social media manager and software tester, dedicated to making sure everything runs smoothly.",
     socials: [
@@ -136,57 +125,52 @@ export const profiles: Profile[] = [
     },
     education: [
       {
-        institution: "Politechnika Śląska",
-        degree: "Bachelor of Computer Science",
+        institution: "lukasz.education.0.institution",
+        degree: "lukasz.education.0.degree",
         fieldOfStudy: "Information and Communication Technology",
-        description:
-          "Politechnika Śląska (Silesian University of Technology) in Gliwice is a well-regarded institution with a strong focus on engineering, technology, and science. It is known for its innovative research, strong academic programs, and significant contributions to science and industry. The university is involved in various scientific and educational activities, hosting events like conferences and workshops to foster knowledge exchange and development",
+        description: "lukasz.education.0.description",
         startDate: new Date("2023-10-01"),
         endDate: null,
       },
       {
-        institution: "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
-        degree: "High School Diploma",
+        institution: "lukasz.education.1.institution",
+        degree: "lukasz.education.1.degree",
         fieldOfStudy: "Computer Science", // Field of study not specified for high school
         startDate: new Date("2019-09-01"),
-        description: `Zespół Szkół Techniczno-Informatycznych in Gliwice (ZSTI Gliwice) is recognized as a "Złota Szkoła 2024" (Golden School 2024), ranking second place in the Silesian Voivodeship. The school prides itself on teaching not just for educational purposes but for life skills. This achievement highlights the school's commitment to providing high-quality education and preparing students for their future careers and life challenges. For more detailed information about the school and its achievements, you can visit their website.`,
+        description: `lukasz.education.1.description`,
         endDate: new Date("2023-05-31"),
       },
     ],
     experience: [
       {
-        company: "notByte",
-        position: "Social Media Manager",
+        company: "lukasz.experience.0.company",
+        position: "lukasz.experience.0.position",
         startDate: new Date("2024-01-01"),
         endDate: null,
-        description:
-          "Crafting engaging content to make sure our brands' voice is heard and developing solutions to drive brand awareness and engagement",
+        description: "lukasz.experience.0.description",
       },
       {
-        company: "Alfa-System",
-        position: "Intern",
+        company: "lukasz.experience.1.company",
+        position: "lukasz.experience.1.position",
         startDate: new Date("2022-04-01"),
         endDate: new Date("2022-05-31"),
-        description:
-          "Gained practical experience working with computer networks, Linux operating system and networking hardware.",
+        description: "lukasz.experience.1.description",
       },
       {
-        company: "PC-Store",
-        position: "Intern",
+        company: "lukasz.experience.2.company",
+        position: "lukasz.experience.2.position",
         startDate: new Date("2021-05-01"),
         endDate: new Date("2021-06-30"),
-        description:
-          "Troubleshooted hardware issues and performed repairs and upgrades, along with building PCs from scratch",
+        description: "lukasz.experience.2.description",
       },
     ],
   },
   {
     id: "Adam_Kolt",
     name: "Adam Kołt",
-    position: "Chief Technology Officer, Software Engineer",
+    position: "adam.roles",
     image: "/adam_temp.jpg",
-    longDescription:
-      "20-year-old IT student and freelance web developer from Zabrze, Poland. I've always been passionate about IT. As a kid, I was fascinated by the things people could create using the ability to code, such as games or applications. I adored the concept of expressing creativity and bringing ideas to life through programming. That's why I decided to attend ZSTI, a technical high school located in Gliwice, renowned for its high-level IT education. It was during my time at the school when I truly fell in love with programming, specifically web development. I studied thoroughly and worked on my skillset to the point where I could take on freelance projects. As a full-stack developer, my job is to oversee both the front-end and the back-end. I connect the two branches together in a synergistic manner, creating a fully functioning project for the client. I use a wide range of technologies that allow me to elevate my work and give the customer the best possible experience. In addition to programming, I am also proficient in computer graphics, utilizing software such as Adobe Photoshop or Adobe Illustrator to create and edit images. Besides my technical skills, I pride myself on the ability to learn quickly and adapt to various situations. I am always open to learning new technologies, frameworks, or libraries. I also excel at problem-solving; I often look for creative ways to avoid or fix issues that might interfere with my work. Outside of work, I am a huge fan of sports, primarily football, basketball, and combat sports. I also enjoy playing video games in my spare time.",
+    longDescription: "adam.description",
     shortDescription:
       "Passionate and skilled software engineer commited to continuously improving my knowledge and understanding of all things IT.",
     socials: [
@@ -206,89 +190,81 @@ export const profiles: Profile[] = [
     },
     education: [
       {
-        institution: "WSB Merito Chorzów",
-        degree: "Bachelor of Computer Science",
+        institution: "adam.education.0.institution",
+        degree: "adam.education.0.degree",
         fieldOfStudy: "Computer Science",
-        description:
-          "WSB Merito is a private university in Chorzów, Poland, offering a wide range of courses in various fields. The university is known for its modern approach to education, focusing on practical skills and preparing students for the job market. The Computer Science program covers a broad spectrum of topics, including software development, data analysis, and computer networks. The curriculum is designed to provide students with a solid foundation in computer science and equip them with the necessary skills to succeed in the IT industry.",
+        description: "adam.education.0.description",
         startDate: new Date("2023-10-01"),
         endDate: null,
       },
       {
-        institution: "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
-        degree: "High School Diploma",
+        institution: "adam.education.1.institution",
+        degree: "adam.education.1.degree",
         fieldOfStudy: "Computer Science",
         startDate: new Date("2019-09-01"),
-        description: `Zespół Szkół Techniczno-Informatycznych in Gliwice (ZSTI Gliwice) is recognized as a "Złota Szkoła 2024" (Golden School 2024), ranking second place in the Silesian Voivodeship. The school prides itself on teaching not just for educational purposes but for life skills. This achievement highlights the school's commitment to providing high-quality education and preparing students for their future careers and life challenges. For more detailed information about the school and its achievements, you can visit their website.`,
+        description: "adam.education.1.description",
         endDate: new Date("2023-05-31"),
       },
     ],
     experience: [
       {
-        company: "Giganci Programowania",
-        position: "Programming Trainer",
+        company: "adam.experience.0.company",
+        position: "adam.experience.0.position",
         startDate: new Date("2024-03-09"),
         endDate: null,
-        description:
-          "Providing programming training for future developers in a wide range of technologies and coding languages.",
+        description: "adam.experience.0.description",
       },
       {
-        company: "notByte",
-        position: "Chief Technology Officer",
+        company: "adam.experience.1.company",
+        position: "adam.experience.1.position",
         startDate: new Date("2024-01-01"),
         endDate: null,
-        description:
-          "Working on and overseeing all technical aspects of the company, from web development to IT infrastructure.",
+        description: "adam.experience.1.description",
       },
       {
-        company: "TOLAPTOP.gr (ERASMUS+)",
-        position: "Computer hardware service technician",
+        company: "adam.experience.2.company",
+        position: "adam.experience.2.position",
         startDate: new Date("2022-05-01"),
         endDate: new Date("2022-06-30"),
-        description:
-          "Performed diagnostic maintenance and troubleshooting during an ERASMUS+ internship. Specialized in laptop disassembly and repair, demonstrating the ability to resolve hardware issues efficiently.",
+        description: "adam.experience.2.description",
       },
       {
-        company: "Centrum Technologii Informatycznej",
-        position: "Software Intern",
+        company: "adam.experience.3.company",
+        position: "adam.experience.3.position",
         startDate: new Date("2022-04-01"),
         endDate: new Date("2022-05-31"),
-        description:
-          "Gained practical experience with software development under a team setting. Worked with front-end and back-end technologies, focusing on Svelte, Express.js and Node.js.",
+        description: "adam.experience.3.description",
       },
       {
-        company: "S4D",
-        position: "Software Tester Intern",
+        company: "adam.experience.4.company",
+        position: "adam.experience.4.position",
         startDate: new Date("2021-05-01"),
         endDate: new Date("2021-06-30"),
-        description:
-          "Worked in a Scrum/Agile environment, testing software applications and ensuring they met quality standards. Developed test cases, executed tests, and reported bugs to the development team. Acquired knowledge of software testing methodologies and tools, including Jira and Cypress.",
+        description: "adam.experience.4.description",
       },
     ],
     awards: [
       {
-        title: 'Two-time finalist of "Motorola Science Cup" competition',
+        title: "adam.awards.0.title",
         date: new Date("2022-06-01"),
-        issuer: "Motorola",
+        issuer: "adam.awards.0.issuer",
         description:
           "National IT competition in Poland showcasing expertise in programming, mathematics, physics, and astronomy. (2021, 2022, 2023)",
       },
       {
-        title: "Recipient of “The Laurel of Science”",
+        title: "adam.awards.1.title",
         date: new Date("2022-01-10"),
-        issuer: "City of Gliwice, Poland",
-        description:
-          "Recognizing exceptional academic performance, awarded by the mayor of the city of Gliwice. (2022)",
+        issuer: "adam.awards.1.issuer",
+        description: "adam.awards.1.description",
       },
     ],
   },
   {
     id: "Przemyslaw_Szymanski",
     name: "Przemysław Szymański",
-    position: "CIO, DevOps Engineer",
+    position: "przemyslaw.roles",
     image: "/przemek.jpg",
-    longDescription:
-      "A DevOps engineer, responsible for managing our Linux infrastructure using VMWare and Proxmox on Oracle Cloud. I work with Git, Docker, Nginx, and PostgreSQL databases like CockroachDB. I also have a keen interest in development with programming languages such as TypeScript, Go, Java, and C.",
+    longDescription: "przemyslaw.description",
     shortDescription:
       "A DevOps engineer, responsible for managing our Linux infrastructure using VMWare and Proxmox on Oracle Cloud.",
     socials: [
@@ -307,72 +283,65 @@ export const profiles: Profile[] = [
     },
     education: [
       {
-        institution: "University of Information Technology in Katowice (WSTI)",
-        degree: "Bachelor of Computer Science",
+        institution: "przemyslaw.education.0.institution",
+        degree: "przemyslaw.education.0.degree",
         fieldOfStudy: "Computer Science",
-        description:
-          "University of Information Technology (WSTI) in Katowice with highly qualified academic staff consists of esteemed researchers and practitioners with significant industry experience and a supportive attitude towards students. Many lecturers at WSTI are actively working graphic designers and IT professionals, allowing students to collaborate with their future employers even during their studies.",
+        description: "przemyslaw.education.0.description",
         startDate: new Date("2023-10-01"),
         endDate: null,
       },
       {
-        institution: "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
-        degree: "High School Diploma",
+        institution: "przemyslaw.education.1.institution",
+        degree: "przemyslaw.education.1.degree",
         fieldOfStudy: "Computer Science",
         startDate: new Date("2019-09-01"),
-        description: `My IT journey began here. I learnt a lot new skills, including Linux systems, networking, database management, frontend and backend development. During my time here, I participated in various tournaments like Motorola Science Cup and Mistrzostwa IT, these events gave me invaluable experience.`,
+        description: "przemyslaw.education.1.description",
         endDate: new Date("2023-05-31"),
       },
     ],
     experience: [
       {
-        company: "Flytronic",
-        position: "Software Tester",
+        company: "przemyslaw.experience.0.company",
+        position: "przemyslaw.experience.0.position",
         startDate: new Date("2024-03-01"),
         endDate: null,
-        description:
-          "I am responsible for testing and programming various electronic circuits using our company software, participating in the construction of testing stations, and contributing to the development of testing procedures. Additionally, I conduct test measurements of unmanned aerial vehicle subsystems, calibrate IMU circuits, and participate in modular and pre-flight tests of UAVs.",
+        description: "przemyslaw.experience.0.description",
       },
       {
-        company: "notByte",
-        position: "Chief Executive Officer",
+        company: "pzemyslaw.experience.1.company",
+        position: "przemyslaw.experience.1.position",
         startDate: new Date("2024-01-01"),
         endDate: null,
-        description:
-          "Leading a software development company and managing cross-functional teams to innovate and drive product strategy and business growth.",
+        description: "przemyslaw.experience.1.description",
       },
       {
-        company: "JEST Gliwice",
-        position: "System & Network Administator",
+        company: "przemyslaw.experience.2.company",
+        position: "przemyslaw.experience.2.position",
         startDate: new Date("2023-05-01"),
         endDate: new Date("2024-02-30"),
-        description:
-          "Managing a Windows Server with a local Active Directory and Azure infrastructure for office device synchronization, overseeing the local network including routers, switches, and computer hardware maintenance in the company, and documenting tasks performed by technicians through protocols and reports using Excel and Word.",
+        description: "przemyslaw.experience.2.description",
       },
       {
-        company: "alfa-system.pl",
-        position: "System & Network Intern",
+        company: "przemyslaw.experience.3.company",
+        position: "przemyslaw.experience.3.position",
         startDate: new Date("2022-05-01"),
         endDate: new Date("2022-06-30"),
-        description:
-          "Managing Ubuntu Linux servers including port management and service diagnostics, configuring TP-LINK and CISCO routers and switches for client installations, servicing and diagnosing network devices and Ethernet/fiber optic connections on-site as a technician, and preparing reports and documentation detailing issues and workflow from diagnosis to problem resolution.",
+        description: "przemyslaw.experience.3.description",
       },
       {
-        company: "alfa-system.pl",
-        position: "System & Network Administator Intern",
+        company: "przemyslaw.experience.4.company",
+        position: "przemyslaw.experience.4.position",
         startDate: new Date("2021-05-01"),
         endDate: new Date("2021-06-30"),
-        description:
-          "Managing Ubuntu Linux servers including port management and service diagnostics, configuring TP-LINK and CISCO routers and switches for client installations, servicing and diagnosing network devices and Ethernet/fiber optic connections on-site as a technician, and preparing reports and documentation detailing issues and workflow from diagnosis to problem resolution.",
+        description: "przemyslaw.experience.4.description",
       },
     ],
     awards: [
       {
-        title: 'Semi-finalist place in "THE FIRST NATIONAL IT CHAMPIONSHIP"',
+        title: "przemyslaw.awards.0.title",
         date: new Date("2022-10-15"),
-        issuer: "Poznań Game Arena",
-        description:
-          "'Mistrzostwa IT' is a national computer-related championship. My partner and I were participating as a team in cybersecurity and systems categories. We’ve reached semi-finals with leading scores, sadly it wasn’t enough for the finals. I experienced so much fun and gained new perspectives.",
+        issuer: "przemyslaw.awards.0.issuer",
+        description: "przemyslaw.awards.0.description",
       },
     ],
   },

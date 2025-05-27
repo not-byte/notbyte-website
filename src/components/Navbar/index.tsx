@@ -7,11 +7,11 @@ import { onClose } from "../../server-actions/navbarContact";
 import { Contact } from "../shared/Contact";
 import Logo from "./Logo";
 import LocaleSwitch from "@/components/shared/LocaleSwitch";
-import {getLocale} from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 
 export default async function Navbar() {
-
   const locale = await getLocale();
+  const t = await getTranslations();
 
   return (
     <nav className="flex justify-between items-center px-4 py-4 fixed w-full bg-grey-lightest text-black dark:bg-black dark:text-white lg:px-8 z-20">
@@ -34,11 +34,10 @@ export default async function Navbar() {
           }}
         >
           <Button className="bg-colors text-lg  rounded-none">
-            <span>get in touch</span>
+            <span>{t("Navbar.get_in_touch")}</span>
           </Button>
         </Link>
       </div>
     </nav>
   );
-};
-
+}

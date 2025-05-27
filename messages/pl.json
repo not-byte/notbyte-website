@@ -1,10 +1,362 @@
 {
   "Homepage": {
-    "title": "Uwolnij cyfrową przyszłość dzięki naszej",
-    "web_alchemy": "Internetowej Magii_",
-    "subtitle": "wznieś swoją internetową tożsamość na wyższy poziom."
+    "title": "Uwolnij cyfrową przyszłość z naszą",
+    "web_alchemy": "Internetową Magią_",
+    "subtitle": "wznieś swoją markę online na wyższy poziom.",
+    "meet_team": "Poznaj naszą drużynę!",
+    "profiles": {
+      "pawel": {
+        "role": "CEO, Inżynier oprogramowania",
+        "description": "Inżynier oprogramowania z pasją do ciągłego rozwoju i innowacji w świecie IT."
+      },
+      "przemyslaw": {
+        "role": "CIO, Inżynier DevOps",
+        "description": "Inżynier DevOps, odpowiada za naszą infrastrukturę Linuksową opartą na VMWare i Proxmox w Oracle Cloud."
+      },
+      "adam": {
+        "role": "CTO, Programista",
+        "description": "Zafascynowany web developer, nieustannie poszerzający wiedzę o świecie IT."
+      },
+      "lukasz": {
+        "role": "Specjalista ds. social mediów, tester",
+        "description": "Specjalista od social mediów i tester oprogramowania, który dba, by wszystko działało jak należy."
+      }
+    },
+    "timeline": {
+      "title": "Wydarzenia i plany rozwoju",
+      "creation_of_the_company": {
+        "title": "Powstanie firmy",
+        "subtitle": "Firma",
+        "description": "Założenie firmy i pierwsze kroki na rynku. Firmę stworzyła czwórka przyjaciół z ambicją, by zostać liderem w branży."
+      },
+      "web_development": {
+        "title": "Tworzenie logo i rozwój strony",
+        "subtitle": "Logo, strona",
+        "description": "Stworzyliśmy logo i rozpoczęliśmy pracę nad stroną internetową w Next.js i Tailwind CSS."
+      },
+      "knury": {
+        "title": "Knury Knurów 2024",
+        "subtitle": "Knurów, koszykówka",
+        "description": "Stworzyliśmy w pełni funkcjonalną aplikację do obsługi turnieju koszykarskiego w Knurowie. Powstała w Go i Nuxt.js – i odniosła duży sukces!"
+      },
+      "future": {
+        "title": "Plany na przyszłość",
+        "subtitle": "przyszłość, ekscytacja",
+        "description": "W przyszłości planujemy dalszy rozwój firmy i realizację nowych projektów. Przyszłość napawa nas ekscytacją i nadzieją na nowe możliwości."
+      }
+    },
+    "portfolio": {
+      "title": "Nasze prace",
+      "description": "Pracowaliśmy nad wyjątkowymi projektami, które pokazują naszą wiedzę i innowacyjność. To efekt zaangażowania i ciężkiej pracy naszego zespołu. Sprawdź nasze realizacje poniżej.",
+      "projects": {
+        "knury": {
+          "title": "Tournament",
+          "description": "Aplikacja do zarządzania turniejami koszykówki – śledzenie przebiegu i wyników. Nowoczesny, przyjazny interfejs, a w planach model SaaS z nowymi funkcjami i większą skalowalnością.",
+          "tags": {
+            "basketball": "Koszykówka",
+            "sport": "Sport",
+            "tournament": "Turniej",
+            "management": "Zarządzanie",
+            "nuxt": "Nuxt",
+            "golang": "Golang"
+          }
+        },
+        "post_manager": {
+          "title": "Post Manager",
+          "description": "Narzędzie wewnętrzne do zarządzania postami w social media. Umożliwia tworzenie i publikację postów na wybranych platformach – wszystko w jednym miejscu.",
+          "tags": {
+            "development": "Rozwój",
+            "internal": "Wewnętrzne",
+            "cms": "CMS"
+          }
+        },
+        "not_byte_website": {
+          "title": "Not Byte",
+          "description": "Strona internetowa firmy specjalizującej się w tworzeniu aplikacji i serwisów webowych. Strona zaprojektowana jest z myślą o intuicyjności, i nowoczyesnym technikom responsywnego designu.",
+          "tags": {
+            "website": "Strona",
+            "next_js": "Next.js",
+            "tailwind": "Tailwind CSS"
+          }
+        }
+      }
+    },
+    "FAQ": {
+      "title": "FAQ",
+      "questions": {
+        "0": {
+          "question": "Jaka jest misja notByte?",
+          "answer": "Naszą misją jest tworzenie innowacyjnych rozwiązań SaaS i nowoczesnego oprogramowania, które odpowiadają na realne potrzeby – by poprawiać jakość życia naszych klientów i budować trwałą wartość dla partnerów."
+        },
+        "1": {
+          "question": "Jakie korzyści przynoszą produkty/usługi notByte klientom?",
+          "answer": "Nasze rozwiązania SaaS i oprogramowanie pomagają zwiększyć efektywność, obniżyć koszty i poprawić komfort użytkowania. Tworzymy narzędzia, które rozwiązują konkretne problemy i pomagają realizować cele biznesowe szybciej i skuteczniej."
+        },
+        "2": {
+          "question": "Czym notByte wyróżnia się na tle konkurencji?",
+          "answer": "notByte wyróżnia się innowacyjnością, podejściem skoncentrowanym na kliencie oraz zwinnością działania. Dogłębnie analizujemy potrzeby użytkowników i tworzymy rozwiązania, które przekraczają ich oczekiwania. Nasz zespół to pasjonaci z doświadczeniem, którzy nie boją się wyzwań."
+        },
+        "3": {
+          "question": "Jak potencjalni inwestorzy mogą zaangażować się w notByte?",
+          "answer": "Inwestorzy mogą się z nami skontaktować przez stronę internetową lub e-mail. Udzielamy szczegółowych informacji, prezentacji i planów rozwoju – jesteśmy otwarci na rozmowy o różnych formach inwestycji: kapitałowych, partnerskich czy strategicznych."
+        },
+        "4": {
+          "question": "Jakie są długoterminowe cele i wizja notByte?",
+          "answer": "Naszym celem jest dalszy rozwój oferty SaaS i oprogramowania, wejście na nowe rynki i nieustanna innowacja. Chcemy być liderem znanym z transformacyjnych rozwiązań i doskonałej obsługi. W planach mamy również zrównoważony rozwój, promowanie kreatywności i pozytywny wpływ na społeczeństwo."
+        }
+      }
+    }
+  },
+  "Navbar": {
+    "get_in_touch": "Skontaktuj się z nami"
   },
   "Footer": {
-    "about": "O nas"
+    "about": {
+      "title": "O nas",
+      "description": "Wznieś swoją obecność online dzięki innowacyjnym rozwiązaniom. Naszą misją jest wspieranie Twoich cyfrowych ambicji przy użyciu nowoczesnych technologii i kreatywnego designu.",
+      "connect": "Połącz się z nami:"
+    },
+    "recent_projects": {
+      "title": "Ostatnie projekty",
+      "tournament": "Tournament",
+      "post_manager": "Post Manager",
+      "our_website": "Nasza strona"
+    },
+    "contact_info": "Dane kontaktowe",
+    "questions": {
+      "title": "Masz pytania?",
+      "contact_us": "Skontaktuj się z nami",
+      "contact_us_description": "Z przyjemnością odpowiemy na wszystkie pytania!"
+    },
+    "copy": "Stworzony z pasją i precyzją."
+  },
+  "Profiles": {
+    "common": {
+      "experience": "Doświadczenie",
+      "education": "Wykształcenie",
+      "achievements": "Osiągnięcia",
+      "at": "w",
+      "present": "Obecnie",
+      "no_description": "Brak opisu"
+    },
+    "pawel": {
+      "roles": "Dyrektor Generalny, Programista",
+      "description": "Ambitny programista specjalizujący się w aplikacjach webowych full-stack. Z pasją rozwijam się w dziedzinie programowania i śledzę najnowsze trendy technologiczne. Moje umiejętności obejmują szerokie spektrum technologii full-stack, a także dogłębną znajomość struktur danych oraz języków niskopoziomowych, takich jak C++. Dobrze odnajduję się w dynamicznych środowiskach, chętnie podejmuję nowe wyzwania i szukam nieszablonowych rozwiązań. Interesuję się również fizyką i matematyką, które staram się łączyć z informatyką, tworząc innowacyjne rozwiązania. Widzę ogromny potencjał w łączeniu fizyki obliczeniowej i modeli matematycznych z programowaniem w celu rozwiązywania złożonych problemów. Chcę pracować w zespole, który ceni innowacje, współpracę i rozwój, aby wykorzystywać swoje umiejętności w projektach łączących technologię i naukę.",
+      "experience": {
+        "0": {
+          "position": "Inżynier Oprogramowania",
+          "company": "iO Data AS",
+          "date": "Paź 2023 - Obecnie",
+          "description": "Zaangażowany we wszystkie etapy cyklu rozwoju oprogramowania, z naciskiem na backend i frontend. Specjalizuję się w analizie i przetwarzaniu danych dla rozwoju złożonych projektów."
+        },
+        "1": {
+          "position": "Dyrektor Generalny",
+          "company": "notByte",
+          "date": "Sty 2024 - Obecnie",
+          "description": "Zarządzanie firmą tworzącą oprogramowanie i zespołami interdyscyplinarnymi. Odpowiedzialność za strategię produktu oraz rozwój firmy."
+        },
+        "2": {
+          "position": "Serwisant Sprzętu Komputerowego",
+          "company": "TOLAPTOP.gr (ERASMUS+)",
+          "date": "Maj 2022 - Cze 2022",
+          "description": "Diagnozowanie, konserwacja i naprawa laptopów w ramach praktyk ERASMUS+. Specjalizacja w rozbieraniu i naprawie laptopów."
+        },
+        "3": {
+          "position": "Praktykant – Programista",
+          "company": "Centrum Technologii Informatycznej",
+          "date": "Kwi 2022 - Maj 2022",
+          "description": "Praktyka programistyczna w zespole. Praca z technologiami frontendowymi i backendowymi, głównie React.js i Node.js."
+        },
+        "4": {
+          "position": "Praktykant – Programista",
+          "company": "SPIE Energotest",
+          "date": "Maj 2021 - Cze 2021",
+          "description": "Udział w projektach dotyczących efektywności energetycznej i automatyzacji. Rozwój rozwiązań programistycznych dla zastosowań przemysłowych. Poznanie PLC i systemów automatyki."
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Inżynieria Informatyki",
+          "institution": "Politechnika Śląska",
+          "date": "Paź 2023 - Obecnie",
+          "description": "Politechnika Śląska w Gliwicach to renomowana uczelnia techniczna, znana z innowacyjnych badań, silnych programów nauczania i wkładu w rozwój nauki i przemysłu. Organizuje konferencje i warsztaty naukowe."
+        },
+        "1": {
+          "degree": "Technik Informatyk",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Wrz 2019 - Maj 2023",
+          "description": "ZSTI w Gliwicach to szkoła nagrodzona tytułem „Złota Szkoła 2024”, zajmująca 2. miejsce w województwie śląskim. Szkoła kładzie nacisk na edukację życiową oraz przygotowanie uczniów do kariery zawodowej."
+        }
+      },
+      "awards": {
+        "0": {
+          "title": "Trzykrotny finalista konkursu „Motorola Science Cup”",
+          "issuer": "Motorola",
+          "description": "Ogólnopolski konkurs z zakresu programowania, matematyki, fizyki i astronomii (2021, 2022, 2023)."
+        },
+        "1": {
+          "title": "Dwukrotny laureat nagrody „Laur Nauki”",
+          "issuer": "Prezydent Gliwic",
+          "description": "Wyróżnienie za wybitne osiągnięcia naukowe przyznawane przez prezydenta miasta Gliwice (2021, 2022)."
+        },
+        "2": {
+          "title": "2. miejsce w „I Ogólnopolskich Mistrzostwach IT”",
+          "issuer": "Poznań Game Arena",
+          "description": "Wyróżnienie za dogłębną znajomość systemu Linux i jego wewnętrznych mechanizmów."
+        }
+      }
+    },
+    "przemyslaw": {
+      "roles": "Dyrektor ds. Informatyki, Inżynier DevOps",
+      "description": "Inżynier DevOps odpowiedzialny za zarządzanie infrastrukturą opartą na Linuksie, wykorzystując VMWare i Proxmox w Oracle Cloud. Pracuję z Gitem, Dockerem, Nginxem i bazami danych PostgreSQL, takimi jak CockroachDB. Programuję również w TypeScript, Go, Javie i C.",
+      "experience": {
+        "0": {
+          "position": "Tester Oprogramowania",
+          "company": "Flytronic",
+          "description": "Testuję i programuję układy elektroniczne, współtworzę stanowiska testowe, rozwijam procedury testowe, przeprowadzam pomiary układów UAV oraz testy modułowe i przedlotowe."
+        },
+        "1": {
+          "position": "Dyrektor Generalny",
+          "company": "notByte",
+          "description": "Zarządzanie firmą informatyczną i kierowanie zespołami wielodyscyplinarnymi. Innowacje produktowe i rozwój biznesu."
+        },
+        "2": {
+          "position": "Administrator Systemów i Sieci",
+          "company": "JEST Gliwice",
+          "description": "Zarządzanie Windows Server z AD i infrastrukturą Azure. Opieka nad lokalną siecią, urządzeniami biurowymi, routerami, switchami. Dokumentacja zadań techników."
+        },
+        "3": {
+          "position": "Praktykant Administratora Systemów i Sieci",
+          "company": "alfa-system.pl",
+          "description": "Zarządzanie serwerami Ubuntu, diagnostyka usług, konfiguracja routerów/switchy TP-LINK i CISCO, serwis urządzeń sieciowych i dokumentacja napraw."
+        },
+        "4": {
+          "position": "Praktykant Administratora Systemów i Sieci",
+          "company": "alfa-system.pl",
+          "description": "Zarządzanie serwerami Ubuntu, diagnostyka usług, konfiguracja routerów/switchy TP-LINK i CISCO, serwis urządzeń sieciowych i dokumentacja napraw."
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Inżynieria Informatyki",
+          "institution": "WSTI Katowice",
+          "date": "Paź 2023 - Obecnie",
+          "description": "Wyższa Szkoła Technologii Informatycznych w Katowicach. Kadra złożona z praktyków i specjalistów. Studenci mają kontakt z potencjalnymi pracodawcami już w trakcie nauki."
+        },
+        "1": {
+          "degree": "Technik Informatyk",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Wrz 2019 - Maj 2023",
+          "description": "Tu zaczęła się moja przygoda z IT – systemy Linux, sieci, bazy danych, frontend i backend. Brałem udział w konkursach takich jak Motorola Science Cup i Mistrzostwa IT."
+        }
+      },
+      "awards": {
+        "0": {
+          "title": "Półfinalista „I Ogólnopolskich Mistrzostw IT”",
+          "issuer": "Poznań Game Arena",
+          "description": "Brałem udział w kategorii cyberbezpieczeństwo i systemy. Dotarliśmy do półfinałów z wysokim wynikiem, co dało mi wiele doświadczenia."
+        }
+      }
+    },
+    "adam": {
+      "roles": "Dyrektor Techniczny, Programista",
+      "description": "20-letni student informatyki i freelancer z Zabrza. Od dziecka fascynowało mnie tworzenie gier i aplikacji. Uczęszczałem do ZSTI w Gliwicach, gdzie zakochałem się w programowaniu, zwłaszcza webowym. Dziś jako full-stack developer tworzę kompletne projekty dla klientów. Pracuję zarówno na froncie, jak i backendzie. Znam wiele technologii, co pozwala mi dostarczać najwyższej jakości rozwiązania. Dodatkowo tworzę grafikę komputerową (Photoshop, Illustrator). Szybko się uczę, łatwo adaptuję i skutecznie rozwiązuję problemy. Poza pracą interesuję się sportem (piłka nożna, koszykówka, sporty walki) i grami komputerowymi.",
+      "experience": {
+        "0": {
+          "position": "Trener Programowania",
+          "company": "Giganci Programowania",
+          "date": "Mar 2024 - Obecnie",
+          "description": "Prowadzę zajęcia programistyczne z różnych języków i technologii dla przyszłych programistów."
+        },
+        "1": {
+          "position": "Dyrektor Techniczny",
+          "company": "notByte",
+          "date": "Sty 2024 - Obecnie",
+          "description": "Odpowiedzialny za całość aspektów technicznych firmy – od web developmentu po infrastrukturę IT."
+        },
+        "2": {
+          "position": "Serwisant Sprzętu Komputerowego",
+          "company": "TOLAPTOP.gr (ERASMUS+)",
+          "date": "Maj 2022 - Cze 2022",
+          "description": "Diagnozowanie i naprawa laptopów w ramach programu ERASMUS+. Skuteczna obsługa problemów sprzętowych."
+        },
+        "3": {
+          "position": "Praktykant – Programista",
+          "company": "Centrum Technologii Informatycznej",
+          "date": "Kwi 2022 - Maj 2022",
+          "description": "Praktyka programistyczna – praca z technologiami front- i backendowymi: Svelte, Express.js, Node.js."
+        },
+        "4": {
+          "position": "Praktykant – Tester Oprogramowania",
+          "company": "S4D",
+          "date": "Maj 2021 - Cze 2021",
+          "description": "Testowanie aplikacji w środowisku Scrum/Agile. Tworzenie przypadków testowych, raportowanie błędów. Poznanie narzędzi jak Jira, Cypress."
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Inżynieria Informatyki",
+          "institution": "WSB Merito Chorzów",
+          "date": "Paź 2023 - Obecnie",
+          "description": "WSB Merito to prywatna uczelnia w Chorzowie z nowoczesnym podejściem do nauczania. Program informatyczny obejmuje m.in. programowanie, analizę danych i sieci komputerowe."
+        },
+        "1": {
+          "degree": "Technik Informatyk",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Wrz 2019 - Maj 2023",
+          "description": "Zespół Szkół Techniczno-Informatycznych w Gliwicach to szkoła o wysokim poziomie edukacji IT. Tu rozwinąłem swoją pasję do programowania i technologii."
+        }
+      },
+      "awards": {
+        "0": {
+          "title": "Dwukrotny finalista konkursu \"Motorola Science Cup\"",
+          "issuer": "Motorola",
+          "description": "Ogólnopolski konkurs informatyczny w Polsce, prezentujący wiedzę z zakresu programowania, matematyki, fizyki i astronomii. (2021, 2022, 2023)"
+        },
+        "1": {
+          "title": "Laureat nagrody „Laur Nauki”",
+          "issuer": "Miasto Gliwice, Polska",
+          "description": "Nagroda przyznawana przez prezydenta miasta Gliwice za wybitne osiągnięcia naukowe. (2022)"
+        }
+      }
+    },
+    "lukasz": {
+      "roles": "Manager Mediów Społecznościowych, Tester Oprogramowania",
+      "description": "Jako oddany manager mediów społecznościowych i tester oprogramowania łączę kreatywność z analityczną precyzją. Specjalizuję się zarówno w platformach społecznościowych, na których tworzę angażujące kampanie, jak i w środowiskach testowania oprogramowania, zapewniając najwyższą jakość doświadczeń użytkownika. Poza sferą zawodową jestem pasjonatem muzyki i gitarzystą, łączącym kreatywność z dyscypliną. Moja miłość do kina i literatury inspiruje mnie do innowacyjnego podejścia do pracy w mediach społecznościowych i testowania. Wierzę w siłę opowiadania historii – zarówno poprzez angażujące treści, jak i przemyślane scenariusze testowe – by nawiązywać kontakt z odbiorcami i osiągać realne efekty. Z entuzjazmem dołączę do zespołu, który ceni innowację i współpracę, by wykorzystać swoje zróżnicowane umiejętności i pasje w projektach łączących technologię, kreatywność i kulturę.",
+      "experience": {
+        "0": {
+          "position": "Manager Mediów Społecznościowych",
+          "company": "notByte",
+          "date": "Styczeń 2024 – obecnie",
+          "description": "Tworzenie angażujących treści, by zadbać o wyrazisty głos marki oraz opracowywanie rozwiązań zwiększających jej rozpoznawalność i zaangażowanie odbiorców."
+        },
+        "1": {
+          "position": "Praktykant",
+          "company": "Alfa-System",
+          "date": "Kwiecień 2022 – Maj 2022",
+          "description": "Zdobycie praktycznego doświadczenia w pracy z sieciami komputerowymi, systemem Linux oraz sprzętem sieciowym."
+        },
+        "2": {
+          "position": "Praktykant",
+          "company": "PC-Store",
+          "date": "Maj 2021 – Czerwiec 2021",
+          "description": "Diagnozowanie i naprawa usterek sprzętowych, wykonywanie modernizacji oraz składanie komputerów od podstaw."
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Licencjat z Informatyki",
+          "institution": "Politechnika Śląska",
+          "date": "Październik 2023 – obecnie",
+          "description": "Politechnika Śląska w Gliwicach to renomowana uczelnia koncentrująca się na inżynierii, technologii i naukach ścisłych. Słynie z innowacyjnych badań, silnych programów akademickich i istotnego wkładu w naukę i przemysł. Uczelnia organizuje konferencje, warsztaty i inne wydarzenia naukowe wspierające wymianę wiedzy i rozwój."
+        },
+        "1": {
+          "degree": "Świadectwo ukończenia technikum informatycznego",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Wrzesień 2019 – Maj 2023",
+          "description": "Zespół Szkół Techniczno-Informatycznych w Gliwicach (ZSTI Gliwice) uzyskał tytuł „Złotej Szkoły 2024”, zajmując drugie miejsce w województwie śląskim. Szkoła stawia na nauczanie nie tylko wiedzy, ale i umiejętności życiowych. Osiągnięcie to podkreśla zaangażowanie placówki w wysoką jakość edukacji i przygotowanie uczniów do przyszłej kariery oraz wyzwań życiowych. Więcej informacji o szkole i jej sukcesach można znaleźć na stronie internetowej."
+        }
+      }
+    }
   }
 }

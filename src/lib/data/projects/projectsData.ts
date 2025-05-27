@@ -7,9 +7,8 @@ import { websiteCollaborators } from "./webisteCollaborators";
 export const projects: ProjectData[] = [
   {
     id: "tournament",
-    title: "Tournament",
-    description:
-      "Tournament is a robust application developed with Nuxt and Golang, designed to enable users to create and manage basketball team tournaments, monitor their progress, and view match results. The application boasts a user-friendly and intuitive interface, featuring a clean and modern design that ensures easy navigation and use. Future plans for the application include expanding it to a SaaS model, offering enhanced features and scalability for a broader audience.",
+    title: "knury.title",
+    description: "knury.description",
     imageUrl: "/knury.jpg",
     bannerUrl: "/knury.jpg",
     tags: ["Photography", "Internal"],
@@ -18,35 +17,35 @@ export const projects: ProjectData[] = [
     status: Status.OnGoing,
     milestones: [
       {
-        name: "Project Kickoff",
+        name: "knury.milestones.0.name",
         date: "2024-03-01",
-        description:
-          "We began our journey with 'Knury Knurów' in March 2024, marking the moment when the first line of code for the project was written.",
-        tags: ["Intialization"],
+        description: "knury.milestones.0.description",
+        tags: ["common.tags.initialization"],
         status: Status.Completed,
       },
       {
-        name: "Project Development",
+        name: "knury.milestones.1.name",
         date: "2024-03-10",
-        description:
-          "As time went on, we found ourselves writing more and more code, gradually beginning to see the first results of our efforts. It was an exciting and rewarding period for us, filled with a sense of accomplishment and progress.",
-        tags: ["Nuxt", "Golang", "development"],
+        description: "knury.milestones.1.description",
+        tags: [
+          "common.tags.nuxt",
+          "common.tags.golang",
+          "common.tags.development",
+        ],
         status: Status.Completed,
       },
       {
-        name: "Project delivery",
+        name: "knury.milestones.2.name",
         date: "2024-05-25",
-        description:
-          "After a challenging yet rewarding journey, we successfully delivered the project to the client. It was a great success, with everything proceeding smoothly and the client being extremely satisfied with the results. We are immensely proud of our achievements. However, we do not plan to stop here.",
-        tags: ["Delivery"],
+        description: "knury.milestones.2.description",
+        tags: ["common.tags.delivery"],
         status: Status.Completed,
       },
       {
-        name: "Plans of expanding",
+        name: "knury.milestones.3.name",
         date: "2024-06-01",
-        description:
-          "We are excited to announce our plans to expand the project into a SaaS model, aiming to offer enhanced features and greater scalability to reach a broader audience. Additionally, we plan to extend our platform's capabilities to include a variety of sports beyond just basketball. We are enthusiastic about the future of this project and the new opportunities it will bring!",
-        tags: ["Future", "Saas"],
+        description: "kanury.milestones.3.description",
+        tags: ["common.tags.future", "common.tags.saas"],
         status: Status.OnGoing,
       },
     ],

@@ -1,4 +1,5 @@
 import { Award } from "@/lib/model/profile";
+import { getFormatter, getTranslations } from "next-intl/server";
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 
@@ -6,18 +7,23 @@ interface ProfileSummaryProps {
   awards: Award[];
 }
 
-export const SkillsSection = ({ awards }: ProfileSummaryProps) => {
-  const formatDate = (date: Date) =>
-    date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+export const SkillsSection = async ({ awards }: ProfileSummaryProps) => {
+  const format = await getFormatter();
+
+  const t = await getTranslations("Profiles");
+
+  const formatDate = (date: Date | null): string =>
+    date
+      ? format.dateTime(date, {
+          year: "numeric",
+          month: "short",
+        })
+      : t("common.present");
 
   return (
     <>
       <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl wqhd:text-8xl 4k:text-9xl font-bold text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-black dark:text-white">
-        Achievements
+        {t("common.achievements")}
       </h2>
 
       <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full ">
@@ -32,15 +38,15 @@ export const SkillsSection = ({ awards }: ProfileSummaryProps) => {
               </div>
               <div className="ml-2 sm:ml-3 md:ml-4">
                 <h4 className="text-lg sm:text-xl md:text-2xl text-white dark:text-gray-100 font-semibold">
-                  {award.title}
+                  {t(award.title)}
                 </h4>
                 <p className="text-xs sm:text-sm text-purple-200 dark:text-gray-400">
-                  {award.issuer} - {formatDate(award.date)}
+                  {t(award.issuer)} - {formatDate(award.date)}
                 </p>
               </div>
             </div>
             <p className="text-sm sm:text-lg md:text-xl text-purple-100 dark:text-gray-300 mt-1 sm:mt-2">
-              {award.description}
+              {t(award.description || "common.no_description")}
             </p>
           </div>
         ))}

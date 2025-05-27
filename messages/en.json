@@ -2,9 +2,483 @@
   "Homepage": {
     "title": "Unleash the digital future, with our",
     "web_alchemy": "Web Alchemy_",
-    "subtitle": "raise your online identity to the new, higher level."
+    "subtitle": "raise your online identity to the new, higher level.",
+    "meet_team": "Meet our team!",
+    "profiles": {
+      "pawel": {
+        "role": "CEO, Software engineer",
+        "description": "Software engineer with a passion for continuous learning and innovation in the world of IT."
+      },
+      "przemyslaw": {
+        "role": "CIO, DevOps Engineer",
+        "description": "DevOps engineer, responsible for managing our Linux infrastructure using VMWare and Proxmox on Oracle Cloud."
+      },
+      "adam": {
+        "role": "CTO, Software Developer",
+        "description": "Passionate and skilled web developer commited to continuously improving my knowledge and understanding of all things IT."
+      },
+      "lukasz": {
+        "role": "Social media manager, tester",
+        "description": "Social media manager and software tester, dedicated to making sure everything runs smoothly."
+      }
+    },
+    "timeline": {
+      "title": "Events and future development plans",
+      "creation_of_the_company": {
+        "title": "Creation of the company",
+        "subtitle": "Company",
+        "description": "Creation of the company, first steps in the market. The company was founded by four friends who wanted to create a company that would be a leader in the market"
+      },
+      "web_development": {
+        "title": "Creation of logo, website development",
+        "subtitle": "Logo, webiste",
+        "description": "With the team we created a logo and started developing the website. The website was created using Next.js and Tailwind CSS."
+      },
+      "knury": {
+        "title": "Knury Knurów 2024",
+        "subtitle": "Knurów, basketball",
+        "description": "With the team we created a fully functional app for the basketball tournament in Knurów. The app was created using golang and nuxt.js. The app was a great success."
+      },
+      "future": {
+        "title": "Future plans",
+        "subtitle": "future, excited",
+        "description": "In the future we plan to expand our company and create new projects. We are excited about the future and the new opportunities it will bring."
+      }
+    },
+    "portfolio": {
+      "title": "Our Works",
+      "description": "We have worked on some incredible projects that demonstrate our expertise and innovation. Our projects are a testament to our team's dedication and hard work. Check out some of our projects below.",
+      "projects": {
+        "knury": {
+          "title": "Tournament",
+          "description": "Tournament is app for managing basketball tournaments, monitoring progress, and viewing results. It has a user-friendly, modern interface with plans to expand to a SaaS model for more features and scalability.",
+          "tags": {
+            "basketball": "Basketball",
+            "sport": "Sports",
+            "tournament": "Tournament",
+            "management": "Management",
+            "nuxt": "Nuxt",
+            "golang": "Golang"
+          }
+        },
+        "post_manager": {
+          "title": "Post Manager",
+          "description": "An internal tool for managing social media posts across all connected platforms. Users can create and publish posts using the built-in creator, selecting the platforms they prefer.",
+          "tags": {
+            "development": "Development",
+            "internal": "Internal",
+            "cms": "CMS"
+          }
+        },
+        "not_byte_website": {
+          "title": "Not Byte",
+          "description": "A website for a company that specializes in creating websites and applications. The website is designed to be user-friendly and easy to navigate, with a modern design and responsive layout.",
+          "tags": {
+            "website": "Website",
+            "next_js": "Next.js",
+            "tailwind": "Tailwind CSS"
+          }
+        }
+      }
+    },
+    "FAQ": {
+      "title": "FAQ",
+      "questions": [
+        {
+          "question": "What is the mission of notByte?",
+          "answer": "Our mission is to innovate and provide cutting-edge SaaS solutions and software that address real-world problems, thereby improving the quality of life for our customers and creating lasting value for our stakeholders."
+        },
+        {
+          "question": "How can customers benefit from notByte's products/services?",
+          "answer": "Customers can benefit from our SaaS solutions and software through enhanced efficiency, cost savings, and improved experiences. Our solutions are designed to solve specific challenges, streamline processes, and deliver measurable results, helping customers achieve their goals more effectively."
+        },
+        {
+          "question": "What makes notByte unique compared to competitors?",
+          "answer": "notByte stands out due to our commitment to innovation, customer-centric approach, and agile methodologies. We focus on understanding our customers' needs deeply and tailor our solutions to exceed expectations. Additionally, our team comprises industry experts with a passion for pushing boundaries and delivering excellence."
+        },
+        {
+          "question": "How can potential investors get in involved with notByte?",
+          "answer": "Potential investors can get involved by contacting us through our website or email to schedule a meeting. We offer detailed presentations, business plans, and investment opportunities that highlight our growth potential and market strategy. We are open to discussing various forms of investment, including equity, partnerships, and strategic alliances."
+        },
+        {
+          "question": "What are notByte's long-term goals and vision for the future?",
+          "answer": "Our long-term goals include expanding our SaaS and software offerings, entering new markets, and continuously driving innovation. We envision becoming a market leader known for transformative solutions and exceptional customer service. Our future plans also involve sustainable growth, fostering a culture of creativity, and making a positive impact on society."
+        }
+      ]
+    }
+  },
+  "Navbar": {
+    "get_in_touch": "get in touch"
   },
   "Footer": {
-    "about": "About Us"
+    "about": {
+      "title": "About Us",
+      "description": "Elevate your online presence with innovative solutions. Our mission is to empower your digital aspirations with cutting-edge technologies and creative design.",
+      "connect": "Connect with us:"
+    },
+    "recent_projects": {
+      "title": "Recent projects",
+      "tournament": "Tournament",
+      "post_manager": "Post Manager",
+      "our_website": "Our website"
+    },
+    "contact_info": "Contact info",
+    "questions": {
+      "title": "Have any questions?",
+      "contact_us": "Contact us",
+      "contact_us_description": "We'll happily answer any questions you have for us!"
+    },
+    "copy": "Crafted with passion and precision."
+  },
+  "Profiles": {
+    "common": {
+      "experience": "Experience",
+      "education": "Education",
+      "achievements": "Achievements",
+      "at": "at",
+      "present": "Present",
+      "no_description": "No description available"
+    },
+    "pawel": {
+      "roles": "Chief Executive Officer, Software Developer",
+      "description": "Ambitious software developer specialized in full-stack web applications, I am deeply passionate about continuous learning and keenly follow industry trends to stay ahead. My skill set spans across various full-stack technologies, underpinned by a strong grasp of data structures and proficiency in lower-level programming languages like C++. I thrive in dynamic environments, eagerly embracing new challenges to push the boundaries of what's possible. My interest doesn't stop at coding; I'm also fascinated by physics and mathematics, aiming to intertwine these disciplines with technology to create innovative solutions. I see immense potential in merging computational physics and mathematical models with software development to tackle complex problems. Eager to contribute to a team that prioritizes innovation, collaboration, and a progressive outlook, I am committed to leveraging my skills and interests to drive impactful projects at the nexus of technology and science.",
+      "experience": {
+        "0": {
+          "position": "Software Engineer",
+          "company": "iO Data AS",
+          "date": "Oct 2023 - Present",
+          "description": "Dedicated to all stages of software development cycle with a focus on backend and frontend solutions. Expertise in data analysis and processing for complex project development."
+        },
+        "1": {
+          "position": "Chief Executive Officer",
+          "company": "notByte",
+          "date": "Jan 2024 - Present",
+          "description": "Leading a software development company and managing cross-functional teams to innovate and drive product strategy and business growth."
+        },
+        "2": {
+          "position": "Computer hardware service technician",
+          "company": "TOLAPTOP.gr (ERASMUS+)",
+          "date": "May 2022 - Jun 2022",
+          "description": "Performed diagnostic maintenance and troubleshooting during an ERASMUS+ internship. Specialized in laptop disassembly and repair, demonstrating the ability to resolve hardware issues efficiently."
+        },
+        "3": {
+          "position": "Software Intern",
+          "company": "Centrum Technologii Informatycznej",
+          "date": "Apr 2022 - May 2022",
+          "description": "Gained practical experience with software development under a team setting. Worked with front-end and back-end technologies, focusing on React.js and Node.js."
+        },
+        "4": {
+          "position": "Software Intern",
+          "company": "SPIE Energotest",
+          "date": "May 2021 - Jun 2021",
+          "description": "Contributed to projects in the area of energy efficiency and automation. Developed software solutions tailored for industrial applications and enhanced understanding of PLCs and automation systems."
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Bachelor of Computer Science",
+          "institution": "Politechnika Śląska",
+          "date": "Oct 2023 - Present",
+          "description": "Politechnika Śląska (Silesian University of Technology) in Gliwice is a well-regarded institution with a strong focus on engineering, technology, and science. It is known for its innovative research, strong academic programs, and significant contributions to science and industry. The university is involved in various scientific and educational activities, hosting events like conferences and workshops to foster knowledge exchange and development"
+        },
+        "1": {
+          "degree": "High School Diploma in Computer Science",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Sep 2019 - May 2023",
+          "description": "Zespół Szkół Techniczno-Informatycznych in Gliwice (ZSTI Gliwice) is recognized as a \"Złota Szkoła 2024\" (Golden School 2024), ranking second place in the Silesian Voivodeship. The school prides itself on teaching not just for educational purposes but for life skills. This achievement highlights the school's commitment to providing high-quality education and preparing students for their future careers and life challenges. For more detailed information about the school and its achievements, you can visit their website."
+        }
+      },
+      "awards": {
+        "0": {
+          "title": "Three-time finalist of \"Motorola Science Cup\" competition",
+          "issuer": "Motorola",
+          "description": "National IT competition in Poland showcasing expertise in programming, mathematics, physics, and astronomy. (2021, 2022, 2023)"
+        },
+        "1": {
+          "title": "Two-time recipient of “The Laurel of Science”",
+          "issuer": "Motorola",
+          "description": "Recognizing exceptional academic performance, awarded by the mayor of the city of Gliwice. (2021, 2022)"
+        },
+        "2": {
+          "title": "2nd place in \"THE FIRST NATIONAL IT CHAMPIONSHIP\"",
+          "issuer": "Poznań game arena",
+          "description": "Reflects comprehensive knowledge of the Linux operating system and its intricate internals."
+        }
+      }
+    },
+    "przemyslaw": {
+      "roles": "CIO, DevOps Engineer",
+      "description": "A DevOps engineer, responsible for managing our Linux infrastructure using VMWare and Proxmox on Oracle Cloud. I work with Git, Docker, Nginx, and PostgreSQL databases like CockroachDB. I also have a keen interest in development with programming languages such as TypeScript, Go, Java, and C.",
+      "experience": {
+        "0": {
+          "position": "Software Tester",
+          "company": "Flytronic",
+          "description": "I am responsible for testing and programming various electronic circuits using our company software, participating in the construction of testing stations, and contributing to the development of testing procedures. Additionally, I conduct test measurements of unmanned aerial vehicle subsystems, calibrate IMU circuits, and participate in modular and pre-flight tests of UAVs."
+        },
+        "1": {
+          "position": "Chief Executive Officer",
+          "company": "notByte",
+          "description": "Leading a software development company and managing cross-functional teams to innovate and drive product strategy and business growth."
+        },
+        "2": {
+          "position": "System & Network Administator",
+          "company": "JEST Gliwice",
+          "description": "Managing a Windows Server with a local Active Directory and Azure infrastructure for office device synchronization, overseeing the local network including routers, switches, and computer hardware maintenance in the company, and documenting tasks performed by technicians through protocols and reports using Excel and Word."
+        },
+        "3": {
+          "position": "System & Network Intern",
+          "company": "alfa-system.pl",
+          "description": "Managing Ubuntu Linux servers including port management and service diagnostics, configuring TP-LINK and CISCO routers and switches for client installations, servicing and diagnosing network devices and Ethernet/fiber optic connections on-site as a technician, and preparing reports and documentation detailing issues and workflow from diagnosis to problem resolution."
+        },
+        "4": {
+          "position": "System & Network Administator Intern",
+          "company": "alfa-system.pl",
+          "description": "Managing Ubuntu Linux servers including port management and service diagnostics, configuring TP-LINK and CISCO routers and switches for client installations, servicing and diagnosing network devices and Ethernet/fiber optic connections on-site as a technician, and preparing reports and documentation detailing issues and workflow from diagnosis to problem resolution."
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Bachelor of Computer Science",
+          "institution": "University of Information Technology in Katowice (WSTI)",
+          "date": "Oct 2023 - Present",
+          "description": "University of Information Technology (WSTI) in Katowice with highly qualified academic staff consists of esteemed researchers and practitioners with significant industry experience and a supportive attitude towards students. Many lecturers at WSTI are actively working graphic designers and IT professionals, allowing students to collaborate with their future employers even during their studies."
+        },
+        "1": {
+          "degree": "High School Diploma in Computer Science",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Sep 2019 - May 2023",
+          "description": "My IT journey began here. I learnt a lot new skills, including Linux systems, networking, database management, frontend and backend development. During my time here, I participated in various tournaments like Motorola Science Cup and Mistrzostwa IT, these events gave me invaluable experience."
+        }
+      },
+      "awards": {
+        "0": {
+          "title": "Semi-finalist place in \"THE FIRST NATIONAL IT CHAMPIONSHIP\"",
+          "issuer": "Poznań Game Arena",
+          "description": "\"Mistrzostwa IT\" is a national computer-related championship. My partner and I were participating as a team in cybersecurity and systems categories. We’ve reached semi-finals with leading scores, sadly it wasn’t enough for the finals. I experienced so much fun and gained new perspectives."
+        }
+      }
+    },
+    "adam": {
+      "roles": "Chief Technology Officer, Software Engineer",
+      "description": "20-year-old IT student and freelance web developer from Zabrze, Poland. I've always been passionate about IT. As a kid, I was fascinated by the things people could create using the ability to code, such as games or applications. I adored the concept of expressing creativity and bringing ideas to life through programming. That's why I decided to attend ZSTI, a technical high school located in Gliwice, renowned for its high-level IT education. It was during my time at the school when I truly fell in love with programming, specifically web development. I studied thoroughly and worked on my skillset to the point where I could take on freelance projects. As a full-stack developer, my job is to oversee both the front-end and the back-end. I connect the two branches together in a synergistic manner, creating a fully functioning project for the client. I use a wide range of technologies that allow me to elevate my work and give the customer the best possible experience. In addition to programming, I am also proficient in computer graphics, utilizing software such as Adobe Photoshop or Adobe Illustrator to create and edit images. Besides my technical skills, I pride myself on the ability to learn quickly and adapt to various situations. I am always open to learning new technologies, frameworks, or libraries. I also excel at problem-solving; I often look for creative ways to avoid or fix issues that might interfere with my work. Outside of work, I am a huge fan of sports, primarily football, basketball, and combat sports. I also enjoy playing video games in my spare time.",
+      "experience": {
+        "0": {
+          "position": "Programming Trainer",
+          "company": "Giganci Programowania",
+          "date": "Mar 2024 - Present",
+          "description": "Providing programming training for future developers in a wide range of technologies and coding languages."
+        },
+        "1": {
+          "position": "Chief Technology Officer",
+          "company": "notByte",
+          "date": "Jan 2024 - Present",
+          "description": "Working on and overseeing all technical aspects of the company, from web development to IT infrastructure."
+        },
+        "2": {
+          "position": "Computer hardware service technician",
+          "company": "TOLAPTOP.gr (ERASMUS+)",
+          "date": "May 2022 - Jun 2022",
+          "description": "Performed diagnostic maintenance and troubleshooting during an ERASMUS+ internship. Specialized in laptop disassembly and repair, demonstrating the ability to resolve hardware issues efficiently."
+        },
+        "3": {
+          "position": "Software Intern",
+          "company": "Centrum Technologii Informatycznej",
+          "date": "Apr 2022 - May 2022",
+          "description": "Gained practical experience with software development under a team setting. Worked with front-end and back-end technologies, focusing on Svelte, Express.js and Node.js."
+        },
+        "4": {
+          "position": "Software Tester Intern",
+          "company": "S4D",
+          "date": "May 2021 - Jun 2021",
+          "description": "Worked in a Scrum/Agile environment, testing software applications and ensuring they met quality standards. Developed test cases, executed tests, and reported bugs to the development team. Acquired knowledge of software testing methodologies and tools, including Jira and Cypress."
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Bachelor of Computer Science",
+          "institution": "WSB Merito Chorzów",
+          "date": "Oct 2023 - Present",
+          "description": "WSB Merito is a private university in Chorzów, Poland, offering a wide range of courses in various fields. The university is known for its modern approach to education, focusing on practical skills and preparing students for the job market. The Computer Science program covers a broad spectrum of topics, including software development, data analysis, and computer networks. The curriculum is designed to provide students with a solid foundation in computer science and equip them with the necessary skills to succeed in the IT industry."
+        },
+        "1": {
+          "degree": "High School Diploma in Computer Science",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Sep 2019 - May 2023",
+          "description": "Zespół Szkół Techniczno-Informatycznych in Gliwice (ZSTI Gliwice) is recognized as a \"Złota Szkoła 2024\" (Golden School 2024), ranking second place in the Silesian Voivodeship. The school prides itself on teaching not just for educational purposes but for life skills. This achievement highlights the school's commitment to providing high-quality education and preparing students for their future careers and life challenges. For more detailed information about the school and its achievements, you can visit their website."
+        }
+      },
+      "awards": {
+        "0": {
+          "title": "Two-time finalist of \"Motorola Science Cup\" competition",
+          "issuer": "Motorola",
+          "description": "National IT competition in Poland showcasing expertise in programming, mathematics, physics, and astronomy. (2021, 2022, 2023)"
+        },
+        "1": {
+          "title": "Recipient of “The Laurel of Science”",
+          "issuer": "City of Gliwice, Poland",
+          "description": "Recognizing exceptional academic performance, awarded by the mayor of the city of Gliwice. (2022)"
+        }
+      }
+    },
+    "lukasz": {
+      "roles": "Social Media Manager, Software Tester",
+      "description": "As a dedicated social media manager and software tester, I blend creativity with analytical precision. My expertise spans social media platforms, where I craft engaging campaigns, and software testing environments, ensuring top-notch user experiences. Beyond my professional pursuits, I am a music enthusiast and guitar player, harmonizing creativity with discipline. My love for cinema and literature fuels innovative approaches to both social media and software testing. I believe in the power of storytelling, whether through compelling social media content or well-crafted test scenarios, to connect with audiences and deliver impactful results. Eager to join a forward-thinking team that values innovation and collaboration, I aim to leverage my diverse skills and interests to contribute to projects at the intersection of technology, creativity, and culture.",
+      "experience": {
+        "0": {
+          "position": "Social Media Manager",
+          "company": "notByte",
+          "date": "Jan 2024 - Present",
+          "description": "Crafting engaging content to make sure our brands' voice is heard and developing solutions to drive brand awareness and engagement"
+        },
+        "1": {
+          "position": "Intern",
+          "company": "Alfa-System",
+          "date": "Apr 2022 - May 2022",
+          "description": "Gained practical experience working with computer networks, Linux operating system and networking hardware."
+        },
+        "2": {
+          "position": "Intern",
+          "company": "PC-Store",
+          "date": "May 2021 - Jun 2021",
+          "description": "Troubleshooted hardware issues and performed repairs and upgrades, along with building PCs from scratch"
+        }
+      },
+      "education": {
+        "0": {
+          "degree": "Bachelor of Computer Science",
+          "institution": "Politechnika Śląska",
+          "date": "Oct 2023 - Present",
+          "description": "Politechnika Śląska (Silesian University of Technology) in Gliwice is a well-regarded institution with a strong focus on engineering, technology, and science. It is known for its innovative research, strong academic programs, and significant contributions to science and industry. The university is involved in various scientific and educational activities, hosting events like conferences and workshops to foster knowledge exchange and development"
+        },
+        "1": {
+          "degree": "High School Diploma in Computer Science",
+          "institution": "Zespół Szkół Techniczno-Informatycznych w Gliwicach",
+          "date": "Sep 2019 - May 2023",
+          "description": "Zespół Szkół Techniczno-Informatycznych in Gliwice (ZSTI Gliwice) is recognized as a \"Złota Szkoła 2024\" (Golden School 2024), ranking second place in the Silesian Voivodeship. The school prides itself on teaching not just for educational purposes but for life skills. This achievement highlights the school's commitment to providing high-quality education and preparing students for their future careers and life challenges. For more detailed information about the school and its achievements, you can visit their website."
+        }
+      }
+    }
+  },
+  "Projects": {
+    "common": {
+      "milestones": "Milestones",
+      "collaborators": "Collaborators",
+      "gallery": "Gallery",
+      "status": {
+        "INITIATED": "INITIATED",
+        "IN_PLANING": "IN PLANNING",
+        "IN_DEVELOPMENT": "IN_DEVELOPMENT",
+        "COMPLETED": "COMPLETED",
+        "PAUSED": "PAUSED",
+        "CANCELLED": "CANCELLED",
+        "ON_HOLD": "ON_HOLD",
+        "ONGOING": "ONGOING"
+      },
+      "tags": {
+        "photography": "Photography",
+        "internal": "Internal",
+        "Initialization": "Initialization",
+        "nuxt": "Nuxt",
+        "golang": "Golang",
+        "development": "Development",
+        "delivery": "Delivery",
+        "future": "Future",
+        "sass": "SaaS",
+        "next_js": "Next.js",
+        "tailwind": "Tailwind CSS"
+      },
+      "roles": {
+        "project_manager": "Project Manager",
+        "lead_developer": "Lead Developer",
+        "frontend_developer": "Frontend Developer",
+        "designer": "Designer",
+        "tester": "Tester"
+      }
+    },
+    "knury": {
+      "title": "Tournament",
+      "description": "Tournament is a robust application developed with Nuxt and Golang, designed to enable users to create and manage basketball team tournaments, monitor their progress, and view match results. The application boasts a user-friendly and intuitive interface, featuring a clean and modern design that ensures easy navigation and use. Future plans for the application include expanding it to a SaaS model, offering enhanced features and scalability for a broader audience.",
+      "milestones": {
+        "0": {
+          "name": "Project Kickoff",
+          "description": "We began our journey with 'Knury Knurów' in March 2024, marking the moment when the first line of code for the project was written."
+        },
+        "1": {
+          "name": "Project Development",
+          "description": "As time went on, we found ourselves writing more and more code, gradually beginning to see the first results of our efforts. It was an exciting and rewarding period for us, filled with a sense of accomplishment and progress."
+        },
+        "2": {
+          "name": "Project Delivery",
+          "description": "After a challenging yet rewarding journey, we successfully delivered the project to the client. It was a great success, with everything proceeding smoothly and the client being extremely satisfied with the results. We are immensely proud of our achievements. However, we do not plan to stop here."
+        },
+        "3": {
+          "name": "Plans of expanding",
+          "description": "We are excited to announce our plans to expand the project into a SaaS model, aiming to offer enhanced features and greater scalability to reach a broader audience. Additionally, we plan to extend our platform's capabilities to include a variety of sports beyond just basketball. We are enthusiastic about the future of this project and the new opportunities it will bring!"
+        }
+      },
+      "collaborators": {
+        "pawel": {
+          "description": "Developed backend solutions for the project, ensuring optimal performance and scalability. Responsible for managing the project's development process and ensuring the timely delivery of milestones."
+        },
+        "przemyslaw": {
+          "description": "Developed the frontend of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones."
+        }
+      }
+    },
+    "post_manager": {
+      "title": "Post Manager",
+      "description": "An internal tool which allows the user to manage social media posts across all connected platforms from the application. The user can create a post using the built-in creator and post it on the platforms of their choosing.",
+      "milestones": {
+        "0": {
+          "name": "Project Kickoff",
+          "description": "After a thorough evaluation process to determine the most suitable technologies for the project, the development team selected a robust stack that would ensure optimal performance and scalability. With the technologies chosen and confirmed, the initial setup phase commenced, leading to the successful initialization of the application."
+        },
+        "1": {
+          "name": "Project Development",
+          "description": "The development period will last until a stable version of the post manager is released."
+        }
+      },
+      "collaborators": {
+        "adam": {
+          "description": "Developed both frontend and backend of the project. Responsible for managing the project's development process and ensuring the timely delivery of milestones."
+        }
+      }
+    },
+    "not_byte_website": {
+      "title": "notByte website",
+      "description": "A website you are reading right now. It is a modern, responsive, and user-friendly website that showcases the projects, team members, and other information about notByte. The website is built using Next.js and Tailwind CSS, ensuring optimal performance and a seamless user experience. The website is continuously updated with new features and content to provide visitors with the latest information about notByte and its projects. The website is also optimized for search engines, making it easy for users to find the information they need.",
+      "milestones": {
+        "0": {
+          "name": "Project Kickoff",
+          "description": "Our efforts to create a modern, responsive, and user-friendly website for notByte began on January 1, 2024. The project's development process was initiated, and the team started working on the website's design and functionality."
+        },
+        "1": {
+          "name": "Project Development",
+          "description": "Project development was quite a protracted process due to little amounts of time and a lot of work. All of our team still studies and works full-time, so we had to find time for the project in our free time. Despite this, we managed to finish the project on time and with a great result. We are proud of our work and we hope that you like our website."
+        },
+        "2": {
+          "name": "Project delivery",
+          "description": "We are happy to announce that the project has been successfully delivered to the client. The website is live and available to the public, providing visitors with information about notByte, its projects, and team members. The website is continuously updated with new features and content to ensure a seamless user experience."
+        },
+        "3": {
+          "name": "Future plans",
+          "description": "Plans for the future include expanding the website's features and content to provide visitors with more information about notByte and its projects. The website will be continuously updated with new features and content to ensure a seamless user experience. We are excited about the future of the website and the new opportunities it will bring."
+        }
+      },
+      "collaborators": {
+        "pawel": {
+          "description": "Developed both frontend and backend of the project. Responsible for managing the project's development process and ensuring the timely delivery of milestones."
+        },
+        "przemyslaw": {
+          "description": "Deisgner of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones."
+        },
+        "adam": {
+          "description": "Designed the project's frontend, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones."
+        },
+        "lukasz": {
+          "description": "Tester of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones."
+        }
+      }
+    }
   }
 }
