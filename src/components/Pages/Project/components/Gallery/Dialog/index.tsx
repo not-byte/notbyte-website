@@ -5,7 +5,6 @@ import Image from "next/image";
 import { shimmer, toBase64 } from "@/UI/shimmer";
 import { Dimmension } from "./model";
 import { shouldImageBeScaled } from "./helper";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 //custom gallery dialog component
 
@@ -20,7 +19,7 @@ const GalleryDialogCompoent = ({ imagesUrls, currentIndex, close }: Props) => {
     width: 0,
     height: 0,
   });
-  const [activeIndex, setActiveIndex] = useState<number>(currentIndex);
+  const [activeIndex] = useState<number>(currentIndex);
 
   const ref = useRef<HTMLImageElement | null>(null);
 

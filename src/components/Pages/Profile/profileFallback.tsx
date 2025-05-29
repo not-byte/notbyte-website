@@ -6,11 +6,12 @@
  */
 
 import React from "react";
+import Link from "next/link";
 
 export const ProfileFallback = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-6 text-center ">
-      <div className="max-w-md w-full  rounded-lg shadow-md p-8 ">
+      <div className="max-w-md w-full rounded-lg shadow-md p-8 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-16 w-16 text-gray-400 mx-auto mb-4"
@@ -26,18 +27,21 @@ export const ProfileFallback = () => {
           />
         </svg>
         <h2 className="text-2xl font-semibold dark:text-white text-gray-800 mb-4">
-          Profile Not Found
+            Profile Not Found
         </h2>
         <p className="mb-8 text-lg dark:text-gray-300">
-          We're sorry, but the profile you're looking for doesn't exist or may
-          have been removed.
+            We're sorry, but the profile you're looking for doesn't exist or may
+            have been removed.
         </p>
-        <a
+        <Link
           href="/"
-          className="inline-block px-6 py-3 bg-colors text-white rounded-md shadow hover:bg-darkModeColors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-150"
         >
-          Return to Home
-        </a>
+          <a
+            className="inline-block px-6 py-3 bg-colors text-white rounded-md shadow hover:bg-darkModeColors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition ease-in-out duration-150"
+          >
+              Return to Home
+          </a>
+        </Link>
       </div>
     </div>
   );

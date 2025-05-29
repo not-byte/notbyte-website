@@ -1,7 +1,4 @@
 {
   "i18n-ally.localesPaths": ["/messages", "messages", "src/i18n"],
-  "i18n-ally.keystyle": "nested",
-  "files.associations": {
-    "*.yaml": "home-assistant"
-  }
+  "i18n-ally.keystyle": "nested"
 }
