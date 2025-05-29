@@ -22,7 +22,8 @@ const useLocalStorage = <T>(key: string, value?: T) => {
 
   const updateLocalStorage = <K>(newValue: updateValue<K>): void => {
     if (newValue instanceof Function) {
-      const fn = newValue;
+      let fn: Function;
+      fn = newValue;
       setStorageVal(fn(storageVal));
     } else {
       const val = newValue as K;
@@ -37,7 +38,7 @@ const useLocalStorage = <T>(key: string, value?: T) => {
   useEffect(() => {
     const rawValue = JSON.stringify(storageVal);
     localStorage.setItem(key, rawValue);
-  }, [storageVal]);
+  }, [key, storageVal]);
 
   return { storage: storageVal, setStorage: updateLocalStorage, clearStorage };
 };
