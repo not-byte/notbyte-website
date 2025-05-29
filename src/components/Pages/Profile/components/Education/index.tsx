@@ -1,5 +1,4 @@
 import React, { cache } from "react";
-import { format } from "date-fns";
 import { Education } from "@/lib/model/profile";
 import { MdSchool } from "react-icons/md";
 import { FaRegCalendarAlt } from "react-icons/fa";

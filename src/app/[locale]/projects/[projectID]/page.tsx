@@ -1,7 +1,8 @@
 import ProjectDetails from "@/components/Pages/Project";
 import { projects } from "@/lib/data/projects/projectsData";
 import React from "react";
-import {notFound} from "next/navigation";
+import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 
 interface Props {
   params: {
@@ -18,6 +19,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const id = params.projectID;
   const project = projects.find((item) => item.id === id);
+  const t = await getTranslations("Projects");
 
   if (!project) {
     return {
@@ -28,7 +30,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: {
-      default: `${project.title} project`,
+      default: t("common.project") + " " + t(project.title),
       template: `%s | project ${project.title}`,
     },
     description: project.description,

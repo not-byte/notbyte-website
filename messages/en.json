@@ -361,6 +361,7 @@
   },
   "Projects": {
     "common": {
+      "project": "Project",
       "milestones": "Milestones",
       "collaborators": "Collaborators",
       "gallery": "Gallery",

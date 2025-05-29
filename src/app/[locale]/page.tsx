@@ -7,6 +7,7 @@ import ProjectSection from "@/components/Content/Projects";
 import { Chakra_Petch } from "next/font/google";
 import { smallProfiles } from "@/lib/data/profile/smallProfileData";
 import { useTranslations } from "next-intl";
+import { routing } from "@/i18n/routing";
 
 const chakra = Chakra_Petch({
   weight: ["700"],
@@ -14,8 +15,19 @@ const chakra = Chakra_Petch({
   display: "swap",
 });
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default function Home() {
   const t = useTranslations("Homepage");
+
+  const localizedProfiles = smallProfiles.map((profile) => {
+    return {
+      ...profile,
+      description: t("profiles." + profile.description),
+    };
+  });
 
   return (
     <main className="flex justify-center items-center h-full flex-col gap-10 w-full overflow-x-hidden">
@@ -41,7 +53,7 @@ export default function Home() {
           </h2>
         }
       >
-        <ProfileWrapper profiles={smallProfiles} />
+        <ProfileWrapper profiles={localizedProfiles} />
       </About>
       <Timeline />
       <ProjectSection />

@@ -361,6 +361,7 @@
   },
   "Projects": {
     "common": {
+      "project": "Projekt",
       "milestones": "Kamienie milowe",
       "collaborators": "Współpracownicy",
       "gallery": "Galeria",

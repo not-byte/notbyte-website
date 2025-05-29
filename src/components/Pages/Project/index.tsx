@@ -13,10 +13,15 @@ interface ProjectDetailsProps {
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
   const t = useTranslations("Projects");
 
-  Object.keys(project.collaborators).forEach((key: any) => {
-    const collaborator = project.collaborators[key];
-    collaborator.description = t(collaborator.description);
-  });
+  const localizedCollaborators = Object.keys(project.collaborators).map(
+    (key: any) => {
+      const collaborator = project.collaborators[key];
+      return {
+        ...collaborator,
+        description: t(collaborator.description),
+      };
+    }
+  );
 
   return (
     <div className="sm:w-[90vw] md:w-[70vw] mx-auto px-6 py-8 sm:px-8 font-sans ">
@@ -41,7 +46,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
       </div>
 
       <Milestones milestones={project.milestones} />
-      <Collabarators collaborators={project.collaborators} />
+      <Collabarators collaborators={localizedCollaborators} />
       {project.gallery.length > 0 && <Gallery gallery={project.gallery} />}
     </div>
   );

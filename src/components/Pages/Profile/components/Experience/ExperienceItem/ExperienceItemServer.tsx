@@ -1,5 +1,4 @@
 import { Experience } from "@/lib/model/profile";
-import { format } from "date-fns";
 import { getFormatter, getTranslations } from "next-intl/server";
 import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";

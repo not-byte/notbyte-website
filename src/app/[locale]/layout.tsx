@@ -5,9 +5,10 @@ import { Toaster } from "react-hot-toast";
 
 import "../globals.css";
 import Footer from "@/components/Footer";
-import {hasLocale, NextIntlClientProvider} from "next-intl";
-import {routing} from "@/i18n/routing";
-import {notFound} from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 
 const baseUrl = "https://notbyte.com";
 
@@ -93,15 +94,17 @@ export const metadata = {
 
 export default async function RootLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: ReactNode;
-  params: Promise<{locale: string}>
+  params: Promise<{ locale: string }>;
 }>) {
-  const {locale} = await params;
+  const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   return (
     <html lang={locale} suppressHydrationWarning>
