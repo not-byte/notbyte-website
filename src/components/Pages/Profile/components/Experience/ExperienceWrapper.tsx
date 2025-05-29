@@ -1,7 +1,7 @@
 import React from "react";
 import { ExperienceItem } from "./ExperienceItem/AnimationWrapper";
 import { ExperienceItemServer } from "./ExperienceItem/ExperienceItemServer";
-import { Experience, Profile } from "@/lib/model/profile";
+import { Experience } from "@/lib/model/profile";
 
 export const ExperienceWrapper = ({
   experience,
