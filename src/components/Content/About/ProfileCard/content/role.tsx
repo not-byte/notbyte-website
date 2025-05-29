@@ -3,6 +3,7 @@
 import React from "react";
 import { useProfileContext } from "./context";
 import { Collaborator } from "@/lib/model/profile";
+import { useTranslations } from "next-intl";
 
 const roleConfig = {
   // Colors
@@ -21,6 +22,8 @@ const roleConfig = {
 
 export const Roles = () => {
   const { roles } = useProfileContext<Collaborator>();
+  const t = useTranslations("Projects");
+
   return (
     <div className="py-3 flex flex-wrap justify-center">
       {roles.map((role, index) => {
@@ -29,7 +32,7 @@ export const Roles = () => {
             key={index}
             className={roleConfig[role.color as keyof typeof roleConfig]}
           >
-            {role.name}
+            {t(role.name)}
           </span>
         );
       })}

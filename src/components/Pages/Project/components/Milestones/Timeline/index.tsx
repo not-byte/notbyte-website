@@ -12,6 +12,7 @@ import { useTheme } from "next-themes";
 import { motion, useAnimation } from "framer-motion";
 import useResponsiveRootMargin from "@/hooks/responsiveRootMargin";
 import { useInView } from "react-intersection-observer";
+import { useTranslations } from "next-intl";
 
 type Props = {
   milestones: Milestone[];
@@ -52,6 +53,8 @@ export const Timeline = ({ milestones }: Props) => {
     rootMargin,
   });
 
+  const t = useTranslations("Projects");
+
   useEffect(() => {
     if (inView) {
       controls.start("show");
@@ -91,13 +94,13 @@ export const Timeline = ({ milestones }: Props) => {
             icon={<FaBriefcase />}
           >
             <h3 className="text-lg font-semibold text-black dark:text-white">
-              {milestone.name}
+              {t(milestone.name)}
             </h3>
             <p className="text-black dark:text-white font-light">
-              Status: {milestone.status}
+              Status: {t("common.status." + milestone.status)}
             </p>
             <p className="text-black dark:text-white mt-2">
-              {milestone.description}
+              {t(milestone.description)}
             </p>
             <div className="flex flex-wrap mt-2">
               {milestone.tags.map((tag, idx) => (
@@ -105,7 +108,7 @@ export const Timeline = ({ milestones }: Props) => {
                   key={idx}
                   className="text-md font-medium bg-darkModeColors text-white px-3 py-1 rounded-full m-1"
                 >
-                  {tag}
+                  {t(tag)}
                 </span>
               ))}
             </div>

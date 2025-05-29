@@ -15,16 +15,15 @@ export const tournamentCollaborators: Collaborator[] = [
       },
     ],
     image: "/pawel.png",
-    description:
-      "Developed backend solutions for the project, ensuring optimal performance and scalability. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
+    description: "knury.collaborators.pawel.description",
     position: "CEO, Software engineer",
     roles: [
       {
-        name: "Project Manager",
+        name: "common.roles.project_manager",
         color: "red",
       },
       {
-        name: "Lead Developer",
+        name: "common.roles.lead_developer",
         color: "blue",
       },
     ],
@@ -43,16 +42,15 @@ export const tournamentCollaborators: Collaborator[] = [
       },
     ],
     image: "/przemek.jpg",
-    description:
-      "Developed the frontend of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
+    description: "knury.collaborators.przemyslaw.description",
     position: "CIO, DevOps Engineer",
     roles: [
       {
-        name: "Project Manager",
+        name: "common.roles.project_manager",
         color: "red",
       },
       {
-        name: "Frontend dev",
+        name: "common.roles.lead_developer",
         color: "blue",
       },
     ],

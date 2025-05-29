@@ -15,16 +15,15 @@ export const websiteCollaborators: Collaborator[] = [
       },
     ],
     image: "/pawel.png",
-    description:
-      "Developed both the frontend and backend of the project, ensuring optimal performance and scalability. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
+    description: "not_byte_website.collaborators.pawel.description",
     position: "CEO, Software engineer",
     roles: [
       {
-        name: "Project Manager",
+        name: "common.roles.project_manager",
         color: "red",
       },
       {
-        name: "Lead Developer",
+        name: "common.roles.lead_developer",
         color: "blue",
       },
     ],
@@ -43,12 +42,11 @@ export const websiteCollaborators: Collaborator[] = [
       },
     ],
     image: "/przemek.jpg",
-    description:
-      "Deisgner of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
+    description: "not_byte_website.collaborators.przemyslaw.description",
     position: "CIO, DevOps Engineer",
     roles: [
       {
-        name: "Designer",
+        name: "common.roles.designer",
         color: "purple",
       },
     ],
@@ -67,12 +65,11 @@ export const websiteCollaborators: Collaborator[] = [
       },
     ],
     image: "/adam_temp.jpg",
-    description:
-      "Designed the project's frontend, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
+    description: "not_byte_website.collaborators.adam.description",
     position: "CTO, Software Developer",
     roles: [
       {
-        name: "Deisgner",
+        name: "common.roles.designer",
         color: "purple",
       },
     ],
@@ -91,12 +88,11 @@ export const websiteCollaborators: Collaborator[] = [
       },
     ],
     image: "/lukasz.png",
-    description:
-      "tester of the project, ensuring a user-friendly and intuitive interface. Responsible for managing the project's development process and ensuring the timely delivery of milestones.",
+    description: "not_byte_website.collaborators.lukasz.description",
     position: "Social media manager, tester",
     roles: [
       {
-        name: "Tester",
+        name: "common.roles.tester",
         color: "pink",
       },
     ],

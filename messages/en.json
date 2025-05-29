@@ -377,13 +377,13 @@
       "tags": {
         "photography": "Photography",
         "internal": "Internal",
-        "Initialization": "Initialization",
+        "initialization": "Initialization",
         "nuxt": "Nuxt",
         "golang": "Golang",
         "development": "Development",
         "delivery": "Delivery",
         "future": "Future",
-        "sass": "SaaS",
+        "saas": "SaaS",
         "next_js": "Next.js",
         "tailwind": "Tailwind CSS"
       },

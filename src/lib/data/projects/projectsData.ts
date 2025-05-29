@@ -44,7 +44,7 @@ export const projects: ProjectData[] = [
       {
         name: "knury.milestones.3.name",
         date: "2024-06-01",
-        description: "kanury.milestones.3.description",
+        description: "knury.milestones.3.description",
         tags: ["common.tags.future", "common.tags.saas"],
         status: Status.OnGoing,
       },
@@ -67,9 +67,8 @@ export const projects: ProjectData[] = [
   },
   {
     id: "post_manager",
-    title: "Post Manager",
-    description:
-      "An internal tool which allows the user to manage social media posts across all connected platforms from the application. The user can create a post using the built-in creator and post it on the platforms of their choosing.",
+    title: "post_manager.title",
+    description: "post_manager.description",
     imageUrl: "/notbyte_dev.jpg",
     bannerUrl: "/notbyte_dev.jpg",
     tags: ["Developer Panel", "CMS", "Internal"],
@@ -77,19 +76,17 @@ export const projects: ProjectData[] = [
     status: Status.InDevelopment,
     milestones: [
       {
-        name: "Project Kickoff",
+        name: "post_manager.milestones.0.name",
         date: "2024-04-10",
-        description:
-          "After a thorough evaluation process to determine the most suitable technologies for the project, the development team selected a robust stack that would ensure optimal performance and scalability. With the technologies chosen and confirmed, the initial setup phase commenced, leading to the successful initialization of the application.",
-        tags: ["Initialization"],
+        description: "post_manager.milestones.0.description",
+        tags: ["common.tags.initialization"],
         status: Status.Completed,
       },
       {
-        name: "Project Development",
+        name: "post_manager.milestones.1.name",
         date: "2024-04-11",
-        description:
-          "The development period will last until a stable version of the post manager is released.",
-        tags: ["Development"],
+        description: "post_manager.milestones.1.description",
+        tags: ["common.tags.development"],
         status: Status.InDevelopment,
       },
     ],
@@ -102,18 +99,17 @@ export const projects: ProjectData[] = [
         ...smallProfiles.find((p) => p.id === "Adam_Kolt"),
         roles: [
           {
-            name: "Project Manager",
+            name: "common.roles.project_manager",
             color: "blue",
           },
           {
-            name: "Lead Developer",
+            name: "common.roles.lead_developer",
             color: "red",
           },
         ],
       },
     ].map((i) => {
-      i.description =
-        "Developed both frontend and backend of the project. Responsible for managing the project's development process and ensuring the timely delivery of milestones.";
+      i.description = "post_manager.collaborators.adam.description";
       return i as Collaborator;
     }),
     projectManager: "Adam Kołt",
@@ -122,46 +118,45 @@ export const projects: ProjectData[] = [
   },
   {
     id: "notByte_website",
-    title: "notByte website",
-    description:
-      "A website you are reading right now. It is a modern, responsive, and user-friendly website that showcases the projects, team members, and other information about notByte. The website is built using Next.js and Tailwind CSS, ensuring optimal performance and a seamless user experience. The website is continuously updated with new features and content to provide visitors with the latest information about notByte and its projects. The website is also optimized for search engines, making it easy for users to find the information they need.",
+    title: "not_byte_website.title",
+    description: "not_byte_website.description",
     imageUrl: "/notByte_website.png",
     bannerUrl: "/notByte_website.png",
-    tags: ["Photography", "Internal"],
+    tags: ["common.tags.photography", "common.tags.internal"],
     creationDate: "2023-04-15",
     location: "Malibu, California",
     status: Status.Completed,
     milestones: [
       {
-        name: "Project Kickoff",
+        name: "not_byte_website.milestones.0.name",
         date: "2024-01-01",
-        description:
-          "Our efforts to create a modern, responsive, and user-friendly website for notByte began on January 1, 2024. The project's development process was initiated, and the team started working on the website's design and functionality.",
-        tags: ["initialization"],
+        description: "not_byte_website.milestones.0.description",
+        tags: ["common.tags.initialization"],
         status: Status.Completed,
       },
       {
-        name: "Project Development",
+        name: "not_byte_website.milestones.1.name",
         date: "2023-02-01",
-        description:
-          "Project development was quite a protracted process due to little amounts of time and a lot of work. All of our team still studies and works full-time, so we had to find time for the project in our free time. Despite this, we managed to finish the project on time and with a great result. We are proud of our work and we hope that you like our website.",
-        tags: ["tailwindcss", "Next.js", "development"],
+        description: "not_byte_website.milestones.1.description",
+        tags: [
+          "common.tags.tailwind",
+          "common.tags.next_js",
+          "common.tags.development",
+        ],
         status: Status.Completed,
       },
       {
-        name: "Project delivery",
+        name: "not_byte_website.milestones.2.name",
         date: "2023-03-01",
-        description:
-          "We are happy to announce that the project has been successfully delivered to the client. The website is live and available to the public, providing visitors with information about notByte, its projects, and team members. The website is continuously updated with new features and content to ensure a seamless user experience.",
-        tags: ["delivery"],
+        description: "not_byte_website.milestones.2.description",
+        tags: ["common.tags.delivery"],
         status: Status.Completed,
       },
       {
-        name: "future plans",
+        name: "not_byte_website.milestones.3.name",
         date: "2023-03-01",
-        description:
-          "Plans for the future include expanding the website's features and content to provide visitors with more information about notByte and its projects. The website will be continuously updated with new features and content to ensure a seamless user experience. We are excited about the future of the website and the new opportunities it will bring.",
-        tags: ["Future"],
+        description: "not_byte_website.milestones.3.description",
+        tags: ["common.tags.future"],
         status: Status.OnGoing,
       },
     ],

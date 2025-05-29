@@ -358,5 +358,127 @@
         }
       }
     }
+  },
+  "Projects": {
+    "common": {
+      "milestones": "Kamienie milowe",
+      "collaborators": "Współpracownicy",
+      "gallery": "Galeria",
+      "status": {
+        "INITIATED": "ROZPOCZĘTY",
+        "IN_PLANING": "W PLANOWANIU",
+        "IN_DEVELOPMENT": "W TRAKCIE ROZWOJU",
+        "COMPLETED": "ZAKOŃCZONY",
+        "PAUSED": "WSTRZYMANY",
+        "CANCELLED": "ANULOWANY",
+        "ON_HOLD": "OCZEKUJĄCY",
+        "ONGOING": "TRWAJĄCY"
+      },
+      "tags": {
+        "photography": "Fotografia",
+        "internal": "Wewnętrzny",
+        "initialization": "Inicjalizacja",
+        "nuxt": "Nuxt",
+        "golang": "Golang",
+        "development": "Rozwój",
+        "delivery": "Dostarczenie",
+        "future": "Przyszłość",
+        "saas": "SaaS",
+        "next_js": "Next.js",
+        "tailwind": "Tailwind CSS"
+      },
+      "roles": {
+        "project_manager": "Kierownik Projektu",
+        "lead_developer": "Główny Programista",
+        "frontend_developer": "Frontend Developer",
+        "designer": "Projektant",
+        "tester": "Tester"
+      }
+    },
+    "knury": {
+      "title": "Turniej",
+      "description": "Turniej to rozbudowana aplikacja opracowana z wykorzystaniem Nuxt i Golang, zaprojektowana do tworzenia i zarządzania turniejami drużyn koszykarskich, monitorowania ich postępów i przeglądania wyników meczów. Aplikacja oferuje przyjazny i intuicyjny interfejs, nowoczesny i przejrzysty design zapewniający łatwą nawigację. Plany na przyszłość obejmują rozwój modelu SaaS, oferując nowe funkcje i skalowalność dla szerszej grupy odbiorców.",
+      "milestones": {
+        "0": {
+          "name": "Rozpoczęcie projektu",
+          "description": "Nasza współpraca z 'Knury Knurów' rozpoczęła się w marcu 2024, kiedy to napisano pierwszą linijkę kodu projektu."
+        },
+        "1": {
+          "name": "Rozwój projektu",
+          "description": "Z czasem kodu przybywało coraz więcej, a my zaczęliśmy dostrzegać pierwsze efekty naszej pracy. Był to ekscytujący okres pełen satysfakcji i postępów."
+        },
+        "2": {
+          "name": "Dostarczenie projektu",
+          "description": "Po wymagającej, ale satysfakcjonującej drodze, z sukcesem dostarczyliśmy projekt klientowi. Klient był niezwykle zadowolony z efektów. Jesteśmy dumni z naszych osiągnięć, ale to dopiero początek."
+        },
+        "3": {
+          "name": "Plany rozwoju",
+          "description": "Planujemy rozwinąć projekt w model SaaS, oferując nowe funkcje i większą skalowalność. Zamierzamy także rozszerzyć możliwości platformy o inne sporty niż koszykówka. Jesteśmy podekscytowani przyszłością tego projektu!"
+        }
+      },
+      "collaborators": {
+        "pawel": {
+          "description": "Stworzył backend projektu, dbając o jego wydajność i skalowalność. Zarządzał procesem rozwoju i dostarczania projektu."
+        },
+        "przemyslaw": {
+          "description": "Stworzył frontend projektu, zapewniając intuicyjny i przyjazny interfejs. Zarządzał procesem rozwoju i dostarczania projektu."
+        }
+      }
+    },
+    "post_manager": {
+      "title": "Post Manager",
+      "description": "Wewnętrzne narzędzie umożliwiające zarządzanie postami w mediach społecznościowych z poziomu aplikacji. Użytkownik może stworzyć post przy użyciu wbudowanego kreatora i opublikować go na wybranych platformach.",
+      "milestones": {
+        "0": {
+          "name": "Rozpoczęcie projektu",
+          "description": "Po dokładnej analizie technologii wybrano solidny stos technologiczny, który zapewnia wysoką wydajność i skalowalność. Następnie rozpoczęto fazę inicjalizacji aplikacji."
+        },
+        "1": {
+          "name": "Rozwój projektu",
+          "description": "Faza rozwoju potrwa do momentu wydania stabilnej wersji menedżera postów."
+        }
+      },
+      "collaborators": {
+        "adam": {
+          "description": "Stworzył frontend i backend projektu. Zarządzał procesem rozwoju i dostarczania projektu."
+        }
+      }
+    },
+    "not_byte_website": {
+      "title": "Strona notByte",
+      "description": "Strona, którą właśnie czytasz. Nowoczesna, responsywna i przyjazna dla użytkownika witryna prezentująca projekty, członków zespołu i inne informacje o notByte. Strona została zbudowana przy użyciu Next.js i Tailwind CSS, co zapewnia wysoką wydajność i płynne działanie. Jest stale aktualizowana o nowe funkcje i treści, aby zapewnić odwiedzającym najnowsze informacje.",
+      "milestones": {
+        "0": {
+          "name": "Rozpoczęcie projektu",
+          "description": "Prace nad nowoczesną i responsywną stroną dla notByte rozpoczęły się 1 stycznia 2024. Zespół rozpoczął prace nad projektem i funkcjonalnością strony."
+        },
+        "1": {
+          "name": "Rozwój projektu",
+          "description": "Rozwój był wydłużony ze względu na ograniczony czas – wszyscy członkowie zespołu studiują i pracują. Mimo to udało nam się ukończyć projekt na czas i jesteśmy z niego bardzo dumni."
+        },
+        "2": {
+          "name": "Dostarczenie projektu",
+          "description": "Z radością ogłaszamy, że projekt został pomyślnie dostarczony. Strona jest dostępna publicznie i przedstawia informacje o notByte, jego projektach i zespole."
+        },
+        "3": {
+          "name": "Plany na przyszłość",
+          "description": "Planujemy rozszerzenie funkcji i zawartości strony, aby lepiej informować o projektach i działaniach notByte. Będzie ona nieustannie rozwijana."
+        }
+      },
+      "collaborators": {
+        "pawel": {
+          "description": "Stworzył frontend i backend projektu. Zarządzał rozwojem i realizacją projektu."
+        },
+        "przemyslaw": {
+          "description": "Projektant projektu, zadbał o przyjazny i intuicyjny interfejs. Zarządzał rozwojem i realizacją projektu."
+        },
+        "adam": {
+          "description": "Zaprojektował frontend projektu, dbając o intuicyjność i użyteczność. Zarządzał rozwojem i realizacją projektu."
+        },
+        "lukasz": {
+          "description": "Tester projektu, odpowiedzialny za sprawdzanie interfejsu i doświadczenia użytkownika. Uczestniczył w rozwoju i realizacji projektu."
+        }
+      }
+    }
   }
 }
