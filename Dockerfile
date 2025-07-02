@@ -1,6 +1,9 @@
 # Build a production distribution
 
-FROM cgr.dev/chainguard/node:latest AS builder
+FROM alpine AS builder
+
+RUN apk add --no-cache libc6-compat
+RUN apk add --update nodejs npm
 
 WORKDIR /app
 
@@ -9,8 +12,6 @@ ENV NEXT_TELEMETRY_DISABLED=1
 COPY --chown=node:node package*.json .
 
 RUN npm install --clean
-
-RUN npm install sharp
 
 COPY --chown=node:node . .
 
@@ -25,6 +26,7 @@ WORKDIR /app
 ENV NODE_ENV="production"
 ENV HOSTNAME="0.0.0.0"
 ENV PORT=3000
+ENV NEXT_TELEMETRY_DISABLED=1
 
 LABEL authors="botprzemek,pawelos231,akolt19d,nozowymrozon"
 
